@@ -166,30 +166,26 @@ const Index = () => {
             </div>
 
             <div className="relative animate-slide-up">
-              <div className="relative mx-auto w-80 h-80 lg:w-96 lg:h-96">
-                {/* Phone mockup */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-100 rounded-3xl shadow-2xl transform rotate-6 animate-bounce-gentle">
-                  <div className="p-6 h-full flex flex-col">
-                    <div className="bg-gradient-refluxe rounded-2xl p-4 mb-4 text-white">
-                      <h3 className="font-bold text-lg">Cuponul tău</h3>
-                      <p className="text-sm opacity-90">Cafea gratuită</p>
-                      <div className="flex justify-between items-center mt-3">
-                        <span className="text-2xl font-bold">50% OFF</span>
-                        <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center">
-                          <div className="w-12 h-12 bg-white rounded-md"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="space-y-2 flex-1">
-                      <div className="h-3 bg-gray-200 rounded"></div>
-                      <div className="h-3 bg-gray-200 rounded w-3/4"></div>
-                      <div className="h-3 bg-gray-200 rounded w-1/2"></div>
-                    </div>
-                  </div>
-                </div>
+              <div className="relative mx-auto max-w-md">
+                <img 
+                  src="/lovable-uploads/495771be-804e-48df-8f77-e4316aff17fb.png" 
+                  alt="Refluxe mobile app demonstrating loyalty cards"
+                  className="w-full h-auto animate-bounce-gentle"
+                />
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Why Digital Cards Section */}
+      <section className="py-0">
+        <div className="w-full">
+          <img 
+            src="/lovable-uploads/955053ff-b18c-43de-bdb8-1ddceb318ca0.png" 
+            alt="De ce carduri digitale acum - beneficiile platformei Refluxe"
+            className="w-full h-auto"
+          />
         </div>
       </section>
 
