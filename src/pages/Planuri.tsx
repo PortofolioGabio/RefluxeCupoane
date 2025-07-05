@@ -14,7 +14,7 @@ const Planuri = () => {
   const plans = [
     {
       name: "Start",
-      storeCount: "1",
+      storeCount: "1 Magazin",
       clientCount: "250 clienți",
       description: "Perfect pentru a testa platforma",
       badge: null,
@@ -33,7 +33,7 @@ const Planuri = () => {
     },
     {
       name: "Avansat",
-      storeCount: "1",
+      storeCount: "1 Magazin",
       clientCount: "500 clienți",
       description: "Ideal pentru afaceri în creștere",
       badge: "Cel mai popular",
@@ -52,7 +52,7 @@ const Planuri = () => {
     },
     {
       name: "Expert",
-      storeCount: "1",
+      storeCount: "1 Magazin",
       clientCount: "Nelimitați",
       description: "Pentru corporații și lanțuri de magazine",
       badge: "Toate funcționalitățile",
@@ -238,6 +238,8 @@ const Planuri = () => {
                     <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
                     <span className="text-sm font-semibold text-gray-700">
                       {plan.clientCount}
+                    </span>
+                    <span className="text-sm font-semibold text-gray-700">
                       {plan.storeCount}
                     </span>
                   </div>
