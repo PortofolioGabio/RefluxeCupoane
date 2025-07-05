@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -165,12 +166,13 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="relative animate-slide-up">
-              <div className="relative mx-auto max-w-md">
+            <div className="relative flex justify-end items-end h-full">
+              <div className="relative">
                 <img 
                   src="/lovable-uploads/495771be-804e-48df-8f77-e4316aff17fb.png" 
                   alt="Refluxe mobile app demonstrating loyalty cards"
-                  className="w-full h-auto animate-bounce-gentle"
+                  className="w-full h-auto max-w-md object-contain"
+                  style={{ marginBottom: '-6rem' }}
                 />
               </div>
             </div>
