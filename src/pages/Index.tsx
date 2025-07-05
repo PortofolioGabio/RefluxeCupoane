@@ -121,64 +121,64 @@ const Index = () => {
     { name: "PayPal", icon: "💳" }
   ];
 
-  return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-hero text-white py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 animate-fade-in">
-              <div className="space-y-4">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-                  Transformă clienții în <span className="text-brand-orange">fani fideli</span>
-                </h1>
-                <p className="text-xl sm:text-2xl text-gray-200 leading-relaxed">
-                  Platforma modernă de cupoane digitale de fidelitate care crește vânzările și retenția clienților.
-                </p>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/demonstratie">
-                  <Button size="lg" className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-8 py-3 text-lg">
-                    Solicită Demonstrație
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="border-white text-white hover:bg-white hover:text-gray-900 font-semibold px-8 py-3 text-lg"
-                  onClick={() => window.open('#', '_blank')}
-                >
-                  Intră în Aplicație
-                  <ExternalLink className="ml-2 h-5 w-5" />
+return (
+  <div className="min-h-screen">
+    {/* Hero Section */}
+    <section className="relative bg-gradient-hero text-white py-24 lg:py-32 overflow-hidden">
+      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-8 animate-fade-in">
+            <div className="space-y-4">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+                Transformă clienții în <span className="text-brand-orange">fani fideli</span>
+              </h1>
+              <p className="text-xl sm:text-2xl text-gray-200 leading-relaxed">
+                Platforma modernă de cupoane digitale de fidelitate care crește vânzările și retenția clienților.
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link to="/demonstratie">
+                <Button size="lg" className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-8 py-3 text-lg">
+                  Solicită Demonstrație
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-              </div>
-
-              <div className="flex items-center space-x-6 text-sm">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-brand-orange" />
-                    <span>{benefit}</span>
-                  </div>
-                ))}
-              </div>
+              </Link>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-white text-white hover:bg-white hover:text-gray-900 font-semibold px-8 py-3 text-lg"
+                onClick={() => window.open('#', '_blank')}
+              >
+                Intră în Aplicație
+                <ExternalLink className="ml-2 h-5 w-5" />
+              </Button>
             </div>
 
-            <div className="relative flex justify-end items-end h-full">
-              <div className="relative">
-                <img 
-                  src="/lovable-uploads/495771be-804e-48df-8f77-e4316aff17fb.png" 
-                  alt="Refluxe mobile app demonstrating loyalty cards"
-                  className="w-full h-auto max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl object-contain"
-                  style={{ marginBottom: 'clamp(-8rem, -5vw, -16rem)' }}
-                />
-              </div>
+            <div className="flex items-center space-x-6 text-sm">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center space-x-2">
+                  <CheckCircle className="h-4 w-4 text-brand-orange" />
+                  <span>{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="relative flex justify-end items-end h-full lg:absolute lg:right-0 lg:top-0 lg:w-1/2">
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/495771be-804e-48df-8f77-e4316aff17fb.png" 
+                alt="Refluxe mobile app demonstrating loyalty cards"
+                className="w-full h-auto max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl object-contain"
+                style={{ marginBottom: '-12rem' }}
+              />
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Why Digital Cards Section */}
       <section className="py-0">
