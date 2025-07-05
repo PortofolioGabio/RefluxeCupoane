@@ -148,8 +148,8 @@ return (
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-gray-900 font-semibold px-8 py-3 text-lg"
-                onClick={() => window.open('#', '_blank')}
+                className="border-white text-gray-900 hover:bg-white hover:font-semibold px-8 py-3 text-lg"
+                onClick={() => window.open('https://app.refluxe.io/', '_blank')}
               >
                 Intră în Aplicație
                 <ExternalLink className="ml-2 h-5 w-5" />
