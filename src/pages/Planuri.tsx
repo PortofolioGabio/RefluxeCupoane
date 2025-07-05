@@ -15,7 +15,6 @@ const Planuri = () => {
     {
       name: "Gratuit",
       clientCount: "100 clienți",
-      price: { monthly: 0, yearly: 0 },
       description: "Perfect pentru a testa platforma",
       badge: null,
       features: [
@@ -34,7 +33,6 @@ const Planuri = () => {
     {
       name: "Pro",
       clientCount: "500 clienți",
-      price: { monthly: 99, yearly: 890 },
       description: "Ideal pentru afaceri în creștere",
       badge: "Cel mai popular",
       features: [
@@ -53,7 +51,6 @@ const Planuri = () => {
     {
       name: "Enterprise",
       clientCount: "1000 clienți",
-      price: { monthly: 299, yearly: 2990 },
       description: "Pentru corporații și lanțuri de magazine",
       badge: "Toate funcționalitățile",
       features: [
@@ -196,6 +193,13 @@ const Planuri = () => {
       {/* Pricing Plans */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Centered pricing text */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Începând de la 249 lei / lună
+            </h2>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {plans.map((plan, index) => (
               <Card 
@@ -223,27 +227,6 @@ const Planuri = () => {
                     {plan.name}
                   </CardTitle>
                   <p className="text-gray-600 mb-6">{plan.description}</p>
-                  
-                  <div className="mb-6">
-                    <div className="flex items-center justify-center">
-                      <span className="text-4xl font-bold text-gray-900">
-                        {plan.price[isYearly ? 'yearly' : 'monthly'] === 0 
-                          ? 'Gratuit' 
-                          : `${plan.price[isYearly ? 'yearly' : 'monthly']} lei`
-                        }
-                      </span>
-                      {plan.price[isYearly ? 'yearly' : 'monthly'] > 0 && (
-                        <span className="text-gray-600 ml-2">
-                          /{isYearly ? 'an' : 'lună'}
-                        </span>
-                      )}
-                    </div>
-                    {isYearly && plan.price.yearly > 0 && (
-                      <p className="text-sm text-gray-500 mt-1">
-                        ~{Math.round(plan.price.yearly / 12)} lei/lună
-                      </p>
-                    )}
-                  </div>
                 </CardHeader>
 
                 <CardContent className="space-y-6">
