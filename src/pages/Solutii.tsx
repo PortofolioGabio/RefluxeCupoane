@@ -100,8 +100,8 @@ const Solutii = () => {
               </div>
             </div>
 
-            <div className="relative lg:flex lg:items-center lg:justify-center lg:absolute lg:right-0 lg:top-0 lg:w-1/2 lg:h-full">
-              <div className="relative w-full max-w-md mx-auto sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl">
+            <div className="relative lg:flex lg:items-start lg:justify-center lg:absolute lg:right-0 lg:top-8 lg:w-1/2 lg:h-full">
+              <div className="relative w-full max-w-sm mx-auto sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
                 <img 
                   src="/lovable-uploads/solutii-hero.png" 
                   alt="Solutii Hero Refluxe"
