@@ -1,151 +1,226 @@
 
 import { useState } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Calendar } from '@/components/ui/calendar';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { CalendarIcon, CheckCircle } from 'lucide-react';
+import { format } from 'date-fns';
+import { ro } from 'date-fns/locale';
 import { useToast } from '@/hooks/use-toast';
 
 const Demonstratie = () => {
   const [formData, setFormData] = useState({
-    name: '',
+    nume: '',
+    prenume: '',
+    telefon: '',
     email: '',
-    whatsapp: '',
-    company: '',
-    stores: '',
-    hasLoyaltyProgram: ''
+    dataNasterii: undefined as Date | undefined,
+    prefix: '+40'
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Cerere trimisă cu succes!",
-      description: "Te vom contacta în curând pentru a programa demonstrația.",
-    });
+    setIsSubmitting(true);
+
+    // Simulate API call
+    setTimeout(() => {
+      console.log('Demo request submitted:', formData);
+      toast({
+        title: "Cerere trimisa cu succes!",
+        description: "Vă vom contacta în cel mai scurt timp pentru a programa demonstrația.",
+      });
+      setIsSubmitting(false);
+      
+      // Reset form
+      setFormData({
+        nume: '',
+        prenume: '',
+        telefon: '',
+        email: '',
+        dataNasterii: undefined,
+        prefix: '+40'
+      });
+    }, 2000);
   };
 
-  const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({
-      ...prev,
-      [field]: value
-    }));
-  };
+  const benefits = [
+    "Demonstrație personalizată de 30 de minute",
+    "Configurare gratuită pentru primul tău program",
+    "Suport tehnic dedicat pentru implementare",
+    "Acces gratuit la toate funcționalitățile timp de 14 zile"
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 flex items-center justify-center p-4">
-      <div className="w-full max-w-md">
-        <Card className="bg-white rounded-3xl shadow-2xl border-0">
-          <CardContent className="p-8">
-            <div className="mb-6">
-              <h2 className="text-gray-800 text-lg font-medium mb-2">
-                Fill out the form below.
-              </h2>
-            </div>
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Solicită o Demonstrație <span className="text-brand-purple">Gratuită</span>
+          </h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Descoperă cum Refluxe poate transforma programul tău de fidelitate în doar 30 de minute.
+          </p>
+        </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <Label htmlFor="name" className="text-gray-700 text-sm font-medium mb-2 block">
-                  Name <span className="text-red-500">*</span>
-                </Label>
-                <Input
-                  id="name"
-                  type="text"
-                  placeholder="Your name"
-                  value={formData.name}
-                  onChange={(e) => handleInputChange('name', e.target.value)}
-                  className="w-full h-12 px-4 rounded-full border border-gray-300 bg-white text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  required
-                />
-              </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Form */}
+          <Card className="shadow-xl border-0">
+            <CardHeader>
+              <CardTitle className="text-2xl text-center">Completează formularul</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="nume">Nume *</Label>
+                    <Input
+                      id="nume"
+                      type="text"
+                      required
+                      value={formData.nume}
+                      onChange={(e) => setFormData({ ...formData, nume: e.target.value })}
+                      placeholder="Introduceți numele"
+                      className="h-12"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="prenume">Prenume *</Label>
+                    <Input
+                      id="prenume"
+                      type="text"
+                      required
+                      value={formData.prenume}
+                      onChange={(e) => setFormData({ ...formData, prenume: e.target.value })}
+                      placeholder="Introduceți prenumele"
+                      className="h-12"
+                    />
+                  </div>
+                </div>
 
-              <div>
-                <Label htmlFor="email" className="text-gray-700 text-sm font-medium mb-2 block">
-                  E-mail <span className="text-red-500">*</span>
-                </Label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="Enter work email"
-                  value={formData.email}
-                  onChange={(e) => handleInputChange('email', e.target.value)}
-                  className="w-full h-12 px-4 rounded-full border border-gray-300 bg-white text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  required
-                />
-              </div>
+                <div className="space-y-2">
+                  <Label htmlFor="telefon">Număr de telefon *</Label>
+                  <div className="flex gap-2">
+                    <Select value={formData.prefix} onValueChange={(value) => setFormData({ ...formData, prefix: value })}>
+                      <SelectTrigger className="w-24 h-12">
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="+40">+40</SelectItem>
+                        <SelectItem value="+41">+41</SelectItem>
+                        <SelectItem value="+43">+43</SelectItem>
+                        <SelectItem value="+49">+49</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <Input
+                      id="telefon"
+                      type="tel"
+                      required
+                      value={formData.telefon}
+                      onChange={(e) => setFormData({ ...formData, telefon: e.target.value })}
+                      placeholder="722 123 456"
+                      className="flex-1 h-12"
+                    />
+                  </div>
+                </div>
 
-              <div>
-                <Label htmlFor="whatsapp" className="text-gray-700 text-sm font-medium mb-2 block">
-                  WhatsApp <span className="text-red-500">*</span>
-                </Label>
-                <Input
-                  id="whatsapp"
-                  type="tel"
-                  placeholder="(11) 99999-9999"
-                  value={formData.whatsapp}
-                  onChange={(e) => handleInputChange('whatsapp', e.target.value)}
-                  className="w-full h-12 px-4 rounded-full border border-gray-300 bg-white text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  required
-                />
-              </div>
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email *</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    placeholder="nume@exemplu.ro"
+                    className="h-12"
+                  />
+                </div>
 
-              <div>
-                <Label htmlFor="company" className="text-gray-700 text-sm font-medium mb-2 block">
-                  Company name <span className="text-red-500">*</span>
-                </Label>
-                <Input
-                  id="company"
-                  type="text"
-                  placeholder="Company name or Instagram"
-                  value={formData.company}
-                  onChange={(e) => handleInputChange('company', e.target.value)}
-                  className="w-full h-12 px-4 rounded-full border border-gray-300 bg-white text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  required
-                />
-              </div>
+                <div className="space-y-2">
+                  <Label>Data nașterii</Label>
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <Button
+                        variant="outline"
+                        className="w-full h-12 justify-start text-left font-normal"
+                      >
+                        <CalendarIcon className="mr-2 h-4 w-4" />
+                        {formData.dataNasterii ? (
+                          format(formData.dataNasterii, "dd MMMM yyyy", { locale: ro })
+                        ) : (
+                          <span>Selectați data nașterii</span>
+                        )}
+                      </Button>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-auto p-0">
+                      <Calendar
+                        mode="single"
+                        selected={formData.dataNasterii}
+                        onSelect={(date) => setFormData({ ...formData, dataNasterii: date })}
+                        locale={ro}
+                        initialFocus
+                      />
+                    </PopoverContent>
+                  </Popover>
+                </div>
 
-              <div>
-                <Label htmlFor="stores" className="text-gray-700 text-sm font-medium mb-2 block">
-                  Number of Stores <span className="text-red-500">*</span>
-                </Label>
-                <Input
-                  id="stores"
-                  type="text"
-                  placeholder="Enter number of Stores"
-                  value={formData.stores}
-                  onChange={(e) => handleInputChange('stores', e.target.value)}
-                  className="w-full h-12 px-4 rounded-full border border-gray-300 bg-white text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  required
-                />
-              </div>
-
-              <div>
-                <Label htmlFor="loyalty" className="text-gray-700 text-sm font-medium mb-2 block">
-                  Do you already have a Loyalty Program? <span className="text-red-500">*</span>
-                </Label>
-                <Select onValueChange={(value) => handleInputChange('hasLoyaltyProgram', value)}>
-                  <SelectTrigger className="w-full h-12 px-4 rounded-full border border-gray-300 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
-                    <SelectValue placeholder="Click to select an option" />
-                  </SelectTrigger>
-                  <SelectContent className="bg-white border border-gray-200 rounded-lg shadow-lg">
-                    <SelectItem value="yes" className="text-gray-700 hover:bg-gray-50">Yes</SelectItem>
-                    <SelectItem value="no" className="text-gray-700 hover:bg-gray-50">No</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
-              <div className="pt-4">
                 <Button
                   type="submit"
-                  className="w-full h-12 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full transition-colors duration-200"
+                  size="lg"
+                  className="w-full bg-gradient-refluxe hover:opacity-90 text-white font-semibold h-12"
+                  disabled={isSubmitting}
                 >
-                  Request a demo!
+                  {isSubmitting ? 'Se trimite...' : 'Solicită Demonstrația'}
                 </Button>
-              </div>
-            </form>
-          </CardContent>
-        </Card>
+              </form>
+            </CardContent>
+          </Card>
+
+          {/* Benefits */}
+          <div className="space-y-8">
+            <Card className="shadow-lg border-0 bg-gradient-refluxe text-white">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold mb-6">Ce vei primi:</h3>
+                <div className="space-y-4">
+                  {benefits.map((benefit, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <CheckCircle className="h-6 w-6 text-white mt-0.5 flex-shrink-0" />
+                      <p className="text-white/90">{benefit}</p>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-lg border-0">
+              <CardContent className="p-8">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  🔒 Datele tale sunt în siguranță
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Nu vom împărtăși niciodată informațiile tale cu terțe părți. Folosim datele doar pentru a-ți oferi cea mai bună experiență de demonstrație.
+                </p>
+                <p className="text-sm text-gray-500">
+                  Prin completarea formularului, ești de acord cu{' '}
+                  <a href="#" className="text-brand-purple hover:underline">
+                    Termenii și Condițiile
+                  </a>{' '}
+                  și{' '}
+                  <a href="#" className="text-brand-purple hover:underline">
+                    Politica de Confidențialitate
+                  </a>.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
       </div>
     </div>
   );
