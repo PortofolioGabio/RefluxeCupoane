@@ -239,6 +239,9 @@ const Planuri = () => {
                     <span className="text-sm font-semibold text-gray-700">
                       {plan.clientCount}
                     </span>
+                  </div>
+                  <div className="flex items-center space-x-3 mb-4">
+                    <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
                     <span className="text-sm font-semibold text-gray-700">
                       {plan.storeCount}
                     </span>
