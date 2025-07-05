@@ -53,7 +53,7 @@ const Navbar = () => {
             </Link>
             <Button 
               className="bg-gradient-refluxe hover:opacity-90 text-white"
-              onClick={() => window.open('#', '_blank')}
+              onClick={() => window.open('https://app.refluxe.io/', '_blank')}
             >
               Intră <ExternalLink className="ml-2 h-4 w-4" />
             </Button>
@@ -100,7 +100,7 @@ const Navbar = () => {
                 </Link>
                 <Button 
                   className="w-full bg-gradient-refluxe hover:opacity-90 text-white"
-                  onClick={() => window.open('#', '_blank')}
+                  onClick={() => window.open('https://app.refluxe.io/', '_blank')}
                 >
                   Intră <ExternalLink className="ml-2 h-4 w-4" />
                 </Button>
