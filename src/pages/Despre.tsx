@@ -73,9 +73,6 @@ const Despre = () => {
       {/* Hero Section */}
       <section className="bg-gradient-hero text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Badge className="bg-white/20 text-white mb-6 px-4 py-2">
-            Povestea Refluxe
-          </Badge>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">
             Transformăm programele de fidelitate în experiențe memorabile
           </h1>
@@ -164,34 +161,6 @@ const Despre = () => {
         </div>
       </section>
 
-      {/* Achievements Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Realizările Noastre
-            </h2>
-            <p className="text-xl text-gray-600">
-              Cifre care demonstrează impactul Refluxe în ecosistemul românesc de retail.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {achievements.map((achievement, index) => (
-              <Card key={index} className="text-center shadow-lg border-0 hover:shadow-xl transition-shadow">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    {achievement.icon}
-                  </div>
-                  <div className="text-3xl font-bold text-gray-900 mb-2">{achievement.number}</div>
-                  <div className="text-gray-600 text-sm">{achievement.label}</div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Technology Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -263,7 +232,7 @@ const Despre = () => {
               </Button>
             </Link>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-brand-purple font-semibold px-8 py-3 text-lg">
+              <Button size="lg" variant="outline" className="border-white text-black hover:bg-white hover:text-brand-purple font-semibold px-8 py-3 text-lg">
                 Contactează-ne
               </Button>
             </Link>
