@@ -181,8 +181,8 @@ return (
     </section>
 
       {/* Why Digital Cards Section */}
-      <section className="py-0">
-        <div className="w-full">
+      <section className="py-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <img 
             src="/lovable-uploads/955053ff-b18c-43de-bdb8-1ddceb318ca0.png" 
             alt="De ce carduri digitale acum - beneficiile platformei Refluxe"
