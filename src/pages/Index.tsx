@@ -172,7 +172,7 @@ const Index = () => {
                   src="/lovable-uploads/495771be-804e-48df-8f77-e4316aff17fb.png" 
                   alt="Refluxe mobile app demonstrating loyalty cards"
                   className="w-full h-auto max-w-md object-contain"
-                  style={{ marginBottom: '-6rem' }}
+                  style={{ marginBottom: '-8rem' }}
                 />
               </div>
             </div>
