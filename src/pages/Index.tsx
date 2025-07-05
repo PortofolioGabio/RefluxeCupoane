@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -126,7 +127,7 @@ const Index = () => {
       <section className="relative bg-gradient-hero text-white py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
             <div className="space-y-8 animate-fade-in">
               <div className="space-y-4">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
@@ -166,11 +167,11 @@ const Index = () => {
             </div>
 
             <div className="relative animate-slide-up">
-              <div className="relative mx-auto max-w-md">
+              <div className="relative mx-auto max-w-lg">
                 <img 
                   src="/lovable-uploads/495771be-804e-48df-8f77-e4316aff17fb.png" 
                   alt="Refluxe mobile app demonstrating loyalty cards"
-                  className="w-full h-auto animate-bounce-gentle"
+                  className="w-full h-auto"
                 />
               </div>
             </div>
@@ -179,8 +180,8 @@ const Index = () => {
       </section>
 
       {/* Why Digital Cards Section */}
-      <section className="py-0">
-        <div className="w-full">
+      <section className="py-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <img 
             src="/lovable-uploads/955053ff-b18c-43de-bdb8-1ddceb318ca0.png" 
             alt="De ce carduri digitale acum - beneficiile platformei Refluxe"
