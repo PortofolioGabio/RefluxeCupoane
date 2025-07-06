@@ -32,42 +32,42 @@ const Index = () => {
 
   const loyaltyPrograms = [
     {
-      image: "/lovable-uploads/6f082d50-f6d4-4f3f-ad73-c605985279c2.png",
+      image: "/gabio-uploads/6f082d50-f6d4-4f3f-ad73-c605985279c2.png",
       title: "RefluxeAcces",
       description: "Transformă experiența clienților cu sisteme moderne de acces bazate pe niveluri și recompense personalizate, creând o comunitate fidelă și angajată."
     },
     {
-      image: "/lovable-uploads/ccfbc196-6e05-4031-912e-00fa318145c9.png",
+      image: "/gabio-uploads/ccfbc196-6e05-4031-912e-00fa318145c9.png",
       title: "RefluxePuncte",
       description: "Dezvoltă programe sofisticate de loialitate cu ștampile digitale, unde fiecare interacțiune se transformă în oportunități tangibile de recompensare și satisfacție maximă."
     },
     {
-      image: "/lovable-uploads/695078de-f615-4f31-8acc-fac9285012f7.png",
+      image: "/gabio-uploads/695078de-f615-4f31-8acc-fac9285012f7.png",
       title: "RefluxeReducere",
       description: "Implementează strategii inteligente de discount cu niveluri progresive care motivează clienții să revină și să se implice mai mult în ecosistema ta de brand."
     },
     {
-      image: "/lovable-uploads/ce8894f8-8ebe-4910-9a6d-b3ff5a3637fc.png",
+      image: "/gabio-uploads/ce8894f8-8ebe-4910-9a6d-b3ff5a3637fc.png",
       title: "RefluxeRecompense",
       description: "Creează ecosisteme complexe de recompensare bazate pe puncte și gamification, stimulând angajamentul continuu și construind relații de lungă durată cu clienții."
     },
     {
-      image: "/lovable-uploads/57e7633a-d890-4c9a-b843-9a2ce7b6d271.png",
+      image: "/gabio-uploads/57e7633a-d890-4c9a-b843-9a2ce7b6d271.png",
       title: "RefluxeCashback",
       description: "Revoluționează fidelitatea prin programe avansate de cashback cu returnări financiare directe, oferind valoare tangibilă și imediată pentru fiecare achiziție realizată."
     },
     {
-      image: "/lovable-uploads/b79307ec-62c8-427c-9e0a-03f9edc1f35a.png",
+      image: "/gabio-uploads/b79307ec-62c8-427c-9e0a-03f9edc1f35a.png",
       title: "RefluxeCupon",
       description: "Dezvoltă campanii dinamice de cupoane digitale cu targeting precis și personalizare avansată, maximizând rata de conversie și achiziția de clienți noi."
     },
     {
-      image: "/lovable-uploads/98b296a9-52a3-4764-8cac-b8cede88a98e.png",
+      image: "/gabio-uploads/98b296a9-52a3-4764-8cac-b8cede88a98e.png",
       title: "RefluxeMultipas",
       description: "Implementează sisteme multi-servicii inovatoare unde clienții acumulează beneficii transversale, creând experiențe holistice și valoare adăugată în întregul parcurs client."
     },
     {
-      image: "/lovable-uploads/995bd4ba-c4fa-4286-aba1-7f6a9f0bd12f.png",
+      image: "/gabio-uploads/995bd4ba-c4fa-4286-aba1-7f6a9f0bd12f.png",
       title: "RefluxeCadou",
       description: "Lansează programe sofisticate de carduri cadou digitale cu flexibilitate maximă și personalizare completă, extinzând reach-ul brandului și generând venituri suplimentare."
     }
@@ -169,7 +169,7 @@ return (
           <div className="relative flex justify-end items-end h-full lg:absolute lg:right-0 lg:top-0 lg:w-1/2">
             <div className="relative">
               <img 
-                src="/lovable-uploads/495771be-804e-48df-8f77-e4316aff17fb.png" 
+                src="/gabio-uploads/495771be-804e-48df-8f77-e4316aff17fb.png" 
                 alt="Refluxe mobile app demonstrating loyalty cards"
                 className="w-full h-auto max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl object-contain"
                 style={{ marginBottom: '-12rem' }}
@@ -184,7 +184,7 @@ return (
       <section className="py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <img 
-            src="/lovable-uploads/955053ff-b18c-43de-bdb8-1ddceb318ca0.png" 
+            src="/gabio-uploads/955053ff-b18c-43de-bdb8-1ddceb318ca0.png" 
             alt="De ce carduri digitale acum - beneficiile platformei Refluxe"
             className="w-full h-auto"
           />
@@ -313,7 +313,7 @@ return (
             
             <div className="relative flex justify-center">
               <img 
-                src="/lovable-uploads/2f049e99-bfad-4539-b644-1b4b2d83ba37.png" 
+                src="/gabio-uploads/2f049e99-bfad-4539-b644-1b4b2d83ba37.png" 
                 alt="Push notifications pe telefon"
                 className="max-w-full h-auto"
               />
@@ -346,7 +346,7 @@ return (
             
             <div className="relative flex justify-center">
               <img 
-                src="/lovable-uploads/ad1aad5f-00a2-4440-a28c-8d7c97a7b352.png" 
+                src="/gabio-uploads/ad1aad5f-00a2-4440-a28c-8d7c97a7b352.png" 
                 alt="Integrări Zapier și aplicații"
                 className="max-w-full h-auto"
               />

@@ -25,7 +25,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/6e0b0371-1768-486a-b523-9672b0996fd8.png" 
+              src="/gabio-uploads/6e0b0371-1768-486a-b523-9672b0996fd8.png" 
               alt="Refluxe"
               className="h-8 w-auto"
             />
