@@ -1,10 +1,33 @@
-
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, Smartphone, Users, TrendingUp, ExternalLink, Star, CheckCircle, Bell, Zap } from 'lucide-react';
+import { useEffect } from 'react';
+import { updatePageSEO, getOrganizationSchema, getWebPageSchema, getSoftwareApplicationSchema } from '@/utils/seo';
+import OptimizedImage from '@/components/OptimizedImage';
 
 const Index = () => {
+  useEffect(() => {
+    const structuredData = [
+      getOrganizationSchema(),
+      getWebPageSchema(
+        'Refluxe - Platformă Cupoane Digitale Fidelitate',
+        'Transformă clienții în fani fideli cu platforma #1 de cupoane digitale și programe de fidelitate din România. Peste 30.000 magazine partenere.',
+        'https://refluxe.ro/'
+      ),
+      getSoftwareApplicationSchema()
+    ];
+
+    updatePageSEO({
+      title: 'Refluxe - Platformă Cupoane Digitale Fidelitate România | Card Loialitate Digital',
+      description: 'Transformă clienții în fani fideli cu platforma #1 de cupoane digitale și programe de fidelitate din România. Peste 30.000 magazine partenere. Începe gratuit!',
+      keywords: 'cupoane digitale, card fidelitate digital, program loialitate, marketing digital, retail Romania, card puncte, cashback, recompense clienti, aplicatie fidelitate',
+      canonical: 'https://refluxe.ro/',
+      ogImage: 'https://refluxe.ro/gabio-uploads/495771be-804e-48df-8f77-e4316aff17fb.png',
+      structuredData: structuredData
+    });
+  }, []);
+
   const features = [
     {
       icon: <Smartphone className="h-8 w-8 text-brand-orange" />,
@@ -168,11 +191,14 @@ return (
 
           <div className="relative flex justify-end items-end h-full lg:absolute lg:right-0 lg:top-0 lg:w-1/2">
             <div className="relative">
-              <img 
+              <OptimizedImage 
                 src="/gabio-uploads/495771be-804e-48df-8f77-e4316aff17fb.png" 
-                alt="Refluxe mobile app demonstrating loyalty cards"
+                alt="Aplicația mobilă Refluxe pentru programe de fidelitate digitale - transformă clienții în fani fideli"
                 className="w-full h-auto max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl object-contain"
                 style={{ marginBottom: '-12rem' }}
+                priority={true}
+                width={600}
+                height={800}
               />
             </div>
           </div>
@@ -183,10 +209,12 @@ return (
       {/* Why Digital Cards Section */}
       <section className="py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <img 
+          <OptimizedImage 
             src="/gabio-uploads/955053ff-b18c-43de-bdb8-1ddceb318ca0.png" 
-            alt="De ce carduri digitale acum - beneficiile platformei Refluxe"
+            alt="Beneficiile cardurilor digitale de fidelitate - de ce să alegi soluțiile Refluxe pentru programul tău de loialitate"
             className="w-full h-auto"
+            width={1200}
+            height={600}
           />
         </div>
       </section>
@@ -206,10 +234,12 @@ return (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {loyaltyPrograms.map((program, index) => (
               <div key={index} className="space-y-4">
-                <img 
+                <OptimizedImage 
                   src={program.image} 
-                  alt={`Program de fidelitate ${index + 1}`}
+                  alt={`${program.title} - ${program.description.substring(0, 100)}...`}
                   className="w-full h-auto"
+                  width={300}
+                  height={400}
                 />
                 <div className="space-y-2">
                   <h3 className="text-lg font-bold text-gray-900">
@@ -312,10 +342,12 @@ return (
             </div>
             
             <div className="relative flex justify-center">
-              <img 
+              <OptimizedImage 
                 src="/gabio-uploads/2f049e99-bfad-4539-b644-1b4b2d83ba37.png" 
-                alt="Push notifications pe telefon"
+                alt="Notificări push mobile pentru aplicația de fidelitate Refluxe - comunicare directă cu clienții"
                 className="max-w-full h-auto"
+                width={400}
+                height={600}
               />
             </div>
           </div>
@@ -345,10 +377,12 @@ return (
             </div>
             
             <div className="relative flex justify-center">
-              <img 
+              <OptimizedImage 
                 src="/gabio-uploads/ad1aad5f-00a2-4440-a28c-8d7c97a7b352.png" 
-                alt="Integrări Zapier și aplicații"
+                alt="Integrări Zapier și aplicații pentru platforma Refluxe - automatizează fluxul de lucru"
                 className="max-w-full h-auto"
+                width={500}
+                height={400}
               />
             </div>
           </div>

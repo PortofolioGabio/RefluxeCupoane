@@ -1,9 +1,62 @@
-
 import { Card, CardContent } from '@/components/ui/card';
 import { Mail, Phone, Clock, Linkedin, Instagram } from 'lucide-react';
 import ScrollAnimatedElement from '@/components/ScrollAnimatedElement';
+import { useEffect } from 'react';
+import { updatePageSEO, getOrganizationSchema, getWebPageSchema } from '@/utils/seo';
 
 const Contact = () => {
+  useEffect(() => {
+    const structuredData = [
+      getOrganizationSchema(),
+      getWebPageSchema(
+        'Contact Refluxe - Suport Cupoane Digitale Fidelitate',
+        'Contactează echipa Refluxe pentru suport, întrebări sau demonstrații despre programele de fidelitate digitale. Răspuns rapid în limba română.',
+        'https://refluxe.ro/contact'
+      ),
+      {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Refluxe",
+        "description": "Contactează echipa Refluxe pentru suport și informații despre programele de fidelitate digitale",
+        "url": "https://refluxe.ro/contact",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "Refluxe",
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+40-756-123-456",
+              "contactType": "customer service",
+              "email": "contact@refluxe.ro",
+              "availableLanguage": "Romanian",
+              "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday", 
+                  "Wednesday",
+                  "Thursday",
+                  "Friday"
+                ],
+                "opens": "09:00",
+                "closes": "17:00"
+              }
+            }
+          ]
+        }
+      }
+    ];
+
+    updatePageSEO({
+      title: 'Contact Refluxe - Suport Cupoane Digitale Fidelitate România | Asistență Platformă',
+      description: 'Contactează echipa Refluxe pentru suport, întrebări sau demonstrații despre programele de fidelitate digitale. Răspuns rapid în limba română. Program Lun-Vin 09:00-17:00.',
+      keywords: 'contact refluxe, suport tehnic, asistenta clienti, demonstratie cupoane digitale, ajutor program fidelitate, contact romania, whatsapp support',
+      canonical: 'https://refluxe.ro/contact',
+      ogImage: 'https://refluxe.ro/gabio-uploads/495771be-804e-48df-8f77-e4316aff17fb.png',
+      structuredData: structuredData
+    });
+  }, []);
+
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
