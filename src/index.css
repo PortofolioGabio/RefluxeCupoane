@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -101,5 +102,27 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Performance optimized scroll animations */
+@layer utilities {
+  .will-change-transform {
+    will-change: transform;
+  }
+  
+  /* Hardware acceleration for smooth animations */
+  .transform-gpu {
+    transform: translateZ(0);
+  }
+  
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    .transition-all,
+    .transition-transform,
+    .transition-opacity {
+      transition: none !important;
+      animation: none !important;
+    }
   }
 }
