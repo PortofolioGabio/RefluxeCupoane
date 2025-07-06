@@ -307,9 +307,9 @@ const Planuri = () => {
               <thead>
                 <tr className="bg-brand-orange">
                   <th className="text-left py-4 px-6 font-bold text-white border-r border-orange-400">Funcționalitate</th>
-                  <th className="text-center py-4 px-6 font-bold text-white border-r border-orange-400">Gratuit</th>
-                  <th className="text-center py-4 px-6 font-bold text-white border-r border-orange-400">Pro</th>
-                  <th className="text-center py-4 px-6 font-bold text-white">Enterprise</th>
+                  <th className="text-center py-4 px-6 font-bold text-white border-r border-orange-400">Start</th>
+                  <th className="text-center py-4 px-6 font-bold text-white border-r border-orange-400">Avansat</th>
+                  <th className="text-center py-4 px-6 font-bold text-white">Expert</th>
                 </tr>
               </thead>
               <tbody>
