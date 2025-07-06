@@ -5,6 +5,7 @@ interface OptimizedImageProps {
   src: string;
   alt: string;
   className?: string;
+  style?: React.CSSProperties;
   width?: number;
   height?: number;
   priority?: boolean;
@@ -15,6 +16,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
   className = '',
+  style,
   width,
   height,
   priority = false,
@@ -51,7 +53,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   };
 
   return (
-    <div className={`relative ${className}`} ref={imgRef}>
+    <div className={`relative ${className}`} style={style} ref={imgRef}>
       {!isLoaded && (
         <div 
           className={`absolute inset-0 bg-gray-200 animate-pulse ${className}`}
