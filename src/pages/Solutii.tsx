@@ -253,7 +253,7 @@ const Solutii = () => {
               </Button>
             </Link>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-brand-purple font-semibold px-8 py-3 text-lg">
+              <Button size="lg" variant="outline" className="border-white text-black hover:bg-white hover:text-brand-purple font-semibold px-8 py-3 text-lg">
                 Consultație Gratuită
               </Button>
             </Link>
