@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import ScrollAnimatedElement from '@/components/ScrollAnimatedElement';
 import { 
   Target, 
   Heart, 
@@ -73,13 +74,15 @@ const Despre = () => {
       {/* Hero Section */}
       <section className="bg-gradient-hero text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-            Transformăm programele de fidelitate în experiențe memorabile
-          </h1>
-          <p className="text-xl text-gray-200 leading-relaxed">
-            Născut din dorința de a moderniza interacțiunea dintre afaceri și clienții lor, 
-            Refluxe este platforma care face programele de fidelitate simple, eficiente și plăcute pentru toți.
-          </p>
+          <ScrollAnimatedElement animation="fadeIn">
+            <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+              Transformăm programele de fidelitate în experiențe memorabile
+            </h1>
+            <p className="text-xl text-gray-200 leading-relaxed">
+              Născut din dorința de a moderniza interacțiunea dintre afaceri și clienții lor, 
+              Refluxe este platforma care face programele de fidelitate simple, eficiente și plăcute pentru toți.
+            </p>
+          </ScrollAnimatedElement>
         </div>
       </section>
 
@@ -87,7 +90,7 @@ const Despre = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <ScrollAnimatedElement animation="slideRight" delay={100}>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                 Misiunea Noastră
               </h2>
@@ -105,14 +108,21 @@ const Despre = () => {
                   "Oferim soluții accessible pentru orice tip de afacere",
                   "Promovăm sustenabilitatea prin digitalizare"
                 ].map((point, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">{point}</span>
-                  </div>
+                  <ScrollAnimatedElement 
+                    key={index} 
+                    animation="fadeIn" 
+                    delay={300 + index * 100}
+                    threshold={0.8}
+                  >
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">{point}</span>
+                    </div>
+                  </ScrollAnimatedElement>
                 ))}
               </div>
-            </div>
-            <div className="relative">
+            </ScrollAnimatedElement>
+            <ScrollAnimatedElement animation="slideLeft" delay={200} className="relative">
               <Card className="shadow-2xl border-0 bg-gradient-to-br from-brand-purple to-brand-orange text-white overflow-hidden">
                 <CardContent className="p-8">
                   <Globe className="h-12 w-12 mb-6 text-white/80" />
@@ -128,7 +138,7 @@ const Despre = () => {
                   </div>
                 </CardContent>
               </Card>
-            </div>
+            </ScrollAnimatedElement>
           </div>
         </div>
       </section>
@@ -136,26 +146,33 @@ const Despre = () => {
       {/* Values Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <ScrollAnimatedElement animation="fadeIn" className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Valorile Noastre
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Principiile care ne ghidează în dezvoltarea produselor și relațiile cu partenerii noștri.
             </p>
-          </div>
+          </ScrollAnimatedElement>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {values.map((value, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                    {value.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">{value.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{value.description}</p>
-                </CardContent>
-              </Card>
+              <ScrollAnimatedElement 
+                key={index} 
+                animation="slideUp" 
+                delay={index * 150}
+                threshold={0.3}
+              >
+                <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
+                  <CardContent className="p-8 text-center">
+                    <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                      {value.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">{value.title}</h3>
+                    <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                  </CardContent>
+                </Card>
+              </ScrollAnimatedElement>
             ))}
           </div>
         </div>
@@ -165,7 +182,7 @@ const Despre = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
+            <ScrollAnimatedElement animation="slideRight" delay={100} className="relative">
               <Card className="shadow-2xl border-0 overflow-hidden">
                 <CardContent className="p-0">
                   <div className="bg-gradient-refluxe p-8 text-white">
@@ -179,17 +196,24 @@ const Despre = () => {
                   <div className="p-8 bg-white">
                     <div className="space-y-3">
                       {features.map((feature, index) => (
-                        <div key={index} className="flex items-start space-x-3">
-                          <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                          <span className="text-gray-700 text-sm">{feature}</span>
-                        </div>
+                        <ScrollAnimatedElement 
+                          key={index} 
+                          animation="fadeIn" 
+                          delay={300 + index * 80}
+                          threshold={0.8}
+                        >
+                          <div className="flex items-start space-x-3">
+                            <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-700 text-sm">{feature}</span>
+                          </div>
+                        </ScrollAnimatedElement>
                       ))}
                     </div>
                   </div>
                 </CardContent>
               </Card>
-            </div>
-            <div>
+            </ScrollAnimatedElement>
+            <ScrollAnimatedElement animation="slideLeft" delay={200}>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                 Construim pentru Viitor
               </h2>
@@ -210,7 +234,7 @@ const Despre = () => {
                   <li>• Feedback loop direct cu utilizatorii</li>
                 </ul>
               </div>
-            </div>
+            </ScrollAnimatedElement>
           </div>
         </div>
       </section>
@@ -218,25 +242,29 @@ const Despre = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-refluxe text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-            Să construim împreună viitorul fidelității
-          </h2>
-          <p className="text-xl mb-8 text-gray-100">
-            Alătură-te misiunii noastre de a transforma modul în care afacerile se conectează cu clienții lor.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/demonstratie">
-              <Button size="lg" className="bg-white text-brand-purple hover:bg-gray-100 font-semibold px-8 py-3 text-lg">
-                Începe Astăzi
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-white text-black hover:bg-white hover:text-brand-purple font-semibold px-8 py-3 text-lg">
-                Contactează-ne
-              </Button>
-            </Link>
-          </div>
+          <ScrollAnimatedElement animation="fadeIn" delay={100}>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+              Să construim împreună viitorul fidelității
+            </h2>
+            <p className="text-xl mb-8 text-gray-100">
+              Alătură-te misiunii noastre de a transforma modul în care afacerile se conectează cu clienții lor.
+            </p>
+          </ScrollAnimatedElement>
+          <ScrollAnimatedElement animation="slideUp" delay={300}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/demonstratie">
+                <Button size="lg" className="bg-white text-brand-purple hover:bg-gray-100 font-semibold px-8 py-3 text-lg">
+                  Începe Astăzi
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button size="lg" variant="outline" className="border-white text-black hover:bg-white hover:text-brand-purple font-semibold px-8 py-3 text-lg">
+                  Contactează-ne
+                </Button>
+              </Link>
+            </div>
+          </ScrollAnimatedElement>
         </div>
       </section>
     </div>
