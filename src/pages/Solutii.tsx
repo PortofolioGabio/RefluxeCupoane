@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Link } from 'react-router-dom';
+// Removed react-router-dom import as it's not supported
 import { 
   Store, 
   Users, 
@@ -22,19 +22,19 @@ import {
 const Solutii = () => {
   const consumerBenefits = [
     {
-      icon: <Smartphone className="h-8 w-8 text-brand-purple" />,
+      icon: <Smartphone className="h-8 w-8 text-purple-600" />,
       title: "Experiență Mobilă",
       description: "Accesează toate cuponul direct din telefon, fără aplicații complexe.",
       features: ["Design responsive", "Acces instant", "Sincronizare cloud"]
     },
     {
-      icon: <Users className="h-8 w-8 text-brand-purple" />,
+      icon: <Users className="h-8 w-8 text-purple-600" />,
       title: "Comunitate Beneficii",
       description: "Descoperă oferte exclusive și conectează-te cu brandurile preferate.",
       features: ["Oferte personalizate", "Recomandări inteligente", "Istoric cupoane"]
     },
     {
-      icon: <Zap className="h-8 w-8 text-brand-purple" />,
+      icon: <Zap className="h-8 w-8 text-purple-600" />,
       title: "Activare Instantanee",
       description: "Folosește cuponul cu un singur click, fără hârtie sau coduri complicate.",
       features: ["QR code scan", "Validare instantanee", "Istoric utilizare"]
@@ -81,10 +81,10 @@ const Solutii = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-hero text-white py-20 lg:py-32 overflow-hidden relative">
+      <section className="bg-gradient-to-br from-purple-600 to-purple-800 text-white py-20 lg:py-32 overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-            <div className="space-y-16">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+            <div className="lg:col-span-2 space-y-16">
               <div className="space-y-8">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
                   Soluția Recurentă pentru Afacerea Ta
@@ -92,16 +92,14 @@ const Solutii = () => {
               </div>
               
               <div className="pt-8">
-                <Link to="/demonstratie">
-                  <Button size="lg" className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-8 py-3 text-lg">
-                    PROGRAMEAZĂ O DEMONSTRAȚIE
-                  </Button>
-                </Link>
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 text-lg">
+                  PROGRAMEAZĂ O DEMONSTRAȚIE
+                </Button>
               </div>
             </div>
 
-            <div className="relative lg:flex lg:items-start lg:justify-center lg:absolute lg:right-0 lg:top-0 lg:w-1/2 lg:h-full lg:-ml-8">
-              <div className="relative w-full max-w-sm mx-auto sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+            <div className="relative lg:flex lg:items-start lg:justify-center">
+              <div className="relative w-full max-w-sm mx-auto">
                 <img 
                   src="/lovable-uploads/solutii-hero.png" 
                   alt="Solutii Hero Refluxe"
@@ -144,11 +142,9 @@ const Solutii = () => {
           </div>
 
           <div className="text-center">
-            <Link to="/demonstratie">
-              <Button size="lg" className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-12 py-4 text-lg rounded-full">
-                PROGRAMEAZĂ O DEMONSTRAȚIE
-              </Button>
-            </Link>
+            <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-12 py-4 text-lg rounded-full">
+              PROGRAMEAZĂ O DEMONSTRAȚIE
+            </Button>
           </div>
         </div>
       </section>
@@ -196,11 +192,11 @@ const Solutii = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="bg-brand-purple/10 text-brand-purple mb-6 px-4 py-2">
+              <Badge className="bg-purple-100 text-purple-600 mb-6 px-4 py-2">
                 Integrare Tehnologică
               </Badge>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Integrare Simplă în <span className="text-brand-purple">5 Minute</span>
+                Integrare Simplă în <span className="text-purple-600">5 Minute</span>
               </h2>
               <p className="text-xl text-gray-600 mb-8">
                 Nu îți schimba sistemele existente. Refluxe se integrează seamless cu infrastructura ta actuală.
@@ -215,7 +211,7 @@ const Solutii = () => {
               </div>
             </div>
             <div className="relative">
-              <Card className="shadow-2xl border-0 bg-gradient-refluxe text-white overflow-hidden">
+              <Card className="shadow-2xl border-0 bg-gradient-to-br from-purple-600 to-purple-800 text-white overflow-hidden">
                 <CardContent className="p-8">
                   <div className="flex items-center space-x-2 mb-6">
                     <Shield className="h-6 w-6" />
@@ -237,7 +233,7 @@ const Solutii = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-refluxe text-white">
+      <section className="py-20 bg-gradient-to-br from-purple-600 to-purple-800 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">
             Gata să implementezi soluția perfectă?
@@ -246,17 +242,13 @@ const Solutii = () => {
             Alege planul potrivit pentru nevoile tale sau solicită o consultație gratuită.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/planuri">
-              <Button size="lg" className="bg-white text-brand-purple hover:bg-gray-100 font-semibold px-8 py-3 text-lg">
-                Vezi Planurile
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-brand-purple font-semibold px-8 py-3 text-lg">
-                Consultație Gratuită
-              </Button>
-            </Link>
+            <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 font-semibold px-8 py-3 text-lg">
+              Vezi Planurile
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-purple-600 font-semibold px-8 py-3 text-lg">
+              Consultație Gratuită
+            </Button>
           </div>
         </div>
       </section>
