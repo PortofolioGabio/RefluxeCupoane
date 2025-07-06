@@ -21,19 +21,78 @@ const Demonstratie = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = async () => {
-    setIsSubmitting(true);
+  const validateForm = () => {
+    const requiredFields = [
+      { field: 'nume', label: 'Nume' },
+      { field: 'email', label: 'Email' },
+      { field: 'whatsapp', label: 'WhatsApp' },
+      { field: 'numeCompanie', label: 'Numele companiei' },
+      { field: 'numarMagazine', label: 'Numărul de magazine' },
+      { field: 'areProgramFidelitate', label: 'Program de fidelitate' }
+    ];
 
-    // Simulate API call
-    setTimeout(() => {
-      console.log('Demo request submitted:', formData);
+    for (const { field, label } of requiredFields) {
+      if (!formData[field as keyof typeof formData].trim()) {
+        toast({
+          title: "Câmp obligatoriu",
+          description: `Vă rugăm să completați câmpul: ${label}`,
+          variant: "destructive",
+        });
+        return false;
+      }
+    }
+
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast({
+        title: "Email invalid",
+        description: "Vă rugăm să introduceți o adresă de email validă",
+        variant: "destructive",
+      });
+      return false;
+    }
+
+    return true;
+  };
+
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+
+    setIsSubmitting(true);
+    console.log('Submitting form data to Make.com webhook:', formData);
+
+    try {
+      const response = await fetch('https://hook.eu2.make.com/qkcxinnfvtq6wtpvy4ky98cmlawzhpmg', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        mode: 'no-cors',
+        body: JSON.stringify({
+          nume: formData.nume,
+          email: formData.email,
+          whatsapp: formData.whatsapp,
+          numeCompanie: formData.numeCompanie,
+          numarMagazine: formData.numarMagazine,
+          areProgramFidelitate: formData.areProgramFidelitate,
+          timestamp: new Date().toISOString(),
+          source: 'Refluxe Demonstratie Form'
+        }),
+      });
+
+      // Since we're using no-cors mode, we can't check response status
+      // We'll assume success and show a positive message
       toast({
         title: "Cerere trimisă cu succes!",
         description: "Vă vom contacta în cel mai scurt timp pentru a programa demonstrația.",
       });
-      setIsSubmitting(false);
-      
-      // Reset form
+
+      // Reset form after successful submission
       setFormData({
         nume: '',
         email: '',
@@ -42,7 +101,17 @@ const Demonstratie = () => {
         numarMagazine: '',
         areProgramFidelitate: ''
       });
-    }, 2000);
+
+    } catch (error) {
+      console.error('Error submitting form to Make.com webhook:', error);
+      toast({
+        title: "Eroare la trimiterea cererii",
+        description: "A apărut o problemă. Vă rugăm să încercați din nou sau să ne contactați direct.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const benefits = [
@@ -73,7 +142,7 @@ const Demonstratie = () => {
                 <h2 className="text-2xl font-semibold text-gray-800 mb-8">
                   Completează formularul de mai jos
                 </h2>
-                <div className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
                     <Label htmlFor="nume" className="text-sm font-medium text-gray-700">
                       Nume <span className="text-red-500">*</span>
@@ -166,15 +235,14 @@ const Demonstratie = () => {
                   </div>
 
                   <Button
-                    type="button"
+                    type="submit"
                     size="lg"
                     className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold h-14 rounded-full mt-8 text-lg"
                     disabled={isSubmitting}
-                    onClick={handleSubmit}
                   >
                     {isSubmitting ? 'Se trimite...' : 'Request a demo!'}
                   </Button>
-                </div>
+                </form>
               </CardContent>
             </Card>
           </ScrollAnimatedElement>
