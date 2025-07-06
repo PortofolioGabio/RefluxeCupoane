@@ -83,8 +83,8 @@ const Solutii = () => {
       {/* Hero Section */}
       <section className="bg-gradient-hero text-white py-20 lg:py-32 overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="space-y-16">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
+            <div className="space-y-16 lg:col-span-2">
               <div className="space-y-8">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
                   Soluția Recurentă pentru Afacerea Ta
@@ -100,7 +100,7 @@ const Solutii = () => {
               </div>
             </div>
 
-            <div className="relative flex items-center justify-center lg:justify-start">
+            <div className="relative flex items-center justify-center lg:justify-start lg:col-span-3">
               <div className="relative w-full max-w-sm mx-auto sm:max-w-md md:max-w-lg lg:max-w-3xl xl:max-w-4xl lg:mx-0">
                 <img 
                   src="/lovable-uploads/solutii-hero.png" 
