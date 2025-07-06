@@ -103,7 +103,7 @@ const Solutii = () => {
             <div className="relative flex items-center justify-center lg:justify-start lg:col-span-3">
               <div className="relative w-full max-w-sm mx-auto sm:max-w-md md:max-w-lg lg:max-w-3xl xl:max-w-4xl lg:mx-0">
                 <img 
-                  src="/lovable-uploads/solutii-hero.png" 
+                  src="/gabio-uploads/solutii-hero.png" 
                   alt="Solutii Hero Refluxe"
                   className="w-full h-auto object-contain"
                 />
