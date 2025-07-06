@@ -81,17 +81,17 @@ const Solutii = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-hero text-white py-12 lg:py-20 overflow-hidden relative">
+      <section className="bg-gradient-hero text-white py-8 lg:py-12 overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
-            <div className="space-y-12 lg:col-span-2">
-              <div className="space-y-8">
+            <div className="space-y-8 lg:col-span-2">
+              <div className="space-y-4">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
                   Soluția Recurentă pentru Afacerea Ta
                 </h1>
               </div>
               
-              <div className="pt-6">
+              <div className="pt-2">
                 <Link to="/demonstratie">
                   <Button size="lg" className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-8 py-3 text-lg">
                     PROGRAMEAZĂ O DEMONSTRAȚIE
