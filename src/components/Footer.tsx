@@ -66,6 +66,19 @@ const Footer = () => {
           <p className="text-gray-400 text-sm">
             © 2025 Refluxe. Toate drepturile rezervate.
           </p>
+          <p className="text-gray-400 text-sm">
+            <strong>Construit cu pasiune de{' '}
+              <a 
+                href="https://gabio.dev" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:text-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-sm"
+                aria-label="Gabriel's portfolio website"
+              >
+                Gabriel
+              </a>
+            </strong>
+          </p>
         </div>
       </div>
     </footer>
