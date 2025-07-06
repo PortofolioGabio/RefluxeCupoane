@@ -13,7 +13,7 @@ const Index = () => {
       getWebPageSchema(
         'Refluxe - Platformă Cupoane Digitale Fidelitate',
         'Transformă clienții în fani fideli cu platforma #1 de cupoane digitale și programe de fidelitate din România. Peste 30.000 magazine partenere.',
-        'https://refluxe.ro/'
+        'https://refluxe.io/'
       ),
       getSoftwareApplicationSchema()
     ];
@@ -22,8 +22,8 @@ const Index = () => {
       title: 'Refluxe - Platformă Cupoane Digitale Fidelitate România | Card Loialitate Digital',
       description: 'Transformă clienții în fani fideli cu platforma #1 de cupoane digitale și programe de fidelitate din România. Peste 30.000 magazine partenere. Începe gratuit!',
       keywords: 'cupoane digitale, card fidelitate digital, program loialitate, marketing digital, retail Romania, card puncte, cashback, recompense clienti, aplicatie fidelitate',
-      canonical: 'https://refluxe.ro/',
-      ogImage: 'https://refluxe.ro/gabio-uploads/495771be-804e-48df-8f77-e4316aff17fb.png',
+      canonical: 'https://refluxe.io/',
+      ogImage: 'https://refluxe.io/gabio-uploads/495771be-804e-48df-8f77-e4316aff17fb.png',
       structuredData: structuredData
     });
   }, []);

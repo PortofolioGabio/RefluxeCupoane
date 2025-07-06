@@ -11,14 +11,14 @@ const Contact = () => {
       getWebPageSchema(
         'Contact Refluxe - Suport Cupoane Digitale Fidelitate',
         'Contactează echipa Refluxe pentru suport, întrebări sau demonstrații despre programele de fidelitate digitale. Răspuns rapid în limba română.',
-        'https://refluxe.ro/contact'
+        'https://refluxe.io/contact'
       ),
       {
         "@context": "https://schema.org",
         "@type": "ContactPage",
         "name": "Contact Refluxe",
         "description": "Contactează echipa Refluxe pentru suport și informații despre programele de fidelitate digitale",
-        "url": "https://refluxe.ro/contact",
+        "url": "https://refluxe.io/contact",
         "mainEntity": {
           "@type": "Organization",
           "name": "Refluxe",
@@ -27,7 +27,7 @@ const Contact = () => {
               "@type": "ContactPoint",
               "telephone": "+40-756-123-456",
               "contactType": "customer service",
-              "email": "contact@refluxe.ro",
+              "email": "contact@refluxe.io",
               "availableLanguage": "Romanian",
               "hoursAvailable": {
                 "@type": "OpeningHoursSpecification",
@@ -51,8 +51,8 @@ const Contact = () => {
       title: 'Contact Refluxe - Suport Cupoane Digitale Fidelitate România | Asistență Platformă',
       description: 'Contactează echipa Refluxe pentru suport, întrebări sau demonstrații despre programele de fidelitate digitale. Răspuns rapid în limba română. Program Lun-Vin 09:00-17:00.',
       keywords: 'contact refluxe, suport tehnic, asistenta clienti, demonstratie cupoane digitale, ajutor program fidelitate, contact romania, whatsapp support',
-      canonical: 'https://refluxe.ro/contact',
-      ogImage: 'https://refluxe.ro/gabio-uploads/495771be-804e-48df-8f77-e4316aff17fb.png',
+      canonical: 'https://refluxe.io/contact',
+      ogImage: 'https://refluxe.io/gabio-uploads/495771be-804e-48df-8f77-e4316aff17fb.png',
       structuredData: structuredData
     });
   }, []);
@@ -135,7 +135,7 @@ const Contact = () => {
                           </div>
                           <div>
                             <h3 className="font-semibold text-xl sm:text-2xl mb-2">E-mail</h3>
-                            <p className="text-white/90 text-lg sm:text-xl">contact@refluxe.ro</p>
+                            <p className="text-white/90 text-lg sm:text-xl">contact@refluxe.io</p>
                           </div>
                         </div>
                       </ScrollAnimatedElement>

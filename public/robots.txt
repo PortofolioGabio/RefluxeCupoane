@@ -1,6 +1,6 @@
 
 # Robots.txt for Refluxe - Cupoane Digitale de Fidelitate
-# https://refluxe.ro
+# https://refluxe.io
 
 User-agent: *
 Allow: /
@@ -30,7 +30,7 @@ User-agent: LinkedInBot
 Allow: /
 
 # Sitemap location
-Sitemap: https://refluxe.ro/sitemap.xml
+Sitemap: https://refluxe.io/sitemap.xml
 
 # Host preference
-Host: https://refluxe.ro
+Host: https://refluxe.io
