@@ -172,24 +172,6 @@ const Planuri = () => {
           <p className="text-xl text-gray-200 mb-8">
             Alege planul perfect pentru afacerea ta. Toate planurile includ acces la funcționalitățile de bază.
           </p>
-          
-          {/* Billing Toggle */}
-          <div className="flex items-center justify-center space-x-4 mb-8">
-            <span className={`font-medium ${!isYearly ? 'text-white' : 'text-gray-300'}`}>
-              Lunar
-            </span>
-            <Switch
-              checked={isYearly}
-              onCheckedChange={setIsYearly}
-              className="data-[state=checked]:bg-brand-orange"
-            />
-            <span className={`font-medium ${isYearly ? 'text-white' : 'text-gray-300'}`}>
-              Anual
-            </span>
-            <Badge className="bg-brand-orange text-white ml-2">
-              Economisești 10%
-            </Badge>
-          </div>
         </div>
       </section>
 
