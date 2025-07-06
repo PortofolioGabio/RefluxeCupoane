@@ -83,7 +83,7 @@ const Solutii = () => {
       {/* Hero Section */}
       <section className="bg-gradient-hero text-white py-20 lg:py-32 overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             <div className="space-y-16">
               <div className="space-y-8">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
