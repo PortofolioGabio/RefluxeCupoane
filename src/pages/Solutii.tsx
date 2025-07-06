@@ -83,7 +83,7 @@ const Solutii = () => {
       {/* Hero Section */}
       <section className="bg-gradient-hero text-white py-20 lg:py-32 overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-16">
               <div className="space-y-8">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
@@ -100,8 +100,8 @@ const Solutii = () => {
               </div>
             </div>
 
-            <div className="relative lg:flex lg:items-start lg:justify-center lg:absolute lg:right-0 lg:top-0 lg:w-1 lg:h-full lg:-ml-8">
-              <div className="relative w-full max-w-sm mx-auto sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+            <div className="relative flex items-center justify-center lg:justify-start">
+              <div className="relative w-full max-w-sm mx-auto sm:max-w-md md:max-w-lg lg:max-w-none lg:mx-0">
                 <img 
                   src="/lovable-uploads/solutii-hero.png" 
                   alt="Solutii Hero Refluxe"
