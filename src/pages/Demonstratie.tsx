@@ -72,101 +72,95 @@ const Demonstratie = () => {
                   Completează formularul de mai jos
                 </h2>
                 <div className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="nume" className="text-sm font-medium text-gray-700">
-                        Nume <span className="text-red-500">*</span>
-                      </Label>
-                      <Input
-                        id="nume"
-                        type="text"
-                        required
-                        value={formData.nume}
-                        onChange={(e) => setFormData({ ...formData, nume: e.target.value })}
-                        placeholder="Numele tău"
-                        className="h-12 rounded-full border-gray-300 px-4"
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="email" className="text-sm font-medium text-gray-700">
-                        Email <span className="text-red-500">*</span>
-                      </Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        required
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        placeholder="Adresa ta de email"
-                        className="h-12 rounded-full border-gray-300 px-4"
-                      />
-                    </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="nume" className="text-sm font-medium text-gray-700">
+                      Nume <span className="text-red-500">*</span>
+                    </Label>
+                    <Input
+                      id="nume"
+                      type="text"
+                      required
+                      value={formData.nume}
+                      onChange={(e) => setFormData({ ...formData, nume: e.target.value })}
+                      placeholder="Numele tău"
+                      className="h-12 rounded-full border-gray-300 px-4"
+                    />
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="whatsapp" className="text-sm font-medium text-gray-700">
-                        WhatsApp <span className="text-red-500">*</span>
-                      </Label>
-                      <Input
-                        id="whatsapp"
-                        type="tel"
-                        required
-                        value={formData.whatsapp}
-                        onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
-                        placeholder="0745 123 456"
-                        className="h-12 rounded-full border-gray-300 px-4"
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="numeCompanie" className="text-sm font-medium text-gray-700">
-                        Numele companiei <span className="text-red-500">*</span>
-                      </Label>
-                      <Input
-                        id="numeCompanie"
-                        type="text"
-                        required
-                        value={formData.numeCompanie}
-                        onChange={(e) => setFormData({ ...formData, numeCompanie: e.target.value })}
-                        placeholder="Numele companiei tale"
-                        className="h-12 rounded-full border-gray-300 px-4"
-                      />
-                    </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="email" className="text-sm font-medium text-gray-700">
+                      Email <span className="text-red-500">*</span>
+                    </Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      placeholder="Adresa ta de email"
+                      className="h-12 rounded-full border-gray-300 px-4"
+                    />
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="numarMagazine" className="text-sm font-medium text-gray-700">
-                        Numărul de magazine <span className="text-red-500">*</span>
-                      </Label>
-                      <Input
-                        id="numarMagazine"
-                        type="text"
-                        required
-                        value={formData.numarMagazine}
-                        onChange={(e) => setFormData({ ...formData, numarMagazine: e.target.value })}
-                        placeholder="Ex: 1, 2-5, 5+"
-                        className="h-12 rounded-full border-gray-300 px-4"
-                      />
-                    </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="whatsapp" className="text-sm font-medium text-gray-700">
+                      WhatsApp <span className="text-red-500">*</span>
+                    </Label>
+                    <Input
+                      id="whatsapp"
+                      type="tel"
+                      required
+                      value={formData.whatsapp}
+                      onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
+                      placeholder="0745 123 456"
+                      className="h-12 rounded-full border-gray-300 px-4"
+                    />
+                  </div>
 
-                    <div className="space-y-2">
-                      <Label className="text-sm font-medium text-gray-700">
-                        Ai deja un program de fidelitate? <span className="text-red-500">*</span>
-                      </Label>
-                      <Select value={formData.areProgramFidelitate} onValueChange={(value) => setFormData({ ...formData, areProgramFidelitate: value })}>
-                        <SelectTrigger className="h-12 rounded-full border-gray-300 px-4">
-                          <SelectValue placeholder="Selectează o opțiune" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="da">Da</SelectItem>
-                          <SelectItem value="nu">Nu</SelectItem>
-                          <SelectItem value="planific">Planific să implementez</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="numeCompanie" className="text-sm font-medium text-gray-700">
+                      Numele companiei <span className="text-red-500">*</span>
+                    </Label>
+                    <Input
+                      id="numeCompanie"
+                      type="text"
+                      required
+                      value={formData.numeCompanie}
+                      onChange={(e) => setFormData({ ...formData, numeCompanie: e.target.value })}
+                      placeholder="Numele companiei tale"
+                      className="h-12 rounded-full border-gray-300 px-4"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="numarMagazine" className="text-sm font-medium text-gray-700">
+                      Numărul de magazine <span className="text-red-500">*</span>
+                    </Label>
+                    <Input
+                      id="numarMagazine"
+                      type="text"
+                      required
+                      value={formData.numarMagazine}
+                      onChange={(e) => setFormData({ ...formData, numarMagazine: e.target.value })}
+                      placeholder="Ex: 1, 2-5, 5+"
+                      className="h-12 rounded-full border-gray-300 px-4"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label className="text-sm font-medium text-gray-700">
+                      Ai deja un program de fidelitate? <span className="text-red-500">*</span>
+                    </Label>
+                    <Select value={formData.areProgramFidelitate} onValueChange={(value) => setFormData({ ...formData, areProgramFidelitate: value })}>
+                      <SelectTrigger className="h-12 rounded-full border-gray-300 px-4">
+                        <SelectValue placeholder="Selectează o opțiune" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="da">Da</SelectItem>
+                        <SelectItem value="nu">Nu</SelectItem>
+                        <SelectItem value="planific">Planific să implementez</SelectItem>
+                      </SelectContent>
+                    </Select>
                   </div>
 
                   <Button
