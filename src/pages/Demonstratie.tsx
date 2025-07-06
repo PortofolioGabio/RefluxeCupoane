@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -10,37 +9,36 @@ import { useToast } from '@/hooks/use-toast';
 
 const Demonstratie = () => {
   const [formData, setFormData] = useState({
-    nome: '',
+    nume: '',
     email: '',
     whatsapp: '',
-    nomeEmpresa: '',
-    numeroLojas: '',
-    temPrograma: ''
+    numeCompanie: '',
+    numarMagazine: '',
+    areProgramFidelitate: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
     setIsSubmitting(true);
 
     // Simulate API call
     setTimeout(() => {
       console.log('Demo request submitted:', formData);
       toast({
-        title: "Cerere trimisa cu succes!",
+        title: "Cerere trimisă cu succes!",
         description: "Vă vom contacta în cel mai scurt timp pentru a programa demonstrația.",
       });
       setIsSubmitting(false);
       
       // Reset form
       setFormData({
-        nome: '',
+        nume: '',
         email: '',
         whatsapp: '',
-        nomeEmpresa: '',
-        numeroLojas: '',
-        temPrograma: ''
+        numeCompanie: '',
+        numarMagazine: '',
+        areProgramFidelitate: ''
       });
     }, 2000);
   };
@@ -54,131 +52,140 @@ const Demonstratie = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Solicită o Demonstrație <span className="text-brand-purple">Gratuită</span>
+            Solicită o Demonstrație <span className="text-purple-600">Gratuită</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Descoperă cum Refluxe poate transforma programul tău de fidelitate în doar 30 de minute.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Form */}
-          <Card className="shadow-xl border-0 bg-white rounded-3xl">
-            <CardContent className="p-8">
-              <h2 className="text-xl font-semibold text-gray-800 mb-6">
-                Preencha o formulário abaixo.
-              </h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="space-y-2">
-                  <Label htmlFor="nome" className="text-sm font-medium text-gray-700">
-                    Nome <span className="text-red-500">*</span>
-                  </Label>
-                  <Input
-                    id="nome"
-                    type="text"
-                    required
-                    value={formData.nome}
-                    onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
-                    placeholder="Seu nome"
-                    className="h-12 rounded-full border-gray-300 px-4"
-                  />
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          {/* Form - Now takes 2 columns */}
+          <div className="lg:col-span-2">
+            <Card className="shadow-xl border-0 bg-white rounded-3xl">
+              <CardContent className="p-10">
+                <h2 className="text-2xl font-semibold text-gray-800 mb-8">
+                  Completează formularul de mai jos
+                </h2>
+                <div className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="nume" className="text-sm font-medium text-gray-700">
+                        Nume <span className="text-red-500">*</span>
+                      </Label>
+                      <Input
+                        id="nume"
+                        type="text"
+                        required
+                        value={formData.nume}
+                        onChange={(e) => setFormData({ ...formData, nume: e.target.value })}
+                        placeholder="Numele tău"
+                        className="h-12 rounded-full border-gray-300 px-4"
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="email" className="text-sm font-medium text-gray-700">
+                        Email <span className="text-red-500">*</span>
+                      </Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        required
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        placeholder="Adresa ta de email"
+                        className="h-12 rounded-full border-gray-300 px-4"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="whatsapp" className="text-sm font-medium text-gray-700">
+                        WhatsApp <span className="text-red-500">*</span>
+                      </Label>
+                      <Input
+                        id="whatsapp"
+                        type="tel"
+                        required
+                        value={formData.whatsapp}
+                        onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
+                        placeholder="0745 123 456"
+                        className="h-12 rounded-full border-gray-300 px-4"
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="numeCompanie" className="text-sm font-medium text-gray-700">
+                        Numele companiei <span className="text-red-500">*</span>
+                      </Label>
+                      <Input
+                        id="numeCompanie"
+                        type="text"
+                        required
+                        value={formData.numeCompanie}
+                        onChange={(e) => setFormData({ ...formData, numeCompanie: e.target.value })}
+                        placeholder="Numele companiei tale"
+                        className="h-12 rounded-full border-gray-300 px-4"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="numarMagazine" className="text-sm font-medium text-gray-700">
+                        Numărul de magazine <span className="text-red-500">*</span>
+                      </Label>
+                      <Input
+                        id="numarMagazine"
+                        type="text"
+                        required
+                        value={formData.numarMagazine}
+                        onChange={(e) => setFormData({ ...formData, numarMagazine: e.target.value })}
+                        placeholder="Ex: 1, 2-5, 5+"
+                        className="h-12 rounded-full border-gray-300 px-4"
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label className="text-sm font-medium text-gray-700">
+                        Ai deja un program de fidelitate? <span className="text-red-500">*</span>
+                      </Label>
+                      <Select value={formData.areProgramFidelitate} onValueChange={(value) => setFormData({ ...formData, areProgramFidelitate: value })}>
+                        <SelectTrigger className="h-12 rounded-full border-gray-300 px-4">
+                          <SelectValue placeholder="Selectează o opțiune" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="da">Da</SelectItem>
+                          <SelectItem value="nu">Nu</SelectItem>
+                          <SelectItem value="planific">Planific să implementez</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                  </div>
+
+                  <Button
+                    type="button"
+                    size="lg"
+                    className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold h-14 rounded-full mt-8 text-lg"
+                    disabled={isSubmitting}
+                    onClick={handleSubmit}
+                  >
+                    {isSubmitting ? 'Se trimite...' : 'Solicită demonstrația gratuită!'}
+                  </Button>
                 </div>
+              </CardContent>
+            </Card>
+          </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="email" className="text-sm font-medium text-gray-700">
-                    Email <span className="text-red-500">*</span>
-                  </Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="Insira email de trabalho"
-                    className="h-12 rounded-full border-gray-300 px-4"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="whatsapp" className="text-sm font-medium text-gray-700">
-                    WhatsApp <span className="text-red-500">*</span>
-                  </Label>
-                  <Input
-                    id="whatsapp"
-                    type="tel"
-                    required
-                    value={formData.whatsapp}
-                    onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
-                    placeholder="(11) 99999-9999"
-                    className="h-12 rounded-full border-gray-300 px-4"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="nomeEmpresa" className="text-sm font-medium text-gray-700">
-                    Nome da empresa <span className="text-red-500">*</span>
-                  </Label>
-                  <Input
-                    id="nomeEmpresa"
-                    type="text"
-                    required
-                    value={formData.nomeEmpresa}
-                    onChange={(e) => setFormData({ ...formData, nomeEmpresa: e.target.value })}
-                    placeholder="Nome da empresa ou Instagram"
-                    className="h-12 rounded-full border-gray-300 px-4"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="numeroLojas" className="text-sm font-medium text-gray-700">
-                    Número de Lojas <span className="text-red-500">*</span>
-                  </Label>
-                  <Input
-                    id="numeroLojas"
-                    type="text"
-                    required
-                    value={formData.numeroLojas}
-                    onChange={(e) => setFormData({ ...formData, numeroLojas: e.target.value })}
-                    placeholder="Insira número de Lojas"
-                    className="h-12 rounded-full border-gray-300 px-4"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label className="text-sm font-medium text-gray-700">
-                    Já tem Programa de Fidelidade? <span className="text-red-500">*</span>
-                  </Label>
-                  <Select value={formData.temPrograma} onValueChange={(value) => setFormData({ ...formData, temPrograma: value })}>
-                    <SelectTrigger className="h-12 rounded-full border-gray-300 px-4">
-                      <SelectValue placeholder="Clique para selecionar uma opção" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="sim">Sim</SelectItem>
-                      <SelectItem value="nao">Não</SelectItem>
-                      <SelectItem value="planejando">Estou planejando implementar</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold h-12 rounded-full mt-8"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? 'Enviando...' : 'Solicitar demonstração!'}
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
-
-          {/* Benefits */}
+          {/* Benefits - Now takes 1 column */}
           <div className="space-y-8">
-            <Card className="shadow-lg border-0 bg-gradient-refluxe text-white">
+            <Card className="shadow-lg border-0 bg-gradient-to-br from-purple-600 to-purple-800 text-white">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-6">Ce vei primi:</h3>
                 <div className="space-y-4">
@@ -202,11 +209,11 @@ const Demonstratie = () => {
                 </p>
                 <p className="text-sm text-gray-500">
                   Prin completarea formularului, ești de acord cu{' '}
-                  <a href="#" className="text-brand-purple hover:underline">
+                  <a href="#" className="text-purple-600 hover:underline">
                     Termenii și Condițiile
                   </a>{' '}
                   și{' '}
-                  <a href="#" className="text-brand-purple hover:underline">
+                  <a href="#" className="text-purple-600 hover:underline">
                     Politica de Confidențialitate
                   </a>.
                 </p>
