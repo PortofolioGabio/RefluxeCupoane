@@ -92,9 +92,6 @@ const Solutii = () => {
                   Soluția Recurentă pentru Afacerea Ta
                 </h1>
               </div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                VREI ASTA ÎN AFACEREA TA?
-              </h2>
               <div className="pt-2">
                 <Link to="/demonstratie">
                   <Button size="lg" className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-8 py-3 text-lg">
@@ -156,6 +153,9 @@ const Solutii = () => {
           </div>
 
           <ScrollAnimatedElement animation="fadeIn" delay={200} className="text-center">
+            <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              VREI ASTA ÎN AFACEREA TA?
+            </h3>
             <Link to="/demonstratie">
               <Button size="lg" className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-12 py-4 text-lg rounded-full">
                 PROGRAMEAZĂ O DEMONSTRAȚIE
