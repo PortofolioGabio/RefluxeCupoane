@@ -22,18 +22,18 @@ const Despre = () => {
   const values = [
     {
       icon: <Target className="h-8 w-8 text-brand-orange" />,
-      title: "Focalizare pe Client",
-      description: "Totul începe și se termină cu experiența clientului. Construim soluții care pun consumatorul în centru."
+      title: "Totul începe cu clientul",
+      description: "Noi nu programăm de drag. Totul e despre client. Despre cum îl facem să rămână, să recomande și să revină."
     },
     {
       icon: <Lightbulb className="h-8 w-8 text-brand-orange" />,
-      title: "Inovație Continuă",
-      description: "Tehnologia evoluează rapid și noi rămânem mereu în față cu soluții moderne și eficiente."
+      title: "Inovație non-stop",
+      description: "Tehnologia se mișcă rapid. Noi o depășim. Livrăm funcții noi și utile, fără bullshit."
     },
     {
       icon: <Heart className="h-8 w-8 text-brand-orange" />,
-      title: "Relații Autentice",
-      description: "Credem că fidelitatea se câștigă prin încredere, transparență și valoare reală oferită."
+      title: "Relații care contează",
+      description: "Credem că fidelizarea reală vine din încredere, transparență și valoare livrată constant."
     }
   ];
 
@@ -61,12 +61,11 @@ const Despre = () => {
   ];
 
   const features = [
-    "Developed cu tehnologii moderne (React, Node.js)",
-    "Infrastructură cloud scalabilă și sigură",
-    "Design responsive optimizat pentru mobile",
-    "API-uri RESTful pentru integrări ușoare",
-    "Securitate de nivel enterprise",
-    "Backup-uri automate și disaster recovery"
+    "Tech stack modern (React, Node.js)",
+    "Cloud scalabil și blindat",
+    "API-uri REST simple",
+    "Securitate enterprise",
+    "Back-up zilnic + disaster recovery"
   ];
 
   return (
@@ -76,11 +75,12 @@ const Despre = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollAnimatedElement animation="fadeIn">
             <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-              Transformăm programele de fidelitate în experiențe memorabile
+              Transformăm Programele de Fidelitate În Magneți de Vânzări Recurenți
             </h1>
             <p className="text-xl text-gray-200 leading-relaxed">
-              Născut din dorința de a moderniza interacțiunea dintre afaceri și clienții lor, 
-              Refluxe este platforma care face programele de fidelitate simple, eficiente și plăcute pentru toți.
+              Refluxe nu e „încă o platformă.”
+              E arma ta secretă ca să-ți faci clienții să revină, să cumpere și să devină obsedați de brandul tău.
+              Simplu pentru tine. Plăcut pentru ei. Profitabil pentru toată lumea.
             </p>
           </ScrollAnimatedElement>
         </div>
@@ -95,18 +95,16 @@ const Despre = () => {
                 Misiunea Noastră
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Să oferim afacerilor din România instrumentele necesare pentru a-și crește loialitatea clienților 
-                prin tehnologie modernă și experiențe digitale excepționale.
-              </p>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Credem că fiecare interacțiune între o afacere și clientul său poate fi o oportunitate de a 
-                construi o relație durabilă, bazată pe valoare reală și încredere reciprocă.
+                Fără loialitate, n-ai business. De aceea, oferim afacerilor din România armele digitale de care au nevoie ca să-și transforme clienții în abonați pe viață.
               </p>
               <div className="space-y-3">
                 {[
-                  "Eliminăm complexitatea din programele de fidelitate",
-                  "Oferim soluții accessible pentru orice tip de afacere",
-                  "Promovăm sustenabilitatea prin digitalizare"
+                  "Tehnologie simplă, dar letală.",
+                  "Experiență digitală care creează dependență.",
+                  "Fiecare interacțiune = o șansă de a vinde din nou.",
+                  "Eliminăm complicațiile inutile",
+                  "Soluții care funcționează pentru orice industrie",
+                  "Construim durabil prin digitalizare"
                 ].map((point, index) => (
                   <ScrollAnimatedElement 
                     key={index} 
@@ -128,12 +126,12 @@ const Despre = () => {
                   <Globe className="h-12 w-12 mb-6 text-white/80" />
                   <h3 className="text-2xl font-bold mb-4">Viziunea Noastră</h3>
                   <p className="text-white/90 text-lg leading-relaxed">
-                    Să devenim platforma de referință pentru programele de fidelitate digitală în România 
-                    și să extindem această misiune în toată Europa de Est.
+                    Vrem să fim nr. 1 în România la fidelizare digitală.
+                    Apoi, să cucerim toată Europa de Est.
                   </p>
                   <div className="mt-6 pt-6 border-t border-white/20">
                     <p className="text-white/80 text-sm">
-                      "Fidelitatea nu se cumpără, se câștigă prin experiențe excepționale."
+                      "Fidelitatea nu se cumpără. Se câștigă cu experiențe wow."
                     </p>
                   </div>
                 </CardContent>
@@ -189,8 +187,7 @@ const Despre = () => {
                     <Shield className="h-12 w-12 mb-4 text-white/80" />
                     <h3 className="text-2xl font-bold mb-4">Tehnologie de Încredere</h3>
                     <p className="text-white/90">
-                      Construim cu cele mai moderne tehnologii pentru a asigura securitate, 
-                      scalabilitate și performanță excepțională.
+                      Platformă construită pe cele mai moderne standarde. Rapidă. Scalabilă. Sigură.
                     </p>
                   </div>
                   <div className="p-8 bg-white">
@@ -218,20 +215,14 @@ const Despre = () => {
                 Construim pentru Viitor
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                În spatele Refluxe stă o echipă de dezvoltatori, designeri și strategii de marketing 
-                cu experiență în construirea produselor digitale scalabile.
-              </p>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Folosim cele mai noi tehnologii și metodologii de dezvoltare pentru a asigura că 
-                platforma noastră rămâne sigură, rapidă și ușor de folosit.
+                În spate avem o echipă de maniaci ai performanței digitale: dezvoltatori, designeri și strategi care fac o singură chestie:
               </p>
               <div className="bg-gray-100 rounded-lg p-6">
-                <h4 className="font-semibold text-gray-900 mb-3">Commitment-ul nostru:</h4>
+                <h4 className="font-semibold text-gray-900 mb-3">Creăm produse care aduc rezultate:</h4>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• Updates regulate cu funcționalități noi</li>
-                  <li>• Suport tehnic specializat în limba română</li>
-                  <li>• Documentație completă și training-uri</li>
-                  <li>• Feedback loop direct cu utilizatorii</li>
+                  <li>• Livrăm funcționalități utile, nu feature-uri de dragul slide-urilor</li>
+                  <li>• Suport în limba română + training complet</li>
+                  <li>• Feedback real de la utilizatori = upgrade continuu</li>
                 </ul>
               </div>
             </ScrollAnimatedElement>
@@ -244,10 +235,10 @@ const Despre = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollAnimatedElement animation="fadeIn" delay={100}>
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-              Să construim împreună viitorul fidelității
+              Hai să Constrium Viitorul Fidelității
             </h2>
             <p className="text-xl mb-8 text-gray-100">
-              Alătură-te misiunii noastre de a transforma modul în care afacerile se conectează cu clienții lor.
+              Te-ai săturat de clienți care vin o dată și dispar? Intră în noua eră a loialității. Refluxe te ajută să îi transformi în abonați care cumpără din nou. Și din nou. Și din nou.
             </p>
           </ScrollAnimatedElement>
           <ScrollAnimatedElement animation="slideUp" delay={300}>
