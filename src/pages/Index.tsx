@@ -47,85 +47,85 @@ const Index = () => {
   ];
 
   const benefits = [
-    "Integrare simplă în 5 minute",
-    "Suport 24/7 în limba română",
-    "Securitate de nivel bancar",
-    "Personalizare completă"
+    "Bază de date",
+    "Alerte push (SMS)",
+    "Notificări automatizate",
+    "Date clare, control total"
   ];
 
   const loyaltyPrograms = [
     {
       image: "/gabio-uploads/6f082d50-f6d4-4f3f-ad73-c605985279c2.png",
       title: "RefluxeAcces",
-      description: "Transformă experiența clienților cu sisteme moderne de acces bazate pe niveluri și recompense personalizate, creând o comunitate fidelă și angajată."
+      description: "Blochează ușa concurenței. Transformă fiecare intrare într-o experiență VIP. Oferă acces cu recompense pe niveluri care îi fac pe clienți să se simtă parte din “gașca selectă” a brandului tău."
     },
     {
       image: "/gabio-uploads/ccfbc196-6e05-4031-912e-00fa318145c9.png",
       title: "RefluxePuncte",
-      description: "Dezvoltă programe sofisticate de loialitate cu ștampile digitale, unde fiecare interacțiune se transformă în oportunități tangibile de recompensare și satisfacție maximă."
+      description: "Fiecare vizită = o victorie. Fă din fiecare interacțiune o misiune cu recompensă. Cu cât vin mai des, cu atât câștigă mai mult. Și nu doar puncte — ci obiceiuri."
     },
     {
       image: "/gabio-uploads/695078de-f615-4f31-8acc-fac9285012f7.png",
       title: "RefluxeReducere",
-      description: "Implementează strategii inteligente de discount cu niveluri progresive care motivează clienții să revină și să se implice mai mult în ecosistema ta de brand."
+      description: "Reduceri care declanșează acțiune. Fără vânzări lente și reduceri ignorate. Oferă discounturi progresive care îi fac să cumpere ACUM, nu “poate mai târziu”."
     },
     {
       image: "/gabio-uploads/ce8894f8-8ebe-4910-9a6d-b3ff5a3637fc.png",
       title: "RefluxeRecompense",
-      description: "Creează ecosisteme complexe de recompensare bazate pe puncte și gamification, stimulând angajamentul continuu și construind relații de lungă durată cu clienții."
+      description: "Gamification care creează dependență. Stimulează creierul clienților cu recompense inteligente. Îi ții în priză, le crești loialitatea și... vânzările cresc pe pilot automat."
     },
     {
       image: "/gabio-uploads/57e7633a-d890-4c9a-b843-9a2ce7b6d271.png",
       title: "RefluxeCashback",
-      description: "Revoluționează fidelitatea prin programe avansate de cashback cu returnări financiare directe, oferind valoare tangibilă și imediată pentru fiecare achiziție realizată."
+      description: "Bani înapoi, bani înapoi! Oferă-le clienților ceea ce iubesc: bani. Cashback-ul îi face să simtă că „au câștigat” la fiecare achiziție. Și vor să câștige din nou și din nou."
     },
     {
       image: "/gabio-uploads/b79307ec-62c8-427c-9e0a-03f9edc1f35a.png",
       title: "RefluxeCupon",
-      description: "Dezvoltă campanii dinamice de cupoane digitale cu targeting precis și personalizare avansată, maximizând rata de conversie și achiziția de clienți noi."
+      description: "Cuponul care vinde în locul tău. Targetare precisă + personalizare automată = cuponul perfect. Trimiți, se deschide, se folosește. Tu doar numeri comenzile."
     },
     {
       image: "/gabio-uploads/98b296a9-52a3-4764-8cac-b8cede88a98e.png",
       title: "RefluxeMultipas",
-      description: "Implementează sisteme multi-servicii inovatoare unde clienții acumulează beneficii transversale, creând experiențe holistice și valoare adăugată în întregul parcurs client."
+      description: "Un singur card. Toate avantajele. Unifică toate serviciile tale într-un multipass digital care adaugă valoare la fiecare vizită. Clienții tăi rămân în joc până câștigă... și apoi joacă din nou."
     },
     {
       image: "/gabio-uploads/995bd4ba-c4fa-4286-aba1-7f6a9f0bd12f.png",
       title: "RefluxeCadou",
-      description: "Lansează programe sofisticate de carduri cadou digitale cu flexibilitate maximă și personalizare completă, extinzând reach-ul brandului și generând venituri suplimentare."
+      description: "Carduri cadou care aduc profit. Ușor de personalizat. Ușor de vândut. Ușor de iubit. Oferă-le clienților motive să dăruiască brandul tău altora – și să-ți plătească pentru asta."
     }
   ];
 
   const steps = [
     {
       number: "1",
-      title: "Creează o promoție",
-      description: "Definește ce va fi recompensa programului tău de fidelitate. Exemplu: Pentru fiecare 6 vizite, primești 1 cadou gratuit!"
+      title: "Stabilește miza",
+      description: "Ce vrei să-i faci pe clienți să repete la infinit? Exemplu: „După 6 vizite, primești un cadou!” Recompensa trebuie să sune prea bine ca să nu revină."
     },
     {
       number: "2", 
-      title: "Creează un stil pentru cardul tău",
-      description: "Alege din sute de șabloane sau creează un card de la zero"
+      title: "Alege stilul",
+      description: "Ai sute de modele pregătite. Sau îl creezi de la zero și-l faci unic. Brandul tău merită un card care întoarce capete."
     },
     {
       number: "3",
-      title: "Personalizează cardul tău",
-      description: "Adaugă logo-ul și culorile pe card. Adaugă informațiile de contact ale afacerii tale."
+      title: "Personalizează",
+      description: "Logo, culori, date de contact – totul pe card. 5 minute mai târziu, ai un instrument de vânzare pe care-l poți arăta cu mândrie."
     },
     {
       number: "4",
-      title: "Descarcă și aplică promoția",
-      description: "Platforma creează automat un fișier PDF promoțional A4 cu regulile promoției, codul QR al cardului și instrucțiunile de instalare."
+      title: "Descarcă promoția",
+      description: "Platforma îți face toată treaba: PDF cu reguli, QR, instrucțiuni. Tu doar îl tipărești și-l afișezi. Gata cu complicațiile."
     },
     {
       number: "5",
-      title: "Promovează programul tău",
-      description: "Tipărește un cod QR pentru a-l plasa în magazin pentru a face mai ușoară înscrierea clienților, sau distribuie link-ul online pentru înregistrare rapidă."
+      title: "Promovează-l",
+      description: "QR în magazin? Link online? Ambele funcționează. Clienții se înscriu în 10 secunde. Iar tu ai o bază de date în creștere."
     },
     {
       number: "6",
-      title: "Totul este gata!",
-      description: "Bucură-te de toate avantajele și beneficiile unui card de fidelitate!"
+      title: "Ai un program LIVE",
+      description: "Începe să-ți vezi clienții revenind, cumpărând și recomandând. Asta înseamnă fidelitate pe pilot automat."
     }
   ];
 
@@ -154,10 +154,10 @@ return (
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-                Transformă clienții în <span className="text-brand-orange">fani fideli</span>
+                Transformă clienții ocazionali <span className="text-brand-orange">în clienți fideli</span>
               </h1>
               <p className="text-xl sm:text-2xl text-gray-200 leading-relaxed">
-                Platforma modernă de cupoane digitale de fidelitate care crește vânzările și retenția clienților.
+                Platforma #1 din România care îți dublează clienții fideli și îți crește veniturile cu până la 30% pe pilot automat.
               </p>
             </div>
             
@@ -266,7 +266,7 @@ return (
                   PAȘI SIMPLI PENTRU A CREA UN PROGRAM DE FIDELITATE
                 </h2>
                 <p className="text-xl text-gray-200">
-                  În doar 15 minute!
+                  ...în mai puțin timp decât îți ia să-ți bei cafeaua.
                 </p>
               </div>
             </div>
