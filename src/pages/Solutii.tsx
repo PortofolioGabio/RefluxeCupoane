@@ -25,31 +25,30 @@ const Solutii = () => {
   const consumerBenefits = [
     {
       icon: <Smartphone className="h-8 w-8 text-brand-purple" />,
-      title: "Experiență Mobilă",
-      description: "Accesează toate cuponul direct din telefon, fără aplicații complexe.",
+      title: "Experiență 100% Mobilă",
+      description: "Fără aplicații plictisitoare. Cuponul e pe telefon, gata de folosit. Instant!",
       features: ["Design responsive", "Acces instant", "Sincronizare cloud"]
     },
     {
       icon: <Users className="h-8 w-8 text-brand-purple" />,
-      title: "Comunitate Beneficii",
-      description: "Descoperă oferte exclusive și conectează-te cu brandurile preferate.",
+      title: "Comunitate de Beneficii",
+      description: "Clienții se conectează cu brandul tău. Primesc oferte personalizate și devin loiali pe viață.",
       features: ["Oferte personalizate", "Recomandări inteligente", "Istoric cupoane"]
     },
     {
       icon: <Zap className="h-8 w-8 text-brand-purple" />,
-      title: "Activare Instantanee",
-      description: "Folosește cuponul cu un singur click, fără hârtie sau coduri complicate.",
+      title: "Activare în 1 Click",
+      description: "QR scanat. Ofertă activată. Gata. Fără coduri, fără bătăi de cap.",
       features: ["QR code scan", "Validare instantanee", "Istoric utilizare"]
     }
   ];
 
   const integrationFeatures = [
-    "API REST completă pentru integrări personalizate",
-    "Webhooks pentru sincronizarea în timp real",
-    "SDK pentru aplicații mobile native",
-    "Plugin-uri pentru platforme e-commerce populare",
-    "Integrare cu sisteme POS existente",
-    "Import/export date în format CSV și JSON"
+    "API REST complet",
+    "Webhooks în timp real",
+    "Plugin-uri pentru tot ce există",
+    "Integrare POS & eCommerce",
+    "Import/Export fără nervi"
   ];
 
   const businessFeatures = [
@@ -170,10 +169,10 @@ const Solutii = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollAnimatedElement animation="fadeIn" className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Pentru Consumatori
+              Ce Primesc Consumatorii Tăi?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Câștigă și folosește cupoane digitale ușor, direct din telefon, fără complicații.
+              Fă-i să spună „WOW!” și să revină iar și iar!
             </p>
           </ScrollAnimatedElement>
 
@@ -219,10 +218,10 @@ const Solutii = () => {
                 Integrare Tehnologică
               </Badge>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Integrare Simplă în <span className="text-brand-purple">5 Minute</span>
+                Integrare Ultra-Rapidă <span className="text-brand-purple">(Da, chiar în 5 Minute)</span>
               </h2>
               <p className="text-xl text-gray-600 mb-8">
-                Nu îți schimba sistemele existente. Refluxe se integrează seamless cu infrastructura ta actuală.
+                Fără IT, fără programatori. Refluxe merge cu ce ai deja.
               </p>
               <div className="space-y-3">
                 {integrationFeatures.map((feature, index) => (
@@ -250,11 +249,11 @@ const Solutii = () => {
                   </div>
                   <h3 className="text-2xl font-bold mb-4">Protecție de Nivel Bancar</h3>
                   <ul className="space-y-3 text-white/90">
-                    <li>• Encriptare end-to-end</li>
-                    <li>• Conformitate GDPR</li>
-                    <li>• Backup automat zilnic</li>
+                    <li>• Criptare End-to-End</li>
+                    <li>• Conform GDPR</li>
+                    <li>• Backup Zilnic</li>
                     <li>• Monitoring 24/7</li>
-                    <li>• Audit trails complete</li>
+                    <li>• Audit complet</li>
                   </ul>
                 </CardContent>
               </Card>
