@@ -10,10 +10,11 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-refluxe rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">R</span>
-              </div>
-              <span className="text-xl font-bold">Refluxe</span>
+              <img
+                src="/gabio-uploads/logof.png"
+                alt="Refluxe logo"
+                className="h-8 w-auto"
+              />
             </div>
             <p className="text-gray-400 text-sm">
               Platforma modernă de cupoane digitale de fidelitate pentru afaceri și consumatori.
