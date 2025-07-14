@@ -77,22 +77,21 @@ const Contact = () => {
             {/* Left Side - Text Content */}
             <ScrollAnimatedElement animation="slideRight" delay={100} className="space-y-8">
               <div>
-                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                  Contact Refluxe.
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                  Contactează Echipa Refluxe
                 </h2>
                 <div className="space-y-6 text-gray-600 text-lg sm:text-xl leading-relaxed">
                   <ScrollAnimatedElement animation="fadeIn" delay={200} threshold={0.8}>
                     <p>
-                      Ai întrebări, vrei să afli mai multe despre serviciile noastre sau ai nevoie 
-                      de ajutor cu programul tău de fidelitate? Suntem aici să te ajutăm! Completează 
-                      formularul de mai jos sau contactează-ne direct prin canalele noastre de 
-                      servicii pentru clienți.
+                      Vrei să-ți transformi clienții în abonați pe viață? Hai să vorbim.
                     </p>
                   </ScrollAnimatedElement>
                   <ScrollAnimatedElement animation="fadeIn" delay={300} threshold={0.8}>
                     <p>
-                      Dacă ai nevoie de orice, nu ezita să ne contactezi. Suntem gata să te ajutăm 
-                      să creezi un program de fidelitate extraordinar!
+                      Fie că ai întrebări, vrei să vezi cum funcționează sau ai nevoie de ajutor cu programul tău de fidelitate, suntem aici ca să-ți oferim soluții clare și rapide.
+                      Scrie-ne.
+                      Sună-ne.
+                      Începe să-ți crești veniturile cu un program de fidelitate care chiar funcționează.
                     </p>
                   </ScrollAnimatedElement>
                 </div>
@@ -108,7 +107,7 @@ const Contact = () => {
                     <span className="text-2xl sm:text-3xl font-bold text-gray-900">Refluxe</span>
                   </div>
                   <p className="text-gray-600 font-medium mb-4 text-lg sm:text-xl">
-                    Conectează-te mai bine și vinde mai mult!
+                    Nu lăsa clienții să dispară. Contactează-ne acum și hai să-i aducem înapoi.
                   </p>
                   <div className="flex space-x-4">
                     <div className="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors cursor-pointer">
