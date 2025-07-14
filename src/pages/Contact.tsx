@@ -111,7 +111,7 @@ const Contact = () => {
                   </p>
                   <div className="flex space-x-4">
                     <div className="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors cursor-pointer">
-                      <Facebook className="h-7 w-7 text-white" />
+                      <Linkedin className="h-7 w-7 text-white" />
                     </div>
                     <div className="w-14 h-14 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors cursor-pointer">
                       <Instagram className="h-7 w-7 text-white" />
@@ -181,7 +181,8 @@ const Contact = () => {
                     <h4 className="font-semibold text-blue-600 mb-3 text-lg sm:text-xl">Legal</h4>
                     <ul className="space-y-2">
                       <li><a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Termeni de Utilizare</a></li>
-                      <li><a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Politica de Confidențialitate</a></li>
+                      <li><a href="https://app.refluxe.io/promo/gdpr/privacy-policy" className="text-gray-600 hover:text-blue-600 transition-colors">Politica de Confidențialitate</a></li>
+                      <li><a href="https://app.refluxe.io/promo/gdpr/subscription-agreement" className="text-gray-600 hover:text-blue-600 transition-colors">Acord de abonament</a></li>
                     </ul>
                   </div>
                 </div>
