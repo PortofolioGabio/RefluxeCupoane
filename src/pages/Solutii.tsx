@@ -56,27 +56,27 @@ const Solutii = () => {
     {
       icon: <Calendar className="h-8 w-8 text-red-500" />,
       title: "Planuri de Abonament Personalizate",
-      description: "Creează pachete personalizate care oferă valoare continuă clienților tăi, fie că sunt servicii regulate, produse exclusive sau acces privilegiat."
+      description: "Creezi pachete ca un expert. Oferi acces exclusiv, creezi dependență, și le faci imposibil să renunțe."
     },
     {
       icon: <Database className="h-8 w-8 text-red-500" />,
-      title: "Facturare Automată și Simplă",
-      description: "Integrează cu Stripe pentru a automatiza plățile, oferind o experiență fără întreruperi, fără probleme pentru tine și clienții tăi."
+      title: "Facturare Complet Automatizată",
+      description: "Stripe + Refluxe = plăți fără întreruperi, fără bătăi de cap. Fără scuze pentru neplată."
     },
     {
       icon: <Star className="h-8 w-8 text-red-500" />,
-      title: "Notificări Push Personalizate",
-      description: "Păstrează clienții informați și implicați cu mementouri, promoții și campaniile de marketing țintite livrate direct pe dispozitivul lor mobil."
+      title: "Notificări Push Care Vând",
+      description: "Trimite oferte direct în buzunarul clientului. Rămâi în mintea lui chiar și când e la duș."
     },
     {
       icon: <PieChart className="h-8 w-8 text-red-500" />,
-      title: "Segmentare Inteligentă cu RFM",
-      description: "Folosește analiza Recency, Frequency și Monetary Value pentru a oferi campanii foarte eficiente și personalizate."
+      title: "Segmentare Inteligență RFM",
+      description: "Trimite mesajul potrivit, persoanei potrivite, la momentul potrivit. Rezultatul? Mai multe vânzări."
     },
     {
       icon: <Repeat className="h-8 w-8 text-red-500" />,
       title: "Reînnoire Automată",
-      description: "Asigură continuitatea planurilor tale de abonament cu reînnoire automată, garantând un flux constant de venituri."
+      description: "Nu mai pierzi bani! Abonamentele se reînnoiesc singure. Tu dormi, veniturile cresc."
     }
   ];
 
@@ -92,7 +92,9 @@ const Solutii = () => {
                   Soluția Recurentă pentru Afacerea Ta
                 </h1>
               </div>
-              
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                VREI ASTA ÎN AFACEREA TA?
+              </h2>
               <div className="pt-2">
                 <Link to="/demonstratie">
                   <Button size="lg" className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-8 py-3 text-lg">
@@ -119,12 +121,13 @@ const Solutii = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollAnimatedElement animation="fadeIn" className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
-              Ce poate face Refluxe pentru afacerea ta:
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Ce Poate Face Refluxe Pentru Afacerea Ta?
             </h2>
-            <div className="w-24 h-1 bg-gray-300 mx-auto"></div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transformă-ți clienții în abonați fideli care plătesc lună de lună, automat.
+            </p>
           </ScrollAnimatedElement>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
             {businessFeatures.map((feature, index) => (
               <ScrollAnimatedElement 
