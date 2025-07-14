@@ -111,7 +111,7 @@ const Contact = () => {
                   </p>
                   <div className="flex space-x-4">
                     <div className="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors cursor-pointer">
-                      <Linkedin className="h-7 w-7 text-white" />
+                      <Facebook className="h-7 w-7 text-white" />
                     </div>
                     <div className="w-14 h-14 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors cursor-pointer">
                       <Instagram className="h-7 w-7 text-white" />
