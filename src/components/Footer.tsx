@@ -31,17 +31,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Servicii</h3>
-            <ul className="space-y-2">
-              <li><span className="text-gray-400">Cupoane Digitale</span></li>
-              <li><span className="text-gray-400">Programe de Fidelitate</span></li>
-              <li><span className="text-gray-400">Automatizare Marketing</span></li>
-              <li><Link to="/demonstratie" className="text-gray-400 hover:text-white transition-colors">Demonstrație</Link></li>
-            </ul>
-          </div>
-
           {/* Contact */}
           <div>
             <h3 className="font-semibold text-lg mb-4">Contact</h3>
@@ -52,11 +41,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-brand-orange" />
-                <span className="text-gray-400 text-sm">+40 123 456 789</span>
+                <span className="text-gray-400 text-sm">+40 758 878 364</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-brand-orange" />
-                <span className="text-gray-400 text-sm">București, România</span>
+                <span className="text-gray-400 text-sm">Iași, România</span>
               </div>
             </div>
           </div>
@@ -65,19 +54,6 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
             © 2025 Refluxe. Toate drepturile rezervate.
-          </p>
-          <p className="text-gray-400 text-sm">
-            <strong>Construit cu pasiune de{' '}
-              <a 
-                href="https://gabio.dev" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:text-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-sm"
-                aria-label="Gabriel's portfolio website"
-              >
-                Gabriel
-              </a>
-            </strong>
           </p>
         </div>
       </div>
