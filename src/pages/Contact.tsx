@@ -110,12 +110,25 @@ const Contact = () => {
                     Nu lăsa clienții să dispară. Contactează-ne acum și hai să-i aducem înapoi.
                   </p>
                   <div className="flex space-x-4">
-                    <div className="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors cursor-pointer">
+                    {/* LinkedIn */}
+                    <a
+                      href="https://www.linkedin.com/company/refluxe/" // <-- Change this to your actual LinkedIn page
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
+                    >
                       <Linkedin className="h-7 w-7 text-white" />
-                    </div>
-                    <div className="w-14 h-14 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors cursor-pointer">
+                    </a>
+                  
+                    {/* Instagram */}
+                    <a
+                      href="https://www.instagram.com/app.refluxe.io/" // <-- Change this to your actual Instagram page
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-14 h-14 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors"
+                    >
                       <Instagram className="h-7 w-7 text-white" />
-                    </div>
+                    </a>
                   </div>
                 </div>
               </ScrollAnimatedElement>
