@@ -13,6 +13,7 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from './ScrollToTop';
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-1">
+            <ScrollToTop />
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/demonstratie" element={<Demonstratie />} />
