@@ -178,7 +178,7 @@ const Planuri = () => {
                     {/* Expandable features list */}
                     <div className={`overflow-hidden transition-all duration-700 ease-in-out ${
                       expandedCard === index 
-                        ? 'max-h-96 opacity-100' 
+                        ? 'max-h-[500px] opacity-100' 
                         : 'max-h-0 opacity-0'
                     }`}>
                       <ul className="space-y-3">
