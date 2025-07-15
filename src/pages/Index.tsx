@@ -208,13 +208,13 @@ return (
 
       {/* Why Digital Cards Section */}
       <section className="py-12">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <OptimizedImage 
             src="/gabio-uploads/955053ff-b18c-43de-bdb8-1ddceb318ca0.png" 
             alt="Beneficiile cardurilor digitale de fidelitate - de ce să alegi soluțiile Refluxe pentru programul tău de loialitate"
             className="w-full h-auto"
-            width={1200}
-            height={600}
+            width={1400}
+            height={700}
           />
         </div>
       </section>
