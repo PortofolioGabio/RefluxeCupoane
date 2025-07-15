@@ -116,8 +116,24 @@ const Planuri = () => {
           {/* Centered pricing text */}
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Începând de la 249 lei / lună
+              🔥 <span className="text-brand-orange">TOTUL</span> pentru doar <span className="text-brand-purple">100 lei / lună</span>
             </h2>
+            <div className="mb-6">
+              <Button className="bg-brand-purple hover:bg-brand-purple/90 text-white font-semibold px-8 py-3 mb-4">
+                Înscrie-te acum
+              </Button>
+            </div>
+            <p className="text-lg text-gray-700 mb-4">
+              Nimic complicat. Fără costuri ascunse. <strong>Un singur preț. O platformă completă. O afacere care crește.</strong>
+            </p>
+            <p className="text-lg text-gray-700 mb-4">
+              Vrei să-ți transformi clienții în fani loiali? <strong>Asta e unealta. 100 lei. Atât. Fără costuri ascunse.</strong>
+            </p>
+            <div className="mb-8">
+              <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-8 py-3">
+                Înscrie-te acum
+              </Button>
+            </div>
           </div>
           <div className="flex justify-center">
             <div className="w-full max-w-md">
@@ -209,8 +225,86 @@ const Planuri = () => {
         </div>
       </section>
 
-      {/* Comparison Table */}
+      {/* Team Access Section */}
       <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+              <strong>Lucrezi cu o echipă și vrei ca fiecare să aibă acces?</strong>
+            </h2>
+            <p className="text-xl text-gray-600 mb-8">
+              Nicio problemă! Cu Refluxe, poți folosi un singur cont și să adaugi mai mulți manageri, fiecare cu cardul lui propriu.
+            </p>
+          </div>
+
+          <div className="bg-gray-50 rounded-lg p-8 mb-12">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              Cum funcționează?
+            </h3>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-4">
+                <span className="text-2xl">👤</span>
+                <p className="text-gray-700">
+                  <strong>Fiecare utilizator are acces separat, dar totul se gestionează dintr-un singur cont central</strong>
+                </p>
+              </div>
+              <div className="flex items-start space-x-4">
+                <span className="text-2xl">💳</span>
+                <p className="text-gray-700">
+                  <strong>Fiecare folosește cardul lui pentru a scana clienți și aplica promoții</strong>
+                </p>
+              </div>
+              <div className="flex items-start space-x-4">
+                <span className="text-2xl">🔔</span>
+                <p className="text-gray-700">
+                  <strong>Notificările automate sunt comune – trimitem mesaje unificate către toți clienții</strong>
+                </p>
+              </div>
+              <div className="flex items-start space-x-4">
+                <span className="text-2xl">📊</span>
+                <p className="text-gray-700">
+                  <strong>Toate datele și rezultatele se văd într-un singur panou</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              Cât costă / lună / utilizator?
+            </h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-brand-purple/10 rounded-lg p-6">
+                <div className="text-lg font-semibold text-brand-purple mb-2">🔹 2–5 utilizatori</div>
+                <div className="text-xl font-bold text-gray-900">80 lei / lună / utilizator</div>
+              </div>
+              <div className="bg-brand-orange/10 rounded-lg p-6">
+                <div className="text-lg font-semibold text-brand-orange mb-2">🔹 6–10 utilizatori</div>
+                <div className="text-xl font-bold text-gray-900">60 lei / lună / utilizator</div>
+              </div>
+              <div className="bg-green-100 rounded-lg p-6">
+                <div className="text-lg font-semibold text-green-600 mb-2">🔹 11+ utilizatori</div>
+                <div className="text-xl font-bold text-gray-900">40 lei / lună / utilizator</div>
+              </div>
+            </div>
+            <p className="text-lg text-gray-600 mt-6">
+              <strong>Cu cât ai mai mulți utilizatori, cu atât plătești mai puțin pentru fiecare. Simplu!</strong>
+            </p>
+          </div>
+
+          <div className="text-center">
+            <p className="text-xl text-gray-700 mb-6">
+              <strong>Activează accesul pentru echipa ta și lasă-i pe toți să contribuie la creșterea afacerii!</strong>
+            </p>
+            <Button className="bg-brand-purple hover:bg-brand-purple/90 text-white font-semibold px-8 py-3">
+              Înscrie-te acum
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison Table */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -249,32 +343,12 @@ const Planuri = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 bg-gray-50">
+      {/* Contact Section */}
+      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Întrebări Frecvente
-            </h2>
-            <p className="text-xl text-gray-600">
-              Răspunsuri la cele mai comune întrebări despre planurile noastre.
-            </p>
-          </div>
-
-          <div className="space-y-6">
-            {faqs.map((faq, index) => (
-              <Card key={index} className="shadow-lg border-0">
-                <CardContent className="p-6">
-                  <h3 className="font-semibold text-gray-900 mb-3">{faq.question}</h3>
-                  <p className="text-gray-600">{faq.answer}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">
-              Mai ai întrebări? Echipa noastră este gata să te ajute.
+          <div className="text-center">
+            <p className="text-xl text-gray-700 mb-6">
+              Ai întrebări? Contactează-ne aici.
             </p>
             <Link to="/contact">
               <Button className="bg-brand-purple hover:bg-brand-purple/90 text-white font-semibold px-8 py-3">
