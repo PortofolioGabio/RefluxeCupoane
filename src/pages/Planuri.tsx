@@ -7,6 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Check, X, Star, ArrowRight, Zap } from 'lucide-react';
 
 const Planuri = () => {
+  const [isYearly, setIsYearly] = useState(false);
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
   const navigate = useNavigate();
 
@@ -28,11 +29,10 @@ const Planuri = () => {
         { name: "Account manager dedicat", included: true }
       ],
       cta: "Contactează Vânzările",
-      popular: false
+      popular: true
     }
   ];
-  
-  
+
   const comparisonFeatures = [
     { name: "1 locație", description: "Ai o locație fizică? Perfect. Planul funcționează pentru acea locație." },
     { name: "1 GEO-locație", description: "Trimitem automat oferte clienților când trec prin apropierea locației tale." },
@@ -81,7 +81,10 @@ const Planuri = () => {
     navigate('/demonstratie');
   };
 
-  const getFeatureStatus = () => 'included';
+  const getFeatureStatus = (planIndex: number, featureIndex: number) => {
+    // Since we only have the Expert plan, all features are included
+    return 'included';
+  };
 
   const renderFeatureCell = (status: string) => {
     if (status === 'included') {
@@ -116,90 +119,92 @@ const Planuri = () => {
               Începând de la 249 lei / lună
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {plans.map((plan, index) => (
-              <Card 
-                key={index} 
-                className={`relative shadow-xl border-0 transition-all duration-300 ${
-                  plan.popular 
-                    ? 'ring-2 ring-brand-purple shadow-2xl scale-105' 
-                    : ''
-                } ${
-                  expandedCard === index 
-                    ? 'scale-105 shadow-2xl' 
-                    : ''
-                }`}
-              >
-                {plan.badge && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <Badge className="bg-brand-purple text-white px-4 py-1">
-                      {plan.badge}
-                    </Badge>
-                  </div>
-                )}
-                
-                <CardHeader className="text-center pb-6">
-                  <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
-                    {plan.name}
-                  </CardTitle>
-                  <p className="text-gray-600 mb-6">{plan.description}</p>
-                  
-                </CardHeader>
-
-                <CardContent className="space-y-4">
-                  {/* Always visible client count */}
-                  <div className="flex items-center space-x-3 mb-4">
-                    <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-sm font-semibold text-gray-700">
-                      {plan.storeCount}
-                    </span>
-                  </div>
-                  <div className="flex items-center space-x-3 mb-4">
-                    <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-sm font-semibold text-gray-700">
-                      {plan.clientCount}
-                    </span>
-                  </div>
-
-                  {/* Expandable features list */}
-                  <div className={`overflow-hidden transition-all duration-700 ease-in-out ${
+          <div className="flex justify-center">
+            <div className="w-full max-w-md">
+              {plans.map((plan, index) => (
+                <Card 
+                  key={index} 
+                  className={`relative shadow-xl border-0 transition-all duration-300 ${
+                    plan.popular 
+                      ? 'ring-2 ring-brand-purple shadow-2xl scale-105' 
+                      : ''
+                  } ${
                     expandedCard === index 
-                      ? 'max-h-96 opacity-100' 
-                      : 'max-h-0 opacity-0'
-                  }`}>
-                    <ul className="space-y-3">
-                      {plan.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start space-x-3">
-                          {feature.included ? (
-                            <Check className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                          ) : (
-                            <X className="h-5 w-5 text-gray-300 mt-0.5 flex-shrink-0" />
-                          )}
-                          <span className={`text-sm ${
-                            feature.included ? 'text-gray-700' : 'text-gray-400'
-                          }`}>
-                            {feature.name}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                      ? 'scale-105 shadow-2xl' 
+                      : ''
+                  }`}
+                >
+                  {plan.badge && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <Badge className="bg-brand-purple text-white px-4 py-1">
+                        {plan.badge}
+                      </Badge>
+                    </div>
+                  )}
+                  
+                  <CardHeader className="text-center pb-6">
+                    <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
+                      {plan.name}
+                    </CardTitle>
+                    <p className="text-gray-600 mb-6">{plan.description}</p>
+                    
+                  </CardHeader>
 
-                  <div className="pt-6">
-                    <Button 
-                      className={`w-full font-semibold py-3 transition-all duration-300 ${
-                        expandedCard === index
-                          ? 'bg-brand-orange hover:bg-brand-orange/90 text-white transform hover:scale-105'
-                          : 'bg-brand-purple hover:bg-brand-purple/90 text-white'
-                      }`}
-                      onClick={() => expandedCard === index ? handleSecondClick(index) : handleButtonClick(index)}
-                    >
-                      {expandedCard === index ? 'Programează un Demo' : 'Află mai multe'}
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                  <CardContent className="space-y-4">
+                    {/* Always visible client count */}
+                    <div className="flex items-center space-x-3 mb-4">
+                      <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
+                      <span className="text-sm font-semibold text-gray-700">
+                        {plan.storeCount}
+                      </span>
+                    </div>
+                    <div className="flex items-center space-x-3 mb-4">
+                      <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
+                      <span className="text-sm font-semibold text-gray-700">
+                        {plan.clientCount}
+                      </span>
+                    </div>
+
+                    {/* Expandable features list */}
+                    <div className={`overflow-hidden transition-all duration-700 ease-in-out ${
+                      expandedCard === index 
+                        ? 'max-h-96 opacity-100' 
+                        : 'max-h-0 opacity-0'
+                    }`}>
+                      <ul className="space-y-3">
+                        {plan.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-start space-x-3">
+                            {feature.included ? (
+                              <Check className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                            ) : (
+                              <X className="h-5 w-5 text-gray-300 mt-0.5 flex-shrink-0" />
+                            )}
+                            <span className={`text-sm ${
+                              feature.included ? 'text-gray-700' : 'text-gray-400'
+                            }`}>
+                              {feature.name}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="pt-6">
+                      <Button 
+                        className={`w-full font-semibold py-3 transition-all duration-300 ${
+                          expandedCard === index
+                            ? 'bg-brand-orange hover:bg-brand-orange/90 text-white transform hover:scale-105'
+                            : 'bg-brand-purple hover:bg-brand-purple/90 text-white'
+                        }`}
+                        onClick={() => expandedCard === index ? handleSecondClick(index) : handleButtonClick(index)}
+                      >
+                        {expandedCard === index ? 'Programează un Demo' : 'Află mai multe'}
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -209,10 +214,10 @@ const Planuri = () => {
         <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Compară Toate Funcționalitățile
+              Toate Funcționalitățile Expert
             </h2>
             <p className="text-xl text-gray-600">
-              Vezi în detaliu ce include fiecare plan pentru a face cea mai bună alegere.
+              Vezi în detaliu ce include planul nostru Expert pentru afacerea ta.
             </p>
           </div>
 
@@ -233,11 +238,9 @@ const Planuri = () => {
                         <div className="text-sm text-gray-500 mt-1">{feature.description}</div>
                       </div>
                     </td>
-                    {[0, 1, 2].map((planIndex) => (
-                      <td className="text-center py-4 px-6">
-                        {renderFeatureCell(getFeatureStatus())}
-                      </td>
-                    ))}
+                    <td className="text-center py-4 px-6">
+                      {renderFeatureCell(getFeatureStatus(0, featureIndex))}
+                    </td>
                   </tr>
                 ))}
               </tbody>
