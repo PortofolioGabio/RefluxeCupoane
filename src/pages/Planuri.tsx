@@ -15,7 +15,7 @@ const Planuri = () => {
       {
         name: "Expert",
         storeCount: "1 Magazin",
-        clientCount: "Nelimitați",
+        clientCount: "Bază de date nelimitată",
         description: "Pentru corporații și lanțuri de magazine",
         badge: "Toate funcționalitățile",
         features: [
