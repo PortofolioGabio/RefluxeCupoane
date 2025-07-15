@@ -12,26 +12,30 @@ const Planuri = () => {
   const navigate = useNavigate();
 
   const plans = [
-    {
-      name: "Expert",
-      storeCount: "1 Magazin",
-      clientCount: "Nelimitați",
-      description: "Pentru corporații și lanțuri de magazine",
-      badge: "Toate funcționalitățile",
-      features: [
-        { name: "Cupoane nelimitate", included: true },
-        { name: "Programe de fidelitate nelimitate", included: true },
-        { name: "Dashboard enterprise", included: true },
-        { name: "Suport dedicat 24/7", included: true },
-        { name: "API și integrări personalizate", included: true },
-        { name: "White-label complet", included: true },
-        { name: "Analitică și rapoarte personalizate", included: true },
-        { name: "Account manager dedicat", included: true }
-      ],
-      cta: "Contactează Vânzările",
-      popular: true
-    }
-  ];
+      {
+        name: "Expert",
+        storeCount: "1 Magazin",
+        clientCount: "Nelimitați",
+        description: "Pentru corporații și lanțuri de magazine",
+        badge: "Toate funcționalitățile",
+        features: [
+          { name: "1 locație", included: true },
+          { name: "1 GEO-locație", included: true },
+          { name: "1 manager", included: true },
+          { name: "Bază de date nelimitată", included: true },
+          { name: "Alerte push nelimitate (tip SMS)", included: true },
+          { name: "Notificări personalizabile și automate", included: true },
+          { name: "10 promoții active simultan", included: true },
+          { name: "Client Ambasador", included: true },
+          { name: "Anti-duplicare", included: true },
+          { name: "Rapoarte detaliate", included: true },
+          { name: "Design personalizabil", included: true },
+          { name: "Integrare API", included: true }
+        ],
+        cta: "Contactează Vânzările",
+        popular: true
+      }
+    ];
 
   const comparisonFeatures = [
     { name: "1 locație", description: "Ai o locație fizică? Perfect. Planul funcționează pentru acea locație." },
@@ -291,46 +295,6 @@ const Planuri = () => {
                 Înscrie-te acum
               </Button>
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Comparison Table */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Toate Funcționalitățile Expert
-            </h2>
-            <p className="text-xl text-gray-600">
-              Vezi în detaliu ce include planul nostru Expert pentru afacerea ta.
-            </p>
-          </div>
-
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse">
-              <thead>
-                <tr className="bg-brand-orange">
-                  <th className="text-left py-4 px-6 font-bold text-white border-r border-orange-400">Funcționalitate</th>
-                  <th className="text-center py-4 px-6 font-bold text-white">Expert</th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparisonFeatures.map((feature, featureIndex) => (
-                  <tr key={featureIndex} className="border-b border-gray-200 hover:bg-gray-50">
-                    <td className="py-4 px-6 text-gray-700 border-r border-gray-200">
-                      <div>
-                        <div className="font-semibold">{feature.name}</div>
-                        <div className="text-sm text-gray-500 mt-1">{feature.description}</div>
-                      </div>
-                    </td>
-                    <td className="text-center py-4 px-6">
-                      {renderFeatureCell(getFeatureStatus(0, featureIndex))}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
           </div>
         </div>
       </section>
