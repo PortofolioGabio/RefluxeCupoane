@@ -286,9 +286,11 @@ const Planuri = () => {
             <p className="text-xl text-gray-700 mb-6">
               <strong>Activează accesul pentru echipa ta și lasă-i pe toți să contribuie la creșterea afacerii!</strong>
             </p>
-            <Button className="bg-brand-purple hover:bg-brand-purple/90 text-white font-semibold px-8 py-3">
-              Înscrie-te acum
-            </Button>
+            <Link to="https://app.refluxe.io/registration">
+              <Button className="bg-brand-purple hover:bg-brand-purple/90 text-white font-semibold px-8 py-3">
+                Înscrie-te acum
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
