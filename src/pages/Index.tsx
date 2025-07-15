@@ -207,14 +207,14 @@ return (
     </section>
 
       {/* Why Digital Cards Section */}
-      <section className="py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-4 sm:py-8 lg:py-12">
+        <div className="max-w-full mx-auto px-2 sm:px-4 lg:px-8">
           <OptimizedImage 
             src="/gabio-uploads/955053ff-b18c-43de-bdb8-1ddceb318ca0.png" 
             alt="Beneficiile cardurilor digitale de fidelitate - de ce să alegi soluțiile Refluxe pentru programul tău de loialitate"
             className="w-full h-auto"
-            width={1400}
-            height={700}
+            width={1600}
+            height={800}
           />
         </div>
       </section>
@@ -241,8 +241,8 @@ return (
                   width={300}
                   height={400}
                 />
-                <div className="space-y-2">
-                  <h3 className="text-lg font-bold text-gray-900">
+                <div className="space-y-2 text-center">
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">
                     <span className="font-extrabold text-brand-purple">Refluxe</span>
                     {program.title.replace('Refluxe', '')}
                   </h3>
