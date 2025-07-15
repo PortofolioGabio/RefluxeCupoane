@@ -25,7 +25,7 @@ const Contact = () => {
           "contactPoint": [
             {
               "@type": "ContactPoint",
-              "telephone": "+40-756-123-456",
+              "telephone": "+40-758-878-364",
               "contactType": "customer service",
               "email": "contact@refluxe.io",
               "availableLanguage": "Romanian",
@@ -146,7 +146,7 @@ const Contact = () => {
                           </div>
                           <div>
                             <h3 className="font-semibold text-xl sm:text-2xl mb-2">WhatsApp Phone</h3>
-                            <p className="text-white/90 text-lg sm:text-xl">+40 756 123 456</p>
+                            <p className="text-white/90 text-lg sm:text-xl">+40 758 878 456</p>
                           </div>
                         </div>
                       </ScrollAnimatedElement>
