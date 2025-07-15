@@ -102,10 +102,10 @@ const Planuri = () => {
       <section className="bg-gradient-hero text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-            Planuri Simple, Rezultate Excepționale
+            Un Singur Plan. Toată Puterea.
           </h1>
           <p className="text-xl text-gray-200 mb-8">
-            Alege planul perfect pentru afacerea ta. Toate planurile includ acces la funcționalitățile de bază.
+            Tot ce ai nevoie pentru un program de fidelitate care aduce clienții înapoi. Fără complicații. Fără costuri ascunse.
           </p>
         </div>
       </section>
@@ -116,24 +116,14 @@ const Planuri = () => {
           {/* Centered pricing text */}
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              🔥 <span className="text-brand-orange">TOTUL</span> pentru doar <span className="text-brand-purple">100 lei / lună</span>
+              <span className="text-brand-orange">TOTUL</span> pentru doar <span className="text-brand-purple">100 lei / lună</span>
             </h2>
-            <div className="mb-6">
-              <Button className="bg-brand-purple hover:bg-brand-purple/90 text-white font-semibold px-8 py-3 mb-4">
-                Înscrie-te acum
-              </Button>
-            </div>
             <p className="text-lg text-gray-700 mb-4">
               Nimic complicat. Fără costuri ascunse. <strong>Un singur preț. O platformă completă. O afacere care crește.</strong>
             </p>
             <p className="text-lg text-gray-700 mb-4">
               Vrei să-ți transformi clienții în fani loiali? <strong>Asta e unealta. 100 lei. Atât. Fără costuri ascunse.</strong>
             </p>
-            <div className="mb-8">
-              <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-8 py-3">
-                Înscrie-te acum
-              </Button>
-            </div>
           </div>
           <div className="flex justify-center">
             <div className="w-full max-w-md">
