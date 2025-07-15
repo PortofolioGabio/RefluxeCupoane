@@ -101,10 +101,11 @@ const Contact = () => {
               <ScrollAnimatedElement animation="slideUp" delay={400}>
                 <div className="pt-8 border-t border-gray-200">
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-12 h-12 bg-gradient-refluxe rounded-lg flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">R</span>
-                    </div>
-                    <span className="text-2xl sm:text-3xl font-bold text-gray-900">Refluxe</span>
+                    <img
+                      src="/gabio-uploads/logof.png"
+                      alt="Refluxe logo"
+                      className="h-8 w-auto"
+                    />
                   </div>
                   <p className="text-gray-600 font-medium mb-4 text-lg sm:text-xl">
                     Nu lăsa clienții să dispară. Contactează-ne acum și hai să-i aducem înapoi.
