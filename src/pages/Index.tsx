@@ -47,10 +47,10 @@ const Index = () => {
   ];
 
   const benefits = [
-    "Bază de date",
+    "Bază date",
     "Alerte push (SMS)",
     "Notificări automatizate",
-    "Date clare, control total"
+    "Rapoarte Detaliate"
   ];
 
   const loyaltyPrograms = [
