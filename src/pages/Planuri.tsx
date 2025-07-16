@@ -8,7 +8,6 @@ import { Check, X, Star, ArrowRight, Zap } from 'lucide-react';
 
 const Planuri = () => {
   const [isYearly, setIsYearly] = useState(false);
-  const [expandedCard, setExpandedCard] = useState<number | null>(null);
   const navigate = useNavigate();
 
   const plans = [
@@ -71,17 +70,7 @@ const Planuri = () => {
     }
   ];
 
-  const handleButtonClick = (index: number) => {
-    if (expandedCard === index) {
-      // If clicking on already expanded card, collapse it
-      setExpandedCard(null);
-    } else {
-      // If clicking on a different card, expand it (auto-collapse previous)
-      setExpandedCard(index);
-    }
-  };
-
-  const handleSecondClick = (index: number) => {
+  const handleDemoClick = () => {
     navigate('/demonstratie');
   };
 
@@ -138,10 +127,6 @@ const Planuri = () => {
                     plan.popular 
                       ? 'ring-2 ring-brand-purple shadow-2xl scale-105' 
                       : ''
-                  } ${
-                    expandedCard === index 
-                      ? 'scale-105 shadow-2xl' 
-                      : ''
                   }`}
                 >
                   {plan.badge && (
@@ -175,12 +160,8 @@ const Planuri = () => {
                       </span>
                     </div>
 
-                    {/* Expandable features list */}
-                    <div className={`overflow-hidden transition-all duration-700 ease-in-out ${
-                      expandedCard === index 
-                        ? 'max-h-[500px] opacity-100' 
-                        : 'max-h-0 opacity-0'
-                    }`}>
+                    {/* Always visible features list */}
+                    <div className="mb-6">
                       <ul className="space-y-3">
                         {plan.features.map((feature, idx) => (
                           <li key={idx} className="flex items-start space-x-3">
@@ -201,14 +182,10 @@ const Planuri = () => {
 
                     <div className="pt-6">
                       <Button 
-                        className={`w-full font-semibold py-3 transition-all duration-300 ${
-                          expandedCard === index
-                            ? 'bg-brand-orange hover:bg-brand-orange/90 text-white transform hover:scale-105'
-                            : 'bg-brand-purple hover:bg-brand-purple/90 text-white'
-                        }`}
-                        onClick={() => expandedCard === index ? handleSecondClick(index) : handleButtonClick(index)}
+                        className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold py-3 transition-all duration-300 transform hover:scale-105"
+                        onClick={handleDemoClick}
                       >
-                        {expandedCard === index ? 'Programează un Demo' : 'Află mai multe'}
+                        Programează un Demo
                       </Button>
                     </div>
                   </CardContent>
