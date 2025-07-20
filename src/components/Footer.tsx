@@ -38,7 +38,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-brand-orange" />
-                <span className="text-gray-400 text-sm">contact@refluxe.io</span>
+                <span className="text-gray-400 text-sm">contact@refluxe.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-brand-orange" />
