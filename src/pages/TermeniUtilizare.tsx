@@ -9,7 +9,7 @@ const TermeniUtilizare = () => {
       getWebPageSchema(
         'Termeni și Condiții de Utilizare - Refluxe',
         'Consultă termenii și condițiile de utilizare pentru platforma Refluxe de cupoane digitale și programe de fidelitate.',
-        'https://refluxe.io/termeni'
+        'https://refluxe.io/termeni-utilizare'
       )
     ];
 
@@ -17,7 +17,7 @@ const TermeniUtilizare = () => {
       title: 'Termeni și Condiții de Utilizare - Refluxe | Reguli Utilizare Platformă',
       description: 'Consultă termenii și condițiile de utilizare pentru platforma Refluxe de cupoane digitale și programe de fidelitate. Informații legale și reguli de utilizare.',
       keywords: 'termeni utilizare refluxe, conditii utilizare, reguli platforma, termeni legali, conditii servicii digitale',
-      canonical: 'https://refluxe.io/termeni',
+      canonical: 'https://refluxe.io/termeni-utilizare',
       ogImage: 'https://refluxe.io/gabio-uploads/495771be-804e-48df-8f77-e4316aff17fb.png',
       structuredData: structuredData
     });
