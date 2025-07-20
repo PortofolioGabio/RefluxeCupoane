@@ -196,7 +196,7 @@ const Contact = () => {
                     <h4 className="font-semibold text-blue-600 mb-3 text-lg sm:text-xl">Legal</h4>
                     <ul className="space-y-2">
                       <li><Link to="/termeni-utilizare" className="text-gray-600 hover:text-blue-600 transition-colors">Termeni de Utilizare</Link></li>
-                      <li><a href="https://app.refluxe.io/promo/gdpr/privacy-policy" className="text-gray-600 hover:text-blue-600 transition-colors">Politica de Confidențialitate</a></li>
+                      <li><Link to="/politica-confidentialitate" className="text-gray-600 hover:text-blue-600 transition-colors">Politica de Confidențialitate</Link></li>
                       <li><a href="https://app.refluxe.io/promo/gdpr/subscription-agreement" className="text-gray-600 hover:text-blue-600 transition-colors">Acord de abonament</a></li>
                     </ul>
                   </div>
