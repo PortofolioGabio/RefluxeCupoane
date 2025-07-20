@@ -21,7 +21,6 @@ const Planuri = () => {
           { name: "1 locație", included: true },
           { name: "1 GEO-locație", included: true },
           { name: "1 manager", included: true },
-          { name: "Bază de date nelimitată", included: true },
           { name: "Alerte push nelimitate (tip SMS)", included: true },
           { name: "Notificări personalizabile și automate", included: true },
           { name: "10 promoții active simultan", included: true },
@@ -155,7 +154,7 @@ const Planuri = () => {
                     </div>
                     <div className="flex items-center space-x-3 mb-4">
                       <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                      <span className="text-sm font-semibold text-gray-700">
+                      <span className="text-sm text-gray-700">
                         {plan.clientCount}
                       </span>
                     </div>
