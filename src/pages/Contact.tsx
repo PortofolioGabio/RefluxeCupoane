@@ -1,6 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Mail, Phone, Clock, Linkedin, Instagram } from 'lucide-react';
-import OptimizedImage from '@/components/OptimizedImage';
+import ScrollAnimatedElement from '@/components/ScrollAnimatedElement';
 import { useEffect } from 'react';
 import { updatePageSEO, getOrganizationSchema, getWebPageSchema } from '@/utils/seo';
 
@@ -62,11 +62,11 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="bg-gradient-hero text-white py-16 text-center">
         <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10">
-          <div>
+          <ScrollAnimatedElement animation="fadeIn">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-wider">
               CONTACT
             </h1>
-          </div>
+          </ScrollAnimatedElement>
         </div>
       </section>
 
@@ -75,39 +75,36 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Left Side - Text Content */}
-            <div className="space-y-8">
+            <ScrollAnimatedElement animation="slideRight" delay={100} className="space-y-8">
               <div>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                   Contactează Echipa Refluxe
                 </h2>
                 <div className="space-y-6 text-gray-600 text-lg sm:text-xl leading-relaxed">
-                  <div>
+                  <ScrollAnimatedElement animation="fadeIn" delay={200} threshold={0.8}>
                     <p>
                       Vrei să-ți transformi clienții în abonați pe viață? Hai să vorbim.
                     </p>
-                  </div>
-                  <div>
+                  </ScrollAnimatedElement>
+                  <ScrollAnimatedElement animation="fadeIn" delay={300} threshold={0.8}>
                     <p>
                       Fie că ai întrebări, vrei să vezi cum funcționează sau ai nevoie de ajutor cu programul tău de fidelitate, suntem aici ca să-ți oferim soluții clare și rapide.
                       Scrie-ne.
                       Sună-ne.
                       Începe să-ți crești veniturile cu un program de fidelitate care chiar funcționează.
                     </p>
-                  </div>
+                  </ScrollAnimatedElement>
                 </div>
               </div>
 
               {/* Footer Section */}
-              <div>
+              <ScrollAnimatedElement animation="slideUp" delay={400}>
                 <div className="pt-8 border-t border-gray-200">
                   <div className="flex items-center space-x-3 mb-4">
-                    <OptimizedImage
+                    <img
                       src="/gabio-uploads/logof.png"
                       alt="Refluxe logo"
                       className="h-8 w-auto"
-                      width={120}
-                      height={32}
-                      priority={true}
                     />
                   </div>
                   <p className="text-gray-600 font-medium mb-4 text-lg sm:text-xl">
@@ -135,16 +132,16 @@ const Contact = () => {
                     </a>
                   </div>
                 </div>
-              </div>
-            </div>
+              </ScrollAnimatedElement>
+            </ScrollAnimatedElement>
 
             {/* Right Side - Contact Card */}
             <div className="lg:pl-6">
-              <div>
+              <ScrollAnimatedElement animation="slideLeft" delay={200}>
                 <Card className="bg-gradient-hero text-white shadow-2xl border-0 overflow-hidden">
                   <CardContent className="p-8 space-y-8">
                     <div className="space-y-6">
-                      <div>
+                      <ScrollAnimatedElement animation="fadeIn" delay={400} threshold={0.8}>
                         <div className="flex items-start space-x-6">
                           <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
                             <Mail className="h-7 w-7 text-white" />
@@ -154,9 +151,9 @@ const Contact = () => {
                             <p className="text-white/90 text-lg sm:text-xl">contact@refluxe.io</p>
                           </div>
                         </div>
-                      </div>
+                      </ScrollAnimatedElement>
 
-                      <div>
+                      <ScrollAnimatedElement animation="fadeIn" delay={500} threshold={0.8}>
                         <div className="flex items-start space-x-6">
                           <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
                             <Phone className="h-7 w-7 text-white" />
@@ -166,9 +163,9 @@ const Contact = () => {
                             <p className="text-white/90 text-lg sm:text-xl">+40 758 878 364</p>
                           </div>
                         </div>
-                      </div>
+                      </ScrollAnimatedElement>
 
-                      <div>
+                      <ScrollAnimatedElement animation="fadeIn" delay={600} threshold={0.8}>
                         <div className="flex items-start space-x-6">
                           <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
                             <Clock className="h-7 w-7 text-white" />
@@ -178,14 +175,14 @@ const Contact = () => {
                             <p className="text-white/90 text-lg sm:text-xl">Lun - Vin de la 09:00 la 17:00</p>
                           </div>
                         </div>
-                      </div>
+                      </ScrollAnimatedElement>
                     </div>
                   </CardContent>
                 </Card>
-              </div>
+              </ScrollAnimatedElement>
 
               {/* Company and Legal Links */}
-              <div>
+              <ScrollAnimatedElement animation="slideUp" delay={700}>
                 <div className="mt-8 grid grid-cols-2 gap-8 text-base sm:text-lg">
                   <div>
                     <h4 className="font-semibold text-blue-600 mb-3 text-lg sm:text-xl">Companie</h4>
@@ -203,7 +200,7 @@ const Contact = () => {
                     </ul>
                   </div>
                 </div>
-              </div>
+              </ScrollAnimatedElement>
             </div>
           </div>
         </div>

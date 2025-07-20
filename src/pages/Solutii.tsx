@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
-import OptimizedImage from '@/components/OptimizedImage';
+import ScrollAnimatedElement from '@/components/ScrollAnimatedElement';
 import { 
   Store, 
   Users, 
@@ -85,7 +85,7 @@ const Solutii = () => {
       <section className="bg-gradient-hero text-white py-8 lg:py-12 overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
-            <div className="space-y-8 lg:col-span-2">
+            <ScrollAnimatedElement animation="slideRight" delay={200} className="space-y-8 lg:col-span-2">
               <div className="space-y-4">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
                   Soluția Recurentă pentru Afacerea Ta
@@ -98,21 +98,17 @@ const Solutii = () => {
                   </Button>
                 </Link>
               </div>
-            </div>
+            </ScrollAnimatedElement>
 
-            <div className="relative flex items-center justify-center lg:justify-start lg:col-span-3">
+            <ScrollAnimatedElement animation="slideLeft" delay={400} className="relative flex items-center justify-center lg:justify-start lg:col-span-3">
               <div className="relative w-full max-w-sm mx-auto sm:max-w-md md:max-w-lg lg:max-w-3xl xl:max-w-4xl lg:mx-0">
-                <OptimizedImage 
+                <img 
                   src="/gabio-uploads/solutii-hero.png" 
                   alt="Solutii Hero Refluxe"
                   className="w-full h-auto object-contain"
-                  responsive={true}
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  width={800}
-                  height={600}
                 />
               </div>
-            </div>
+            </ScrollAnimatedElement>
           </div>
         </div>
       </section>
@@ -120,18 +116,21 @@ const Solutii = () => {
       {/* What Refluxe Can Do Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <ScrollAnimatedElement animation="fadeIn" className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Ce Poate Face Refluxe Pentru Afacerea Ta?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Transformă-ți clienții în abonați fideli care plătesc lună de lună, automat.
             </p>
-          </div>
+          </ScrollAnimatedElement>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
             {businessFeatures.map((feature, index) => (
-              <div
+              <ScrollAnimatedElement 
                 key={index} 
+                animation="slideUp" 
+                delay={index * 100}
+                threshold={0.2}
               >
                 <Card className="group hover:shadow-xl transition-all duration-300 border border-gray-200 shadow-sm hover:-translate-y-1 text-center h-full">
                   <CardHeader className="pb-4">
@@ -148,11 +147,11 @@ const Solutii = () => {
                     </p>
                   </CardContent>
                 </Card>
-              </div>
+              </ScrollAnimatedElement>
             ))}
           </div>
 
-          <div className="text-center">
+          <ScrollAnimatedElement animation="fadeIn" delay={200} className="text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               VREI ASTA ÎN AFACEREA TA?
             </h2>
@@ -161,7 +160,7 @@ const Solutii = () => {
                 PROGRAMEAZĂ O DEMONSTRAȚIE
               </Button>
             </Link>
-          </div>
+          </ScrollAnimatedElement>
         </div>
       </section>
 

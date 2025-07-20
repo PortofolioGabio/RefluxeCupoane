@@ -1,5 +1,4 @@
 
-import OptimizedImage from './OptimizedImage';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
@@ -11,13 +10,10 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <OptimizedImage
+              <img
                 src="/gabio-uploads/logof.png"
                 alt="Refluxe logo"
-                className="h-6 w-auto"
-                width={120}
-                height={24}
-                priority={true}
+                className="h-8 w-auto"
               />
             </div>
             <p className="text-gray-400 text-sm">
