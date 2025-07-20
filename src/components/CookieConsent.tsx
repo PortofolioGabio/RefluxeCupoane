@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CookieConsent = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,9 +31,9 @@ const CookieConsent = () => {
         <div className="flex-1 text-xs text-gray-600">
           <p>
             Folosim cookie-uri pentru experiență optimă.{' '}
-            <a href="/termeni-utilizare" className="text-blue-600 hover:text-blue-800 underline">
+            <Link to="/termeni-utilizare" className="text-blue-600 hover:text-blue-800 underline">
               Detalii aici
-            </a>.
+            </Link>.
           </p>
         </div>
         
