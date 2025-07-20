@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, ExternalLink } from 'lucide-react';
+import OptimizedImage from './OptimizedImage';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,10 +25,13 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img 
+            <OptimizedImage 
               src="/gabio-uploads/6e0b0371-1768-486a-b523-9672b0996fd8.png" 
               alt="Refluxe"
               className="h-8 w-auto"
+              width={120}
+              height={32}
+              priority={true}
             />
           </Link>
 
