@@ -105,24 +105,20 @@ All colors MUST be HSL.
   }
 }
 
-/* Performance optimized scroll animations */
+/* Scroll animations disabled - utility classes kept for compatibility */
 @layer utilities {
   .will-change-transform {
-    will-change: transform;
+    /* Disabled - was: will-change: transform; */
   }
   
-  /* Hardware acceleration for smooth animations */
+  /* Hardware acceleration disabled */
   .transform-gpu {
-    transform: translateZ(0);
+    /* Disabled - was: transform: translateZ(0); */
   }
   
-  /* Reduced motion support */
-  @media (prefers-reduced-motion: reduce) {
-    .transition-all,
-    .transition-transform,
-    .transition-opacity {
-      transition: none !important;
-      animation: none !important;
-    }
+  /* Animation disabling for all elements */
+  * {
+    transition: none !important;
+    animation: none !important;
   }
 }
