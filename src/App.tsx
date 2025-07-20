@@ -9,10 +9,12 @@ import Solutii from "./pages/Solutii";
 import Despre from "./pages/Despre";
 import Planuri from "./pages/Planuri";
 import Contact from "./pages/Contact";
+import TermeniUtilizare from "./pages/TermeniUtilizare";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import CookieConsent from "./components/CookieConsent";
 
 const queryClient = new QueryClient();
 
@@ -33,10 +35,12 @@ const App = () => (
               <Route path="/despre" element={<Despre />} />
               <Route path="/planuri" element={<Planuri />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/termeni-utilizare" element={<TermeniUtilizare />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
           <Footer />
+          <CookieConsent />
         </div>
       </BrowserRouter>
     </TooltipProvider>
