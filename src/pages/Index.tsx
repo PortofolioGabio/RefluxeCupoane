@@ -48,7 +48,7 @@ const Index = () => {
 
   const benefits = [
     "Bază date",
-    "Alerte push (SMS)",
+    "Alerte PUSH",
     "Notificări automatizate",
     "Rapoarte Detaliate"
   ];

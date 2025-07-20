@@ -25,43 +25,43 @@ const CookieConsent = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50 p-6">
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div className="flex-1 text-sm text-gray-700">
+    <div className="fixed bottom-4 left-4 right-4 sm:left-6 sm:right-6 md:left-auto md:right-6 md:max-w-md bg-white border border-gray-200 rounded-lg shadow-lg z-50 p-4">
+      <div className="flex items-start justify-between gap-3">
+        <div className="flex-1 text-xs text-gray-600">
           <p>
-            Folosim cookie-uri pentru a îmbunătăți experiența ta pe site și pentru a analiza traficul. 
-            Continuând să navighezi, accepți utilizarea cookie-urilor conform{' '}
+            Folosim cookie-uri pentru experiență optimă.{' '}
             <a href="/termeni-utilizare" className="text-blue-600 hover:text-blue-800 underline">
-              Termenilor de Utilizare
+              Detalii aici
             </a>.
           </p>
         </div>
         
-        <div className="flex items-center gap-3">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={handleReject}
-            className="text-gray-600 border-gray-300 hover:bg-gray-50"
-          >
-            Refuz
-          </Button>
-          <Button
-            size="sm"
-            onClick={handleAccept}
-            className="bg-blue-600 hover:bg-blue-700 text-white"
-          >
-            Accept
-          </Button>
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={handleReject}
-            className="p-2 text-gray-500 hover:text-gray-700"
-          >
-            <X className="h-4 w-4" />
-          </Button>
-        </div>
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={handleReject}
+          className="p-1 text-gray-400 hover:text-gray-600 h-auto min-w-0"
+        >
+          <X className="h-3 w-3" />
+        </Button>
+      </div>
+      
+      <div className="flex items-center gap-2 mt-3">
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={handleReject}
+          className="text-xs px-3 py-1 h-7 text-gray-600 border-gray-300 hover:bg-gray-50"
+        >
+          Refuz
+        </Button>
+        <Button
+          size="sm"
+          onClick={handleAccept}
+          className="text-xs px-3 py-1 h-7 bg-blue-600 hover:bg-blue-700 text-white"
+        >
+          Accept
+        </Button>
       </div>
     </div>
   );

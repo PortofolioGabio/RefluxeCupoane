@@ -10,6 +10,7 @@ import Despre from "./pages/Despre";
 import Planuri from "./pages/Planuri";
 import Contact from "./pages/Contact";
 import TermeniUtilizare from "./pages/TermeniUtilizare";
+import Politica from "./pages/Politica";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -36,6 +37,7 @@ const App = () => (
               <Route path="/planuri" element={<Planuri />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/termeni-utilizare" element={<TermeniUtilizare />} />
+              <Route path="/politica-de-confidentialitate" element={<Politica />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
