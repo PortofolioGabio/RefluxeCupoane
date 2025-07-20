@@ -212,7 +212,7 @@ return (
           <OptimizedImage 
             src="/gabio-uploads/955053ff-b18c-43de-bdb8-1ddceb318ca0.png" 
             alt="Beneficiile cardurilor digitale de fidelitate - de ce să alegi soluțiile Refluxe pentru programul tău de loialitate"
-            className="w-full h-auto"
+            className="w-full h-auto max-w-4xl mx-auto"
             width={1600}
             height={800}
           />
