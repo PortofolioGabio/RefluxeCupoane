@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
@@ -29,6 +28,8 @@ const Footer = () => {
               <li><Link to="/solutii" className="text-gray-400 hover:text-white transition-colors">Soluții</Link></li>
               <li><Link to="/despre" className="text-gray-400 hover:text-white transition-colors">Despre</Link></li>
               <li><Link to="/planuri" className="text-gray-400 hover:text-white transition-colors">Planuri</Link></li>
+              <li><Link to="/termeni-utilizare" className="text-gray-400 hover:text-white transition-colors">Termeni de Utilizare</Link></li>
+              <li><Link to="/politica-confidentialitate" className="text-gray-400 hover:text-white transition-colors">Politica de Confidențialitate</Link></li>
             </ul>
           </div>
 
