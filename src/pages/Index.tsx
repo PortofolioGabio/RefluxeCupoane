@@ -72,12 +72,12 @@ const Index = () => {
     {
       image: "/gabio-uploads/ce8894f8-8ebe-4910-9a6d-b3ff5a3637fc.png",
       title: "RefluxeRecompense",
-      description: "Gamification care creează dependență. Stimulează creierul clienților cu recompense inteligente. Îi ții în priză, le crești loialitatea și... vânzările cresc pe pilot automat."
+      description: "Gamificarea care creează dependență. Stimulează creierul clienților cu recompense inteligente. Îi ții în priză, le crești loialitatea și... vânzările cresc pe pilot automat."
     },
     {
       image: "/gabio-uploads/57e7633a-d890-4c9a-b843-9a2ce7b6d271.png",
       title: "RefluxeCashback",
-      description: "Bani înapoi, bani înapoi! Oferă-le clienților ceea ce iubesc: bani. Cashback-ul îi face să simtă că „au câștigat” la fiecare achiziție. Și vor să câștige din nou și din nou."
+      description: "Cashback-ul îi face să simtă că „au câștigat” la fiecare achiziție. Și vor să câștige din nou și din nou."
     },
     {
       image: "/gabio-uploads/b79307ec-62c8-427c-9e0a-03f9edc1f35a.png",

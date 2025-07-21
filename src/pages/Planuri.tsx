@@ -12,13 +12,12 @@ const Planuri = () => {
 
   const plans = [
       {
-        name: "Expert",
+        name: "Nelimitat+",
         storeCount: "1 Magazin",
         clientCount: "Bază de date nelimitată",
         description: "Pentru corporații și lanțuri de magazine",
         badge: "Toate funcționalitățile",
         features: [
-          { name: "1 locație", included: true },
           { name: "1 GEO-locație", included: true },
           { name: "1 manager", included: true },
           { name: "Alerte push nelimitate (tip SMS)", included: true },
@@ -107,8 +106,10 @@ const Planuri = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Centered pricing text */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              <span className="text-brand-orange">TOTUL</span> pentru doar <span className="text-brand-purple">100 lei / lună</span>
+            <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
+              <span className="text-brand-orange">TOTUL</span> pentru doar
+              <br />
+              <span className="text-brand-purple">100 lei / lună</span>
             </h2>
             <p className="text-lg text-gray-700 mb-4">
               Nimic complicat. Fără costuri ascunse. <strong>Un singur preț. O platformă completă. O afacere care crește.</strong>
