@@ -106,10 +106,10 @@ const Planuri = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Centered pricing text */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4 leading-relaxed">
+            <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
               <span className="text-brand-orange">TOTUL</span> pentru doar
               <br />
-              <span className="text-brand-purple">100 lei / lună</span>
+              <span className="text-brand-purple block mt-2">100 lei / lună</span>
             </h2>
             <p className="text-lg text-gray-700 mb-4">
               Nimic complicat. Fără costuri ascunse. <strong>Un singur preț. O platformă completă. O afacere care crește.</strong>
