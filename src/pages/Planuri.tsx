@@ -114,27 +114,31 @@ const Planuri = () => {
             <p className="text-lg text-gray-700 mb-4">
               Nimic complicat. Fără costuri ascunse. <strong>Un singur preț. O platformă completă. O afacere care crește.</strong>
             </p>
-            <p className="text-lg text-gray-700 mb-8">
+            <p className="text-lg text-gray-700 mb-12">
               Vrei să-ți transformi clienții în fani loiali? <strong>Asta e unealta. 100 lei. Atât. Fără costuri ascunse.</strong>
             </p>
             
-            {/* Pricing Options */}
-            <div className="space-y-6 mb-8">
-              <div className="text-lg text-gray-700">
-                <span className="font-semibold text-gray-900">Implementarea</span> costă <span className="text-brand-orange font-bold">200 lei</span> o singură dată
+            {/* Pricing Options - Better Layout */}
+            <div className="bg-gray-50 rounded-3xl p-8 mb-12 max-w-4xl mx-auto">
+              <div className="text-center mb-8">
+                <p className="text-lg text-gray-600">
+                  <span className="font-semibold text-gray-900">Implementarea</span> costă <span className="text-brand-orange font-bold text-xl">200 lei</span> o singură dată
+                </p>
               </div>
               
-              <div className="space-y-4">
-                <div className="text-lg text-gray-700">
-                  <span className="text-brand-orange font-bold">Plan pe 6 luni:</span> 
-                  <span className="ml-2 text-2xl font-extrabold text-brand-orange">90 lei/lună</span>
-                  <span className="ml-2 text-green-600 font-semibold">(10% reducere + implementare gratuită)</span>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                <div className="text-center p-6 bg-white rounded-2xl border-2 border-brand-orange/20 hover:border-brand-orange/40 transition-all">
+                  <div className="text-brand-orange font-bold text-lg mb-2">Plan pe 6 luni</div>
+                  <div className="text-3xl font-extrabold text-brand-orange mb-2">90 lei/lună</div>
+                  <div className="text-green-600 font-semibold">10% reducere</div>
+                  <div className="text-green-600 font-semibold">Implementare gratuită</div>
                 </div>
                 
-                <div className="text-lg text-gray-700">
-                  <span className="text-brand-purple font-bold">Plan pe 12 luni:</span> 
-                  <span className="ml-2 text-2xl font-extrabold text-brand-purple">80 lei/lună</span>
-                  <span className="ml-2 text-green-600 font-semibold">(20% reducere + implementare gratuită)</span>
+                <div className="text-center p-6 bg-white rounded-2xl border-2 border-brand-purple/20 hover:border-brand-purple/40 transition-all">
+                  <div className="text-brand-purple font-bold text-lg mb-2">Plan pe 12 luni</div>
+                  <div className="text-3xl font-extrabold text-brand-purple mb-2">80 lei/lună</div>
+                  <div className="text-green-600 font-semibold">20% reducere</div>
+                  <div className="text-green-600 font-semibold">Implementare gratuită</div>
                 </div>
               </div>
             </div>
