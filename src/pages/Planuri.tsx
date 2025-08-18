@@ -103,40 +103,40 @@ const Planuri = () => {
 
       {/* Pricing Plans */}
       <section className="py-20">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
-              <span className="text-brand-orange">TOTUL</span> pentru doar
-              <br />
-              <span className="text-brand-purple block mt-2">100 lei / lună</span>
-            </h2>
-            <p className="text-lg text-gray-700 mb-4">
-              Nimic complicat. Fără costuri ascunse. <strong>Un singur preț. O platformă completă. O afacere care crește.</strong>
-            </p>
-            <p className="text-lg text-gray-700 mb-8">
-              Vrei să-ți transformi clienții în fani loiali? <strong>Asta e unealta. 100 lei. Atât. Fără costuri ascunse.</strong>
-            </p>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
+            <span className="text-brand-orange">TOTUL</span> pentru doar
+            <br />
+            <span className="text-brand-purple block mt-2">100 lei / lună</span>
+          </h2>
+          <p className="text-lg text-gray-700 mb-4">
+            Nimic complicat. Fără costuri ascunse. <strong>Un singur preț. O platformă completă. O afacere care crește.</strong>
+          </p>
+          <p className="text-lg text-gray-700 mb-8">
+            Vrei să-ți transformi clienții în fani loiali? <strong>Asta e unealta. 100 lei. Atât. Fără costuri ascunse.</strong>
+          </p>
+          
+          {/* Pricing Options */}
+          <div className="space-y-6 mb-8">
+            <div className="text-lg text-gray-700">
+              <span className="font-semibold text-gray-900">Implementarea</span> costă <span className="text-brand-orange font-bold">200 lei</span> o singură dată
+            </div>
             
-            {/* Pricing Options */}
-            <div className="space-y-6 mb-8">
+            <div className="space-y-4">
               <div className="text-lg text-gray-700">
-                <span className="font-semibold text-gray-900">Implementarea</span> costă <span className="text-brand-orange font-bold">200 lei</span> o singură dată
+                <span className="text-brand-orange font-bold">Plan pe 6 luni:</span> 
+                <span className="ml-2 text-2xl font-extrabold text-brand-orange">90 lei/lună</span>
+                <span className="ml-2 text-green-600 font-semibold">(10% reducere + implementare gratuită)</span>
               </div>
               
-              <div className="space-y-4">
-                <div className="text-lg text-gray-700">
-                  <span className="text-brand-orange font-bold">Plan pe 6 luni:</span> 
-                  <span className="ml-2 text-2xl font-extrabold text-brand-orange">90 lei/lună</span>
-                  <span className="ml-2 text-green-600 font-semibold">(10% reducere + implementare gratuită)</span>
-                </div>
-                
-                <div className="text-lg text-gray-700">
-                  <span className="text-brand-purple font-bold">Plan pe 12 luni:</span> 
-                  <span className="ml-2 text-2xl font-extrabold text-brand-purple">80 lei/lună</span>
-                  <span className="ml-2 text-green-600 font-semibold">(20% reducere + implementare gratuită)</span>
-                </div>
+              <div className="text-lg text-gray-700">
+                <span className="text-brand-purple font-bold">Plan pe 12 luni:</span> 
+                <span className="ml-2 text-2xl font-extrabold text-brand-purple">80 lei/lună</span>
+                <span className="ml-2 text-green-600 font-semibold">(20% reducere + implementare gratuită)</span>
               </div>
             </div>
           </div>
+        </div>
           <div className="flex justify-center">
             <div className="w-full max-w-md">
               {plans.map((plan, index) => (
