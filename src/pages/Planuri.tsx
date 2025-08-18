@@ -103,8 +103,6 @@ const Planuri = () => {
 
       {/* Pricing Plans */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Centered pricing text */}
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
               <span className="text-brand-orange">TOTUL</span> pentru doar
@@ -114,9 +112,30 @@ const Planuri = () => {
             <p className="text-lg text-gray-700 mb-4">
               Nimic complicat. Fără costuri ascunse. <strong>Un singur preț. O platformă completă. O afacere care crește.</strong>
             </p>
-            <p className="text-lg text-gray-700 mb-4">
+            <p className="text-lg text-gray-700 mb-8">
               Vrei să-ți transformi clienții în fani loiali? <strong>Asta e unealta. 100 lei. Atât. Fără costuri ascunse.</strong>
             </p>
+            
+            {/* Pricing Options */}
+            <div className="space-y-6 mb-8">
+              <div className="text-lg text-gray-700">
+                <span className="font-semibold text-gray-900">Implementarea</span> costă <span className="text-brand-orange font-bold">200 lei</span> o singură dată
+              </div>
+              
+              <div className="space-y-4">
+                <div className="text-lg text-gray-700">
+                  <span className="text-brand-orange font-bold">Plan pe 6 luni:</span> 
+                  <span className="ml-2 text-2xl font-extrabold text-brand-orange">90 lei/lună</span>
+                  <span className="ml-2 text-green-600 font-semibold">(10% reducere + implementare gratuită)</span>
+                </div>
+                
+                <div className="text-lg text-gray-700">
+                  <span className="text-brand-purple font-bold">Plan pe 12 luni:</span> 
+                  <span className="ml-2 text-2xl font-extrabold text-brand-purple">80 lei/lună</span>
+                  <span className="ml-2 text-green-600 font-semibold">(20% reducere + implementare gratuită)</span>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="flex justify-center">
             <div className="w-full max-w-md">
@@ -247,15 +266,15 @@ const Planuri = () => {
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-brand-purple/10 rounded-lg p-6">
                 <div className="text-lg font-semibold text-brand-purple mb-2">🔹 2–5 utilizatori</div>
-                <div className="text-xl font-bold text-gray-900">80 lei / lună / utilizator</div>
+                <div className="text-xl font-bold text-gray-900">85 lei / lună / utilizator</div>
               </div>
               <div className="bg-brand-orange/10 rounded-lg p-6">
                 <div className="text-lg font-semibold text-brand-orange mb-2">🔹 6–10 utilizatori</div>
-                <div className="text-xl font-bold text-gray-900">60 lei / lună / utilizator</div>
+                <div className="text-xl font-bold text-gray-900">70 lei / lună / utilizator</div>
               </div>
               <div className="bg-green-100 rounded-lg p-6">
                 <div className="text-lg font-semibold text-green-600 mb-2">🔹 11+ utilizatori</div>
-                <div className="text-xl font-bold text-gray-900">40 lei / lună / utilizator</div>
+                <div className="text-xl font-bold text-gray-900">50 lei / lună / utilizator</div>
               </div>
             </div>
             <p className="text-lg text-gray-600 mt-6">
