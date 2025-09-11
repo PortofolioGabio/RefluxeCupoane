@@ -362,4 +362,4 @@ const Planuri = () => {
   );
 };
 
-export default Planuri; 
+export default Planuri;
