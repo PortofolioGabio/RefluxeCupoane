@@ -12,7 +12,7 @@ const Planuri = () => {
     {
       name: "START",
       description: "Pentru Întreprinderile mici care vor să devină mari.",
-      monthlyPrice: "249",
+      monthlyPrice: "149",
       yearlyDiscount: "Primești 2 luni gratuite.",
       yearlyNote: "(plată unică)",
       features: [
@@ -23,7 +23,7 @@ const Planuri = () => {
     {
       name: "PLUS", 
       description: "Pentru o afacere in crestere, cu câteva puncte de vânzare.",
-      monthlyPrice: "349",
+      monthlyPrice: "249",
       yearlyDiscount: "Primești 2 luni gratuite.",
       yearlyNote: "(plată unică)",
       features: [
@@ -34,7 +34,7 @@ const Planuri = () => {
     {
       name: "PRO",
       description: "Pentru companii avansate care au deja mai multe puncte de vânzare.",
-      monthlyPrice: "499", 
+      monthlyPrice: "399", 
       yearlyDiscount: "Primești 2 luni gratuite.",
       yearlyNote: "(plată unică)",
       features: [
