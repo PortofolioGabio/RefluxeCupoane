@@ -33,7 +33,7 @@ const Planuri = () => {
     },
     {
       name: "PRO",
-      description: "Pentru companiile avansate care se preocupă de creșterea vânzărilor",
+      description: "Pentru companii avansate care au deja mai multe puncte de vânzare.",
       monthlyPrice: "499", 
       yearlyDiscount: "Primești 2 luni gratuite.",
       yearlyNote: "(plată unică)",
