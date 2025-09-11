@@ -12,7 +12,6 @@ const Navbar = () => {
     { name: 'Acasă', path: '/' },
     { name: 'Soluții', path: '/solutii' },
     { name: 'Despre', path: '/despre' },
-    { name: 'Planuri', path: '/planuri' }, 
     { name: 'Contact', path: '/contact' },
   ];
 
