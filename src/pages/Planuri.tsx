@@ -2,69 +2,216 @@ import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Switch } from '@/components/ui/switch';
 import { Link, useNavigate } from 'react-router-dom';
 import { Check, X, Star, ArrowRight, Zap } from 'lucide-react';
 
 const Planuri = () => {
-  const [isYearly, setIsYearly] = useState(false);
   const navigate = useNavigate();
 
   const plans = [
-      {
-        name: "Nelimitat+",
-        storeCount: "1 Magazin",
-        clientCount: "Bază de date nelimitată",
-        description: "Pentru corporații și lanțuri de magazine",
-        badge: "Toate funcționalitățile",
-        features: [
-          { name: "1 GEO-locație", included: true },
-          { name: "1 manager", included: true },
-          { name: "Alerte push nelimitate (tip SMS)", included: true },
-          { name: "Notificări personalizabile și automate", included: true },
-          { name: "10 promoții active simultan", included: true },
-          { name: "Client Ambasador", included: true },
-          { name: "Anti-duplicare", included: true },
-          { name: "Rapoarte detaliate", included: true },
-          { name: "Design personalizabil", included: true },
-          { name: "Integrare API", included: true }
-        ],
-        cta: "Contactează Vânzările",
-        popular: true
-      }
-    ];
-
-  const comparisonFeatures = [
-    { name: "1 locație", description: "Ai o locație fizică? Perfect. Planul funcționează pentru acea locație." },
-    { name: "1 GEO-locație", description: "Trimitem automat oferte clienților când trec prin apropierea locației tale." },
-    { name: "1 manager", description: "Poți avea o persoană care administrează totul. Fără haos, totul sub control." },
-    { name: "Bază de date nelimitată", description: "Oricâți clienți ai, îi poți păstra pe toți într-un singur loc. Fără limite." },
-    { name: "Alerte push nelimitate (tip SMS)", description: "Trimite mesaje clienților direct pe telefon. Seamănă cu SMS-urile, dar sunt mai smart." },
-    { name: "Notificări personalizabile și automate", description: "Trimitem oferte sau mesaje automat, exact cum vrei tu. Clientul simte că e special." },
-    { name: "10 promoții active simultan", description: "Poți rula până la 10 promoții în același timp – fără să le amesteci." },
-    { name: "Client Ambasador", description: "Clienții tăi îți aduc alți clienți. Le dai un mic beneficiu, și vorbesc în locul tău." },
-    { name: "Anti-duplicare", description: "Un client nu poate trișa – nu poate folosi aceeași ofertă de mai multe ori." },
-    { name: "Rapoarte detaliate", description: "Vezi clar ce merge, câți clienți revin, ce promoții aduc cei mai mulți bani." },
-    { name: "Design personalizabil", description: "Alegi culorile, logo-ul, mesajele – totul arată exact cum vrei tu." },
-    { name: "Integrare API", description: "Dacă ai deja alte sisteme, conectăm Refluxe cu ele ca să meargă totul ca uns." }
+    {
+      name: "START",
+      description: "Pentru afacerile mici care doresc să înceapă cu programele de fidelitate",
+      monthlyPrice: "249",
+      yearlyPrice: "2.976",
+      yearlyDiscount: "Gratis 2 meses gratis (pagamento anual, 6 mês)",
+      features: [
+        "1 Loja",
+        "200 Clientes"
+      ]
+    },
+    {
+      name: "PLUS", 
+      description: "Para negócios em crescimento com mais necessidades de vendas",
+      monthlyPrice: "349",
+      yearlyPrice: "4.188",
+      yearlyDiscount: "Gratis 2 meses gratis (pagamento anual, 6 mês)",
+      features: [
+        "1 Loja",
+        "500 Clientes"
+      ]
+    },
+    {
+      name: "PRO",
+      description: "Para empresas avançadas que se preocupam com o crescimento das vendas",
+      monthlyPrice: "499", 
+      yearlyPrice: "5.988",
+      yearlyDiscount: "Gratis 2 meses gratis (pagamento anual, 6 mês)",
+      features: [
+        "1 Loja",
+        "Clientes ilimitados"
+      ]
+    }
   ];
 
-  const faqs = [
+  const comparisonFeatures = [
     {
-      question: "Pot schimba planul oricând?",
-      answer: "Da, poți face upgrade sau downgrade oricând. Modificările se aplică la următoarea facturare."
+      name: "Promoções disponíveis",
+      description: "Você pode usar até 4 tipos de cupons para as promoções",
+      start: "1",
+      plus: "5", 
+      pro: "10"
     },
     {
-      question: "Există perioadă de probă gratuită?",
-      answer: "Planul Pro include 14 zile de probă gratuită. Planul Enterprise include 30 de zile."
+      name: "Cartões de visita",
+      description: "Cartões digitais finalizados - disponível em cartões públicos",
+      start: true,
+      plus: true,
+      pro: true
     },
     {
-      question: "Ce se întâmplă dacă depășesc limita de cupoane?",
-      answer: "Te vom notifica când te apropii de limită și îți vom sugera upgrade-ul la planul superior."
+      name: "Cartões de assinatura",
+      description: "Cartões múltiplos disponíveis",
+      start: true,
+      plus: true,
+      pro: true
     },
     {
-      question: "Includ planurile suport tehnic?",
-      answer: "Toate planurile includ suport tehnic. Pro și Enterprise au suport prioritar și dedicat."
+      name: "Cartões de cashback",
+      description: "Cartões de cashback finalizados com ferramentas de economia personalizadas",
+      start: true,
+      plus: true,
+      pro: true
+    },
+    {
+      name: "Cartões de desconto",
+      description: "Cartões digitais de desconto directo finalizados",
+      start: true,
+      plus: true,
+      pro: true
+    },
+    {
+      name: "Cartão presente",
+      description: "Cartões digitais de certificado pré - pago finalizados",
+      start: true,
+      plus: true,
+      pro: true
+    },
+    {
+      name: "Cartões de cupom",
+      description: "Cartões digitais de cupons finalizados com descontos para a primeira visita",
+      start: true,
+      plus: true,
+      pro: true
+    },
+    {
+      name: "Cartões de membros",
+      description: "Cartões digitais finalizados para membros",
+      start: true,
+      plus: true,
+      pro: true
+    },
+    {
+      name: "Cartões de recompensas",
+      description: "Cartões digitais de recompensas finalizados",
+      start: true,
+      plus: true,
+      pro: true
+    },
+    {
+      name: "Cartões de recompensas",
+      description: "Cartões digitais de recompensas finalizados",
+      start: true,
+      plus: true,
+      pro: true
+    },
+    {
+      name: "Geolocalizações",
+      description: "111 Modelos de cartões prontos para usar para diferentes tipos de negócios, incluindo o setor de serviços, como com um design individual em alguns negócios",
+      start: true,
+      plus: true,
+      pro: true
+    },
+    {
+      name: "Personalização dos cartões",
+      description: "Crie um projeto, cartes com um design exclusivo em 5 minutos. Personalize cores, logotipos, imagens de seu e estrutura do cartão. Aproveite os modelos mais criativos de cartões personalizados",
+      start: true,
+      plus: true,
+      pro: true
+    },
+    {
+      name: "CRM",
+      description: "CRM avançado, a capacidade de segmentar seus clientes para correspondência direcionada e aumento de vendas em até 200%",
+      start: true,
+      plus: true,
+      pro: true
+    },
+    {
+      name: "Push livre",
+      description: "Notificação completa de SMS. Clientes que querem podem receber notificação push ilimitada. Automaticamente. Envie sua mensagem na história do telefone e não necessita o cliente. Gerar um",
+      start: true,
+      plus: true,
+      pro: true
+    },
+    {
+      name: "Geolocalizações inteligentes",
+      description: "Use o mapa automaticamente para seus clientes quando eles chegarem a 100 metros de sua empresa. Suas ofertas serão por gestão remota na consulta dos seus clientes para sua loja",
+      start: "Geolocalizações",
+      plus: "Geolocalizações",
+      pro: "Geolocalizações"
+    },
+    {
+      name: "Personalização de notificações push",
+      description: "Crie um projeto, cartes de push automatizado. Crie mensagens finalizadas automaticamente, gratuitamente",
+      start: false,
+      plus: false,
+      pro: true
+    },
+    {
+      name: "PWA Scanner App",
+      description: "Aplicativo opcional scanner CRM/PWA para conectar pontos e prêmios aos seus clientes com facilidade e rapidez",
+      start: true,
+      plus: true,
+      pro: true
+    },
+    {
+      name: "Programa de Indicação",
+      description: "Seus clientes podem indicar pontos e recompensas por convidar amigos para sua promoção. Aumente sua base de clientes com custo de publicidade",
+      start: false,
+      plus: true,
+      pro: true
+    },
+    {
+      name: "Controle duplicado",
+      description: "Seus clientes não podem usar outros cartões de fidelidade para uma promoção e obter mais pontos do que deveriam. Controle apenas aplicado exclusivo de clientes",
+      start: true,
+      plus: true,
+      pro: true
+    },
+    {
+      name: "Relatórios inteligentes",
+      description: "Relatórios completos e feedbacks para você analisar a performance integrada de seus programas e clientes",
+      start: true,
+      plus: true,
+      pro: true
+    },
+    {
+      name: "Análise para gerenciamento",
+      description: "Veja qual item deve ganhar de segmento e outros vendedores na cidade, para mostrar e para visitar. Recomendação para melhorar suas vendas de empresa",
+      start: "1",
+      plus: "3",
+      pro: "5"
+    },
+    {
+      name: "API e Integração",
+      description: "Integração com sua software para automação automática de cartões, pontos e prêmios",
+      start: false,
+      plus: false,
+      pro: true
+    },
+    {
+      name: "Os campos personalizáveis",
+      description: "Pegue seus próprios campos com cobrança personalizada: seu nome e telefone. Adicione mais campos para seus clientes",
+      start: false,
+      plus: true,
+      pro: true
+    },
+    {
+      name: "Configuração gratuita do programa de fidelidade",
+      description: "Configuramos todos os programas de fidelidade",
+      start: false,
+      plus: false,
+      pro: true
     }
   ];
 
@@ -72,248 +219,139 @@ const Planuri = () => {
     navigate('/demonstratie');
   };
 
-  const getFeatureStatus = (planIndex: number, featureIndex: number) => {
-    // Since we only have the Expert plan, all features are included
-    return 'included';
-  };
-
-  const renderFeatureCell = (status: string) => {
-    if (status === 'included') {
-      return <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mx-auto"><Check className="h-3 w-3 text-white" /></div>;
-    } else if (status === 'excluded') {
-      return <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mx-auto"><X className="h-3 w-3 text-white" /></div>;
-    } else {
-      return <span className="text-xs text-gray-600 mx-auto block text-center">Limited</span>;
+  const renderFeatureStatus = (status: boolean | string) => {
+    if (typeof status === 'boolean') {
+      return status ? (
+        <div className="flex justify-center">
+          <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+            <Check className="h-4 w-4 text-white" />
+          </div>
+        </div>
+      ) : (
+        <div className="flex justify-center">
+          <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
+            <X className="h-4 w-4 text-white" />
+          </div>
+        </div>
+      );
     }
+    return <div className="text-center text-sm">{status}</div>;
   };
 
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-hero text-white py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-            Un Singur Plan. Toată Puterea.
-          </h1>
-          <p className="text-xl text-gray-200 mb-8">
-            Tot ce ai nevoie pentru un program de fidelitate care aduce clienții înapoi. Fără complicații. Fără costuri ascunse.
-          </p>
-        </div>
-      </section>
-
-      {/* Pricing Plans */}
-      <section className="py-20">
+      <section className="bg-gradient-to-r from-purple-800 to-purple-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Centered pricing text */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
-              <span className="text-brand-orange">TOTUL</span> pentru doar
-              <br />
-              <span className="text-brand-purple block mt-2">100 lei / lună</span>
-            </h2>
-            <p className="text-lg text-gray-700 mb-4">
-              Nimic complicat. Fără costuri ascunse. <strong>Un singur preț. O platformă completă. O afacere care crește.</strong>
-            </p>
-            <p className="text-lg text-gray-700 mb-12">
-              Vrei să-ți transformi clienții în fani loiali? <strong>Asta e unealta. 100 lei. Atât. Fără costuri ascunse.</strong>
-            </p>
-            
-            {/* Pricing Options - Better Layout */}
-            <div className="bg-gray-50 rounded-3xl p-8 mb-12 max-w-4xl mx-auto">
-              <div className="text-center mb-8">
-                <p className="text-lg text-gray-600">
-                  <span className="font-semibold text-gray-900">Implementarea</span> costă <span className="text-brand-orange font-bold text-xl">200 lei</span> o singură dată
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-                <div className="text-center p-6 bg-white rounded-2xl border-2 border-brand-orange/20 hover:border-brand-orange/40 transition-all">
-                  <div className="text-brand-orange font-bold text-lg mb-2">Plan pe 6 luni</div>
-                  <div className="text-3xl font-extrabold text-brand-orange mb-2">90 lei/lună</div>
-                  <div className="text-green-600 font-semibold">10% reducere</div>
-                  <div className="text-green-600 font-semibold">Implementare gratuită</div>
-                </div>
-                
-                <div className="text-center p-6 bg-white rounded-2xl border-2 border-brand-purple/20 hover:border-brand-purple/40 transition-all">
-                  <div className="text-brand-purple font-bold text-lg mb-2">Plan pe 12 luni</div>
-                  <div className="text-3xl font-extrabold text-brand-purple mb-2">80 lei/lună</div>
-                  <div className="text-green-600 font-semibold">20% reducere</div>
-                  <div className="text-green-600 font-semibold">Implementare gratuită</div>
-                </div>
-              </div>
-            </div>
+          <div className="text-center mb-12">
+            <h1 className="text-3xl sm:text-4xl font-bold mb-4">
+              TRANSFORME CLIENȚII ÎN FANI CHIAR ASTĂZI
+            </h1>
           </div>
-          <div className="flex justify-center">
-            <div className="w-full max-w-md">
-              {plans.map((plan, index) => (
-                <Card 
-                  key={index} 
-                  className={`relative shadow-xl border-0 transition-all duration-300 ${
-                    plan.popular 
-                      ? 'ring-2 ring-brand-purple shadow-2xl scale-105' 
-                      : ''
-                  }`}
-                >
-                  {plan.badge && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <Badge className="bg-brand-purple text-white px-4 py-1">
-                        {plan.badge}
-                      </Badge>
-                    </div>
-                  )}
+
+          {/* Pricing Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {plans.map((plan, index) => (
+              <Card key={index} className="bg-white text-gray-900 shadow-xl border-0">
+                <CardHeader className="text-center pb-4">
+                  <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
+                    {plan.name}
+                  </CardTitle>
+                  <p className="text-gray-600 text-sm mb-4">{plan.description}</p>
+                  <div className="text-sm text-gray-500 mb-2">A partir de</div>
+                  <div className="text-4xl font-bold text-gray-900 mb-2">
+                    R${plan.monthlyPrice}<span className="text-lg font-normal">/mês</span>
+                  </div>
+                  <div className="text-sm text-red-500 mb-2">
+                    ou R$ {plan.yearlyPrice}ano. Ganhe 2 meses grátis
+                  </div>
+                  <div className="text-xs text-gray-500 mb-4">
+                    (pagamento anual, 6 mês)
+                  </div>
                   
-                  <CardHeader className="text-center pb-6">
-                    <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
-                      {plan.name}
-                    </CardTitle>
-                    <p className="text-gray-600 mb-6">{plan.description}</p>
-                    
-                  </CardHeader>
-
-                  <CardContent className="space-y-4">
-                    {/* Always visible client count */}
-                    <div className="flex items-center space-x-3 mb-4">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                      <span className="text-sm font-semibold text-gray-700">
-                        {plan.storeCount}
-                      </span>
-                    </div>
-                    <div className="flex items-center space-x-3 mb-4">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">
-                        {plan.clientCount}
-                      </span>
-                    </div>
-
-                    {/* Always visible features list */}
-                    <div className="mb-6">
-                      <ul className="space-y-3">
-                        {plan.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-start space-x-3">
-                            {feature.included ? (
-                              <Check className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                            ) : (
-                              <X className="h-5 w-5 text-gray-300 mt-0.5 flex-shrink-0" />
-                            )}
-                            <span className={`text-sm ${
-                              feature.included ? 'text-gray-700' : 'text-gray-400'
-                            }`}>
-                              {feature.name}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="pt-6">
-                      <Button 
-                        className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold py-3 transition-all duration-300 transform hover:scale-105"
-                        onClick={handleDemoClick}
-                      >
-                        Programează un Demo
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                  <div className="space-y-2 mb-6">
+                    {plan.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center justify-center space-x-2">
+                        <Check className="h-4 w-4 text-green-500" />
+                        <span className="text-sm">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <Button 
+                    className="w-full bg-white border border-gray-300 text-gray-700 hover:bg-gray-50"
+                    onClick={handleDemoClick}
+                  >
+                    AFLĂ MAI MULTE ACUM
+                  </Button>
+                </CardHeader>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Team Access Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-              <strong>Lucrezi cu o echipă și vrei ca fiecare să aibă acces?</strong>
+      {/* Comparison Table Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-r from-purple-800 to-purple-900 text-white py-8 mb-8">
+            <h2 className="text-3xl font-bold text-center">
+              DESCOPERĂ FUNCȚIONALITĂȚILE FIECĂRUI PLAN
             </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Nicio problemă! Cu Refluxe, poți folosi un singur cont și să adaugi mai mulți manageri, fiecare cu cardul lui propriu.
-            </p>
           </div>
 
-          <div className="bg-gray-50 rounded-lg p-8 mb-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-              Cum funcționează?
-            </h3>
-            <div className="space-y-4">
-              <div className="flex items-start space-x-4">
-                <span className="text-2xl">👤</span>
-                <p className="text-gray-700">
-                  <strong>Fiecare utilizator are acces separat, dar totul se gestionează dintr-un singur cont central</strong>
-                </p>
-              </div>
-              <div className="flex items-start space-x-4">
-                <span className="text-2xl">💳</span>
-                <p className="text-gray-700">
-                  <strong>Fiecare folosește cardul lui pentru a scana clienți și aplica promoții</strong>
-                </p>
-              </div>
-              <div className="flex items-start space-x-4">
-                <span className="text-2xl">🔔</span>
-                <p className="text-gray-700">
-                  <strong>Notificările automate sunt comune – trimitem mesaje unificate către toți clienții</strong>
-                </p>
-              </div>
-              <div className="flex items-start space-x-4">
-                <span className="text-2xl">📊</span>
-                <p className="text-gray-700">
-                  <strong>Toate datele și rezultatele se văd într-un singur panou</strong>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Cât costă / lună / utilizator?
-            </h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-brand-purple/10 rounded-lg p-6">
-                <div className="text-lg font-semibold text-brand-purple mb-2">🔹 2–5 utilizatori</div>
-                <div className="text-xl font-bold text-gray-900">85 lei / lună / utilizator</div>
-              </div>
-              <div className="bg-brand-orange/10 rounded-lg p-6">
-                <div className="text-lg font-semibold text-brand-orange mb-2">🔹 6–10 utilizatori</div>
-                <div className="text-xl font-bold text-gray-900">70 lei / lună / utilizator</div>
-              </div>
-              <div className="bg-green-100 rounded-lg p-6">
-                <div className="text-lg font-semibold text-green-600 mb-2">🔹 11+ utilizatori</div>
-                <div className="text-xl font-bold text-gray-900">50 lei / lună / utilizator</div>
-              </div>
-            </div>
-            <p className="text-lg text-gray-600 mt-6">
-              <strong>Cu cât ai mai mulți utilizatori, cu atât plătești mai puțin pentru fiecare. Simplu!</strong>
-            </p>
-          </div>
-
-          <div className="text-center">
-            <p className="text-xl text-gray-700 mb-6">
-              <strong>Activează accesul pentru echipa ta și lasă-i pe toți să contribuie la creșterea afacerii!</strong>
-            </p>
-            <Link to="https://app.refluxe.io/registration">
-              <Button className="bg-brand-purple hover:bg-brand-purple/90 text-white font-semibold px-8 py-3">
-                Înscrie-te acum
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <p className="text-xl text-gray-700 mb-6">
-              Ai întrebări? Contactează-ne aici.
-            </p>
-            <Link to="/contact">
-              <Button className="bg-brand-purple hover:bg-brand-purple/90 text-white font-semibold px-8 py-3">
-                Contactează-ne
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse bg-white shadow-lg">
+              <thead>
+                <tr className="bg-gradient-to-r from-red-500 to-orange-500 text-white">
+                  <th className="border border-gray-300 px-6 py-4 text-left font-semibold">
+                    Funcționalitate
+                  </th>
+                  <th className="border border-gray-300 px-6 py-4 text-center font-semibold">
+                    START
+                  </th>
+                  <th className="border border-gray-300 px-6 py-4 text-center font-semibold">
+                    PLUS
+                  </th>
+                  <th className="border border-gray-300 px-6 py-4 text-center font-semibold">
+                    PRO
+                  </th>
+                </tr>
+                <tr className="bg-orange-400 text-white">
+                  <th className="border border-gray-300 px-6 py-3 text-left font-semibold">
+                    Costuri pe lună
+                  </th>
+                  <th className="border border-gray-300 px-6 py-3 text-center font-semibold">
+                    R$249
+                  </th>
+                  <th className="border border-gray-300 px-6 py-3 text-center font-semibold">
+                    R$349
+                  </th>
+                  <th className="border border-gray-300 px-6 py-3 text-center font-semibold">
+                    R$499
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisonFeatures.map((feature, index) => (
+                  <tr key={index} className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                    <td className="border border-gray-300 px-6 py-4">
+                      <div className="font-semibold text-gray-900 mb-1">{feature.name}</div>
+                      <div className="text-sm text-gray-600">{feature.description}</div>
+                    </td>
+                    <td className="border border-gray-300 px-6 py-4">
+                      {renderFeatureStatus(feature.start)}
+                    </td>
+                    <td className="border border-gray-300 px-6 py-4">
+                      {renderFeatureStatus(feature.plus)}
+                    </td>
+                    <td className="border border-gray-300 px-6 py-4">
+                      {renderFeatureStatus(feature.pro)}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
