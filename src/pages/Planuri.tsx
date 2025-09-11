@@ -149,9 +149,9 @@ const Planuri = () => {
     {
       name: "Geolocalizări inteligente",
       description: "Folosește harta automat pentru clienții tăi când ajung la 100 metri de compania ta. Ofertele tale vor fi prin gestionare la distanță în consultarea clienților tăi pentru magazinul tău",
-      start: "Geolocalizare",
-      plus: "Geolocalizare",
-      pro: "Geolocalizare"
+      start: false,
+      plus: false,
+      pro: true
     },
     {
       name: "Personalizarea notificărilor push",
