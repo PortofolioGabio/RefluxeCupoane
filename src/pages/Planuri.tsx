@@ -171,7 +171,7 @@ const Planuri = () => {
       name: "Program de Recomandare",
       description: "Clienții tăi pot recomanda puncte și recompense prin invitarea prietenilor la promoția ta. Crește-ți baza de clienți cu cost de publicitate",
       start: false,
-      plus: true,
+      plus: false,
       pro: true
     },
     {
