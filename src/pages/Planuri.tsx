@@ -2,9 +2,12 @@ import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { Link, useNavigate } from 'react-router-dom';
 import { Check, X, Star, ArrowRight, Zap } from 'lucide-react';
 
 const Planuri = () => {
+  const navigate = useNavigate();
+
   const plans = [
     {
       name: "START",
@@ -215,80 +218,74 @@ const Planuri = () => {
     }
   ];
 
-  const renderFeatureStatus = (status) => {
+  const handleDemoClick = () => {
+    navigate('/demonstratie');
+  };
+
+  const renderFeatureStatus = (status: boolean | string) => {
     if (typeof status === 'boolean') {
       return status ? (
         <div className="flex justify-center">
-          <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
-            <Check className="h-3 w-3 text-white" />
+          <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+            <Check className="h-4 w-4 text-white" />
           </div>
         </div>
       ) : (
         <div className="flex justify-center">
-          <div className="w-5 h-5 bg-red-500 rounded-full flex items-center justify-center">
-            <X className="h-3 w-3 text-white" />
+          <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
+            <X className="h-4 w-4 text-white" />
           </div>
         </div>
       );
     }
-    return <div className="text-center text-xs font-medium">{status}</div>;
+    return <div className="text-center text-sm font-medium">{status}</div>;
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Navbar */}
-      <nav className="bg-white border-b border-gray-200 py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          <div className="text-2xl font-bold text-purple-600">YourLogo</div>
-          <div className="hidden md:flex space-x-8">
-            <a href="#" className="text-gray-700 hover:text-purple-600">Acasă</a>
-            <a href="#" className="text-gray-700 hover:text-purple-600">Funcții</a>
-            <a href="#" className="text-gray-700 hover:text-purple-600">Planuri</a>
-            <a href="#" className="text-gray-700 hover:text-purple-600">Contact</a>
-          </div>
-        </div>
-      </nav>
-
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-800 to-purple-900 text-white py-12">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h1 className="text-2xl sm:text-3xl font-bold mb-4">
+      <section className="bg-gradient-to-r from-purple-800 to-purple-900 text-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h1 className="text-3xl sm:text-4xl font-bold mb-4">
               TRANSFORMĂ CLIENȚII ÎN FANI CHIAR ASTĂZI
             </h1>
           </div>
 
           {/* Pricing Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {plans.map((plan, index) => (
-              <Card key={index} className="bg-white text-gray-900 shadow-lg border-0 rounded-lg">
-                <CardHeader className="text-center p-6">
-                  <CardTitle className="text-xl font-bold text-gray-900 mb-2">
+              <Card key={index} className="bg-white text-gray-900 shadow-xl border-0">
+                <CardHeader className="text-center pb-4">
+                  <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
                     {plan.name}
                   </CardTitle>
-                  <p className="text-gray-600 text-xs mb-3 leading-relaxed">{plan.description}</p>
-                  <div className="text-xs text-gray-500 mb-1">A partir de</div>
-                  <div className="text-3xl font-bold text-gray-900 mb-1">
-                    R${plan.monthlyPrice}<span className="text-sm font-normal">/lună</span>
+                  <p className="text-gray-600 text-sm mb-4">{plan.description}</p>
+                  <div className="text-sm text-gray-500 mb-2">A partir de</div>
+                  <div className="text-4xl font-bold text-gray-900 mb-2">
+                    R${plan.monthlyPrice}<span className="text-lg font-normal">/lună</span>
                   </div>
-                  <div className="text-xs text-red-500 mb-1">
+                  <div className="text-sm text-red-500 mb-2">
                     {plan.yearlyDiscount}
                   </div>
                   <div className="text-xs text-gray-500 mb-4">
                     {plan.yearlyNote}
                   </div>
                   
-                  <div className="space-y-1 mb-4">
+                  <div className="space-y-2 mb-6">
                     {plan.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center justify-center space-x-1">
-                        <Check className="h-3 w-3 text-green-500" />
-                        <span className="text-xs">{feature}</span>
+                      <div key={idx} className="flex items-center justify-center space-x-2">
+                        <Check className="h-4 w-4 text-green-500" />
+                        <span className="text-sm">{feature}</span>
                       </div>
                     ))}
                   </div>
                   
-                  <Button className="w-full bg-white border border-gray-300 text-gray-700 hover:bg-gray-50 text-xs py-2">
-                    COMECE A FIDELIZAR
+                  <Button 
+                    className="w-full bg-white border border-gray-300 text-gray-700 hover:bg-gray-50"
+                    onClick={handleDemoClick}
+                  >
+                    AFLĂ MAI MULTE ACUM
                   </Button>
                 </CardHeader>
               </Card>
@@ -298,42 +295,42 @@ const Planuri = () => {
       </section>
 
       {/* Comparison Table Section */}
-      <section className="py-12 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-purple-800 to-purple-900 text-white py-6 mb-8 text-center">
-            <h2 className="text-2xl font-bold">
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-r from-purple-800 to-purple-900 text-white py-8 mb-8">
+            <h2 className="text-3xl font-bold text-center">
               DESCOPERĂ FUNCȚIONALITĂȚILE FIECĂRUI PLAN
             </h2>
           </div>
 
-          <div className="overflow-x-auto shadow-lg">
-            <table className="w-full border-collapse bg-white">
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse bg-white shadow-lg">
               <thead>
                 <tr className="bg-gradient-to-r from-red-500 to-orange-500 text-white">
-                  <th className="border border-white px-4 py-3 text-left font-semibold text-sm">
-                    Funcție
+                  <th className="border border-gray-300 px-6 py-4 text-left font-semibold">
+                    Funcționalitate
                   </th>
-                  <th className="border border-white px-4 py-3 text-center font-semibold text-sm">
+                  <th className="border border-gray-300 px-6 py-4 text-center font-semibold">
                     START
                   </th>
-                  <th className="border border-white px-4 py-3 text-center font-semibold text-sm">
+                  <th className="border border-gray-300 px-6 py-4 text-center font-semibold">
                     PLUS
                   </th>
-                  <th className="border border-white px-4 py-3 text-center font-semibold text-sm">
+                  <th className="border border-gray-300 px-6 py-4 text-center font-semibold">
                     PRO
                   </th>
                 </tr>
                 <tr className="bg-orange-400 text-white">
-                  <th className="border border-white px-4 py-2 text-left font-semibold text-sm">
+                  <th className="border border-gray-300 px-6 py-3 text-left font-semibold">
                     Costuri pe lună
                   </th>
-                  <th className="border border-white px-4 py-2 text-center font-semibold text-sm">
+                  <th className="border border-gray-300 px-6 py-3 text-center font-semibold">
                     R$249
                   </th>
-                  <th className="border border-white px-4 py-2 text-center font-semibold text-sm">
+                  <th className="border border-gray-300 px-6 py-3 text-center font-semibold">
                     R$349
                   </th>
-                  <th className="border border-white px-4 py-2 text-center font-semibold text-sm">
+                  <th className="border border-gray-300 px-6 py-3 text-center font-semibold">
                     R$499
                   </th>
                 </tr>
@@ -341,17 +338,17 @@ const Planuri = () => {
               <tbody>
                 {comparisonFeatures.map((feature, index) => (
                   <tr key={index} className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
-                    <td className="border border-gray-200 px-4 py-3">
-                      <div className="font-semibold text-gray-900 mb-1 text-sm">{feature.name}</div>
-                      <div className="text-xs text-gray-600 leading-relaxed">{feature.description}</div>
+                    <td className="border border-gray-300 px-6 py-4">
+                      <div className="font-semibold text-gray-900 mb-1">{feature.name}</div>
+                      <div className="text-sm text-gray-600">{feature.description}</div>
                     </td>
-                    <td className="border border-gray-200 px-4 py-3">
+                    <td className="border border-gray-300 px-6 py-4">
                       {renderFeatureStatus(feature.start)}
                     </td>
-                    <td className="border border-gray-200 px-4 py-3">
+                    <td className="border border-gray-300 px-6 py-4">
                       {renderFeatureStatus(feature.plus)}
                     </td>
-                    <td className="border border-gray-200 px-4 py-3">
+                    <td className="border border-gray-300 px-6 py-4">
                       {renderFeatureStatus(feature.pro)}
                     </td>
                   </tr>
@@ -365,4 +362,4 @@ const Planuri = () => {
   );
 };
 
-export default Planuri;
+export default Planuri; 
