@@ -17,7 +17,7 @@ const Planuri = () => {
       yearlyDiscount: "sau R$ 2.976/ano. Ganhe 2 meses grátis",
       yearlyNote: "(pagamento anual, 6 mês)",
       features: [
-        "1 Loja",
+        "1 Magazin",
         "200 Clientes"
       ]
     },
