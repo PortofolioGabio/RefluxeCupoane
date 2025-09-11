@@ -14,7 +14,7 @@ const Planuri = () => {
       description: "Pentru afacerile mici care doresc să înceapă cu programe de fidelitate",
       monthlyPrice: "249",
       yearlyPrice: "2.976",
-      yearlyDiscount: "sau 100 RON /an. Câștigă 2 luni gratuit",
+      yearlyDiscount: "sau 100 RON/an. Câștigă 2 luni gratuit",
       yearlyNote: "(plată anuală, 6 luni)",
       features: [
         "1 Magazin",
