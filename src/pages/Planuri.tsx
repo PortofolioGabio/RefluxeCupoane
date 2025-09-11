@@ -26,7 +26,7 @@ const Planuri = () => {
       description: "Pentru afacerile în creștere cu mai multe nevoi de vânzări",
       monthlyPrice: "349",
       yearlyPrice: "4.188",
-      yearlyDiscount: "sau R$ 4.188/an. Câștigă 2 luni gratuit",
+      yearlyDiscount: "sau 200 RON /an. Câștigă 2 luni gratuit",
       yearlyNote: "(plată anuală, 6 luni)",
       features: [
         "1 Magazin",
