@@ -13,7 +13,6 @@ const Planuri = () => {
       name: "START",
       description: "Pentru afacerile mici care doresc să înceapă cu programe de fidelitate",
       monthlyPrice: "249",
-      yearlyPrice: "100",
       yearlyDiscount: "Primești 2 luni gratuite.",
       yearlyNote: "(plată unică)",
       features: [
@@ -25,7 +24,6 @@ const Planuri = () => {
       name: "PLUS", 
       description: "Pentru afacerile în creștere cu mai multe nevoi de vânzări",
       monthlyPrice: "349",
-      yearlyPrice: "200",
       yearlyDiscount: "Primești 2 luni gratuite.",
       yearlyNote: "(plată unică)",
       features: [
@@ -37,7 +35,6 @@ const Planuri = () => {
       name: "PRO",
       description: "Pentru companiile avansate care se preocupă de creșterea vânzărilor",
       monthlyPrice: "499", 
-      yearlyPrice: "300",
       yearlyDiscount: "Primești 2 luni gratuite.",
       yearlyNote: "(plată unică)",
       features: [
@@ -264,6 +261,9 @@ const Planuri = () => {
                   <div className="text-sm text-gray-500 mb-2">La doar</div>
                   <div className="text-4xl font-bold text-gray-900 mb-2">
                     {plan.monthlyPrice}<span className="text-lg font-normal">RON /lună</span>
+                  </div>
+                  <div className="text-sm text-red-500 mb-2">
+                    {plan.yearlyDiscount}
                   </div>
                   <div className="text-xs text-gray-500 mb-4">
                     {plan.yearlyNote}
