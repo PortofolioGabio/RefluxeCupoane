@@ -261,7 +261,7 @@ const Planuri = () => {
                     {plan.name}
                   </CardTitle>
                   <p className="text-gray-600 text-sm mb-4">{plan.description}</p>
-                  <div className="text-sm text-gray-500 mb-2">A partir de</div>
+                  <div className="text-sm text-gray-500 mb-2">La doar</div>
                   <div className="text-4xl font-bold text-gray-900 mb-2">
                     R${plan.monthlyPrice}<span className="text-lg font-normal">/lună</span>
                   </div>
