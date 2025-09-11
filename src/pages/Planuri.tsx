@@ -11,7 +11,7 @@ const Planuri = () => {
   const plans = [
     {
       name: "START",
-      description: "Pentru Întreprinderile mici care vor să devină mari.",
+      description: "Pentru Întreprinderile mici care vor să devină mari mari în industria lor.",
       monthlyPrice: "149",
       yearlyDiscount: "sau 1,490 RON / an. Primești 2 luni gratuite.",
       yearlyNote: "(plată unică)",
