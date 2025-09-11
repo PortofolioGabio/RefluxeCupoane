@@ -13,7 +13,7 @@ const Planuri = () => {
       name: "START",
       description: "Pentru Întreprinderile mici care vor să devină mari.",
       monthlyPrice: "149",
-      yearlyDiscount: "Primești 2 luni gratuite.",
+      yearlyDiscount: "sau 1,490 RON / an. Primești 2 luni gratuite.",
       yearlyNote: "(plată unică)",
       features: [
         "1 Magazin",
