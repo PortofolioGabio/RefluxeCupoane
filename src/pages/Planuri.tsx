@@ -13,7 +13,7 @@ const Planuri = () => {
       name: "START",
       description: "Pentru afacerile mici care doresc să înceapă cu programe de fidelitate",
       monthlyPrice: "249",
-      yearlyPrice: "2.976",
+      yearlyPrice: "100",
       yearlyDiscount: "sau 100 RON/an. Câștigă 2 luni gratuit",
       yearlyNote: "(plată anuală, 6 luni)",
       features: [
@@ -25,7 +25,7 @@ const Planuri = () => {
       name: "PLUS", 
       description: "Pentru afacerile în creștere cu mai multe nevoi de vânzări",
       monthlyPrice: "349",
-      yearlyPrice: "4.188",
+      yearlyPrice: "200",
       yearlyDiscount: "sau 200 RON/an. Câștigă 2 luni gratuit",
       yearlyNote: "(plată anuală, 6 luni)",
       features: [
@@ -37,7 +37,7 @@ const Planuri = () => {
       name: "PRO",
       description: "Pentru companiile avansate care se preocupă de creșterea vânzărilor",
       monthlyPrice: "499", 
-      yearlyPrice: "5.988",
+      yearlyPrice: "300",
       yearlyDiscount: "sau 300 RON/an. Câștigă 2 luni gratuit",
       yearlyNote: "(plată anuală, 6 luni)",
       features: [
