@@ -11,14 +11,14 @@ const Planuri = () => {
   const plans = [
     {
       name: "START",
-      description: "Pentru afacerile mici care doresc să înceapă cu programele de fidelitate",
+      description: "Pentru afacerile mici care doresc să înceapă cu programe de fidelitate",
       monthlyPrice: "249",
       yearlyPrice: "2.976",
-      yearlyDiscount: "sau R$ 2.976/ano. Ganhe 2 meses grátis",
-      yearlyNote: "(pagamento anual, 6 mês)",
+      yearlyDiscount: "sau R$ 2.976/an. Câștigă 2 luni gratuit",
+      yearlyNote: "(plată anuală, 6 luni)",
       features: [
         "1 Magazin",
-        "200 Clientes"
+        "200 Clienți"
       ]
     },
     {
@@ -26,11 +26,11 @@ const Planuri = () => {
       description: "Pentru afacerile în creștere cu mai multe nevoi de vânzări",
       monthlyPrice: "349",
       yearlyPrice: "4.188",
-      yearlyDiscount: "sau R$ 4.188/ano. Ganhe 2 meses grátis",
-      yearlyNote: "(pagamento anual, 6 mês)",
+      yearlyDiscount: "sau R$ 4.188/an. Câștigă 2 luni gratuit",
+      yearlyNote: "(plată anuală, 6 luni)",
       features: [
         "1 Magazin",
-        "500 Clientes"
+        "500 Clienți"
       ]
     },
     {
@@ -38,11 +38,11 @@ const Planuri = () => {
       description: "Pentru companiile avansate care se preocupă de creșterea vânzărilor",
       monthlyPrice: "499", 
       yearlyPrice: "5.988",
-      yearlyDiscount: "sau R$ 5.988/ano. Ganhe 2 meses grátis",
-      yearlyNote: "(pagamento anual, 6 mês)",
+      yearlyDiscount: "sau R$ 5.988/an. Câștigă 2 luni gratuit",
+      yearlyNote: "(plată anuală, 6 luni)",
       features: [
         "1 Magazin",
-        "Clientes ilimitados"
+        "Clienți nelimitați"
       ]
     }
   ];
@@ -308,7 +308,7 @@ const Planuri = () => {
               <thead>
                 <tr className="bg-gradient-to-r from-red-500 to-orange-500 text-white">
                   <th className="border border-gray-300 px-6 py-4 text-left font-semibold">
-                    Funcție
+                    Funcționalitate
                   </th>
                   <th className="border border-gray-300 px-6 py-4 text-center font-semibold">
                     START
