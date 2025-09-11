@@ -14,7 +14,8 @@ const Planuri = () => {
       description: "Pentru afacerile mici care doresc să înceapă cu programele de fidelitate",
       monthlyPrice: "249",
       yearlyPrice: "2.976",
-      yearlyDiscount: "Gratis 2 meses gratis (pagamento anual, 6 mês)",
+      yearlyDiscount: "sau R$ 2.976/ano. Ganhe 2 meses grátis",
+      yearlyNote: "(pagamento anual, 6 mês)",
       features: [
         "1 Loja",
         "200 Clientes"
@@ -22,10 +23,11 @@ const Planuri = () => {
     },
     {
       name: "PLUS", 
-      description: "Para negócios em crescimento com mais necessidades de vendas",
+      description: "Pentru afacerile în creștere cu mai multe nevoi de vânzări",
       monthlyPrice: "349",
       yearlyPrice: "4.188",
-      yearlyDiscount: "Gratis 2 meses gratis (pagamento anual, 6 mês)",
+      yearlyDiscount: "sau R$ 4.188/ano. Ganhe 2 meses grátis",
+      yearlyNote: "(pagamento anual, 6 mês)",
       features: [
         "1 Loja",
         "500 Clientes"
@@ -33,10 +35,11 @@ const Planuri = () => {
     },
     {
       name: "PRO",
-      description: "Para empresas avançadas que se preocupam com o crescimento das vendas",
+      description: "Pentru companiile avansate care se preocupă de creșterea vânzărilor",
       monthlyPrice: "499", 
       yearlyPrice: "5.988",
-      yearlyDiscount: "Gratis 2 meses gratis (pagamento anual, 6 mês)",
+      yearlyDiscount: "sau R$ 5.988/ano. Ganhe 2 meses grátis",
+      yearlyNote: "(pagamento anual, 6 mês)",
       features: [
         "1 Loja",
         "Clientes ilimitados"
@@ -46,169 +49,169 @@ const Planuri = () => {
 
   const comparisonFeatures = [
     {
-      name: "Promoções disponíveis",
-      description: "Você pode usar até 4 tipos de cupons para as promoções",
+      name: "Promoții disponibile",
+      description: "Poți folosi până la 4 tipuri de cupoane pentru promoții",
       start: "1",
       plus: "5", 
       pro: "10"
     },
     {
-      name: "Cartões de visita",
-      description: "Cartões digitais finalizados - disponível em cartões públicos",
+      name: "Carduri de vizită",
+      description: "Carduri digitale finalizate - disponibile în carduri publice",
       start: true,
       plus: true,
       pro: true
     },
     {
-      name: "Cartões de assinatura",
-      description: "Cartões múltiplos disponíveis",
+      name: "Carduri de abonament",
+      description: "Carduri multiple disponibile",
       start: true,
       plus: true,
       pro: true
     },
     {
-      name: "Cartões de cashback",
-      description: "Cartões de cashback finalizados com ferramentas de economia personalizadas",
+      name: "Carduri de cashback",
+      description: "Carduri de cashback finalizate cu instrumente de economie personalizate",
       start: true,
       plus: true,
       pro: true
     },
     {
-      name: "Cartões de desconto",
-      description: "Cartões digitais de desconto directo finalizados",
+      name: "Carduri de reducere",
+      description: "Carduri digitale de reducere directă finalizate",
       start: true,
       plus: true,
       pro: true
     },
     {
-      name: "Cartão presente",
-      description: "Cartões digitais de certificado pré - pago finalizados",
+      name: "Card cadou",
+      description: "Carduri digitale de certificat pre-plătit finalizate",
       start: true,
       plus: true,
       pro: true
     },
     {
-      name: "Cartões de cupom",
-      description: "Cartões digitais de cupons finalizados com descontos para a primeira visita",
+      name: "Carduri de cupon",
+      description: "Carduri digitale de cupoane finalizate cu reduceri pentru prima vizită",
       start: true,
       plus: true,
       pro: true
     },
     {
-      name: "Cartões de membros",
-      description: "Cartões digitais finalizados para membros",
+      name: "Carduri de membri",
+      description: "Carduri digitale finalizate pentru membri",
       start: true,
       plus: true,
       pro: true
     },
     {
-      name: "Cartões de recompensas",
-      description: "Cartões digitais de recompensas finalizados",
+      name: "Carduri de recompense",
+      description: "Carduri digitale de recompense finalizate",
       start: true,
       plus: true,
       pro: true
     },
     {
-      name: "Cartões de recompensas",
-      description: "Cartões digitais de recompensas finalizados",
+      name: "Carduri de recompense",
+      description: "Carduri digitale de recompense finalizate",
       start: true,
       plus: true,
       pro: true
     },
     {
-      name: "Geolocalizações",
-      description: "111 Modelos de cartões prontos para usar para diferentes tipos de negócios, incluindo o setor de serviços, como com um design individual em alguns negócios",
+      name: "Geolocalizări",
+      description: "111 Modele de carduri gata de folosit pentru diferite tipuri de afaceri, inclusiv sectorul de servicii, cu un design individual în unele afaceri",
       start: true,
       plus: true,
       pro: true
     },
     {
-      name: "Personalização dos cartões",
-      description: "Crie um projeto, cartes com um design exclusivo em 5 minutos. Personalize cores, logotipos, imagens de seu e estrutura do cartão. Aproveite os modelos mais criativos de cartões personalizados",
+      name: "Personalizarea cardurilor",
+      description: "Creează un proiect, carduri cu un design exclusiv în 5 minute. Personalizează culori, logo-uri, imagini și structura cardului. Profită de cele mai creative modele de carduri personalizate",
       start: true,
       plus: true,
       pro: true
     },
     {
       name: "CRM",
-      description: "CRM avançado, a capacidade de segmentar seus clientes para correspondência direcionada e aumento de vendas em até 200%",
+      description: "CRM avansat, capacitatea de a segmenta clienții pentru corespondență direcționată și creșterea vânzărilor cu până la 200%",
       start: true,
       plus: true,
       pro: true
     },
     {
-      name: "Push livre",
-      description: "Notificação completa de SMS. Clientes que querem podem receber notificação push ilimitada. Automaticamente. Envie sua mensagem na história do telefone e não necessita o cliente. Gerar um",
+      name: "Push gratuit",
+      description: "Notificare completă de SMS. Clienții care doresc pot primi notificare push nelimitată. Automat. Trimite mesajul tău în istoricul telefonului și nu necesită clientul. Generează unul",
       start: true,
       plus: true,
       pro: true
     },
     {
-      name: "Geolocalizações inteligentes",
-      description: "Use o mapa automaticamente para seus clientes quando eles chegarem a 100 metros de sua empresa. Suas ofertas serão por gestão remota na consulta dos seus clientes para sua loja",
-      start: "Geolocalizações",
-      plus: "Geolocalizações",
-      pro: "Geolocalizações"
+      name: "Geolocalizări inteligente",
+      description: "Folosește harta automat pentru clienții tăi când ajung la 100 metri de compania ta. Ofertele tale vor fi prin gestionare la distanță în consultarea clienților tăi pentru magazinul tău",
+      start: "Geolocalizare",
+      plus: "Geolocalizare",
+      pro: "Geolocalizare"
     },
     {
-      name: "Personalização de notificações push",
-      description: "Crie um projeto, cartes de push automatizado. Crie mensagens finalizadas automaticamente, gratuitamente",
+      name: "Personalizarea notificărilor push",
+      description: "Creează un proiect, carduri de push automatizat. Creează mesaje finalizate automat, gratuit",
       start: false,
       plus: false,
       pro: true
     },
     {
       name: "PWA Scanner App",
-      description: "Aplicativo opcional scanner CRM/PWA para conectar pontos e prêmios aos seus clientes com facilidade e rapidez",
+      description: "Aplicație opțională scanner CRM/PWA pentru conectarea punctelor și premiilor clienților tăi cu ușurință și rapiditate",
       start: true,
       plus: true,
       pro: true
     },
     {
-      name: "Programa de Indicação",
-      description: "Seus clientes podem indicar pontos e recompensas por convidar amigos para sua promoção. Aumente sua base de clientes com custo de publicidade",
+      name: "Program de Recomandare",
+      description: "Clienții tăi pot recomanda puncte și recompense prin invitarea prietenilor la promoția ta. Crește-ți baza de clienți cu cost de publicitate",
       start: false,
       plus: true,
       pro: true
     },
     {
-      name: "Controle duplicado",
-      description: "Seus clientes não podem usar outros cartões de fidelidade para uma promoção e obter mais pontos do que deveriam. Controle apenas aplicado exclusivo de clientes",
+      name: "Control duplicat",
+      description: "Clienții tăi nu pot folosi alte carduri de fidelitate pentru o promoție și să obțină mai multe puncte decât ar trebui. Control aplicat exclusiv pentru clienți",
       start: true,
       plus: true,
       pro: true
     },
     {
-      name: "Relatórios inteligentes",
-      description: "Relatórios completos e feedbacks para você analisar a performance integrada de seus programas e clientes",
+      name: "Rapoarte inteligente",
+      description: "Rapoarte complete și feedback pentru a analiza performanța integrată a programelor și clienților tăi",
       start: true,
       plus: true,
       pro: true
     },
     {
-      name: "Análise para gerenciamento",
-      description: "Veja qual item deve ganhar de segmento e outros vendedores na cidade, para mostrar e para visitar. Recomendação para melhorar suas vendas de empresa",
+      name: "Analiză pentru management",
+      description: "Vezi ce articol trebuie să câștigi din segment și alți vânzători din oraș, pentru a arăta și pentru a vizita. Recomandare pentru îmbunătățirea vânzărilor companiei tale",
       start: "1",
       plus: "3",
       pro: "5"
     },
     {
-      name: "API e Integração",
-      description: "Integração com sua software para automação automática de cartões, pontos e prêmios",
+      name: "API și Integrare",
+      description: "Integrare cu software-ul tău pentru automatizarea automată a cardurilor, punctelor și premiilor",
       start: false,
       plus: false,
       pro: true
     },
     {
-      name: "Os campos personalizáveis",
-      description: "Pegue seus próprios campos com cobrança personalizada: seu nome e telefone. Adicione mais campos para seus clientes",
+      name: "Câmpuri personalizabile",
+      description: "Ia-ți propriile câmpuri cu taxare personalizată: numele și telefonul tău. Adaugă mai multe câmpuri pentru clienții tăi",
       start: false,
       plus: true,
       pro: true
     },
     {
-      name: "Configuração gratuita do programa de fidelidade",
-      description: "Configuramos todos os programas de fidelidade",
+      name: "Configurare gratuită a programului de fidelitate",
+      description: "Configurăm toate programele de fidelitate",
       start: false,
       plus: false,
       pro: true
@@ -235,7 +238,7 @@ const Planuri = () => {
         </div>
       );
     }
-    return <div className="text-center text-sm">{status}</div>;
+    return <div className="text-center text-sm font-medium">{status}</div>;
   };
 
   return (
@@ -245,7 +248,7 @@ const Planuri = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4">
-              TRANSFORME CLIENȚII ÎN FANI CHIAR ASTĂZI
+              TRANSFORMĂ CLIENȚII ÎN FANI CHIAR ASTĂZI
             </h1>
           </div>
 
@@ -260,13 +263,13 @@ const Planuri = () => {
                   <p className="text-gray-600 text-sm mb-4">{plan.description}</p>
                   <div className="text-sm text-gray-500 mb-2">A partir de</div>
                   <div className="text-4xl font-bold text-gray-900 mb-2">
-                    R${plan.monthlyPrice}<span className="text-lg font-normal">/mês</span>
+                    R${plan.monthlyPrice}<span className="text-lg font-normal">/lună</span>
                   </div>
                   <div className="text-sm text-red-500 mb-2">
-                    ou R$ {plan.yearlyPrice}ano. Ganhe 2 meses grátis
+                    {plan.yearlyDiscount}
                   </div>
                   <div className="text-xs text-gray-500 mb-4">
-                    (pagamento anual, 6 mês)
+                    {plan.yearlyNote}
                   </div>
                   
                   <div className="space-y-2 mb-6">
@@ -305,7 +308,7 @@ const Planuri = () => {
               <thead>
                 <tr className="bg-gradient-to-r from-red-500 to-orange-500 text-white">
                   <th className="border border-gray-300 px-6 py-4 text-left font-semibold">
-                    Funcționalitate
+                    Funcție
                   </th>
                   <th className="border border-gray-300 px-6 py-4 text-center font-semibold">
                     START
