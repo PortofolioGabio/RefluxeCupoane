@@ -325,13 +325,13 @@ const Planuri = () => {
                     Costuri pe lună
                   </th>
                   <th className="border border-gray-300 px-6 py-3 text-center font-semibold">
-                    R$249
+                    249 RON
                   </th>
                   <th className="border border-gray-300 px-6 py-3 text-center font-semibold">
-                    R$349
+                    349 RON
                   </th>
                   <th className="border border-gray-300 px-6 py-3 text-center font-semibold">
-                    R$499
+                    499 RON
                   </th>
                 </tr>
               </thead>
