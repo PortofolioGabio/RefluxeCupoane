@@ -53,6 +53,13 @@ const Planuri = () => {
       pro: "10"
     },
     {
+      name: "Acces pentru manageri/echipa",
+      description: "Daca aveti mai multe puncte de vânzare si mai multi asistenti de vânzări sau casieri, această functie este pentru dvs.! Rapoarte separate pentru fiecare manager/echipă si punct de vânzare. Recompensati cei mai eficienti manageri/echipe din companie!",
+      start: "1",
+      plus: "5", 
+      pro: "10"
+    },
+    {
       name: "Carduri de vizită",
       description: "Carduri digitale finalizate - disponibile în carduri publice",
       start: true,
