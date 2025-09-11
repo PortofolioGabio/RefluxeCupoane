@@ -322,13 +322,13 @@ const Planuri = () => {
                     Investiție lunară
                   </th>
                   <th className="border border-gray-300 px-6 py-3 text-center font-semibold">
+                    149 RON
+                  </th>
+                  <th className="border border-gray-300 px-6 py-3 text-center font-semibold">
                     249 RON
                   </th>
                   <th className="border border-gray-300 px-6 py-3 text-center font-semibold">
-                    349 RON
-                  </th>
-                  <th className="border border-gray-300 px-6 py-3 text-center font-semibold">
-                    499 RON
+                    399 RON
                   </th>
                 </tr>
               </thead>
