@@ -119,7 +119,7 @@ const Planuri = () => {
       pro: true
     },
     {
-      name: "Geolocalizări",
+      name: "Șabloane",
       description: "111 Modele de carduri gata de folosit pentru diferite tipuri de afaceri, inclusiv sectorul de servicii, cu un design individual în unele afaceri",
       start: true,
       plus: true,
