@@ -11,7 +11,7 @@ const Planuri = () => {
   const plans = [
     {
       name: "START",
-      description: "Pentru afacerile mici care doresc să înceapă cu programe de fidelitate",
+      description: "Pentru Întreprinderile mici care vor sa devină mari.",
       monthlyPrice: "249",
       yearlyDiscount: "Primești 2 luni gratuite.",
       yearlyNote: "(plată unică)",
