@@ -322,7 +322,7 @@ const Planuri = () => {
                 </tr>
                 <tr className="bg-orange-400 text-white">
                   <th className="border border-gray-300 px-6 py-3 text-left font-semibold">
-                    Costuri pe lună
+                    Investiție lunară
                   </th>
                   <th className="border border-gray-300 px-6 py-3 text-center font-semibold">
                     249 RON
