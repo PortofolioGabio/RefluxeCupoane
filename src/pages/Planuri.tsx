@@ -24,7 +24,7 @@ const Planuri = () => {
       name: "PLUS", 
       description: "Pentru o afacere in crestere, cu câteva puncte de vânzare.",
       monthlyPrice: "249",
-      yearlyDiscount: "Primești 2 luni gratuite.",
+      yearlyDiscount: "sau 1,490 RON / an. Primești 2 luni gratuite.",
       yearlyNote: "(plată unică)",
       features: [
         "1 Magazin",
