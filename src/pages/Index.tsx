@@ -358,6 +358,7 @@ return (
       <section className="py-20 bg-gradient-hero text-white text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+            Este <span className="text-brand-orange">mai ieftin să readuci</span> un client decât să câștigi unul nou
             Alătură-te la peste <span className="text-brand-orange">30.000</span> de magazine
           </h2>
         </div>
