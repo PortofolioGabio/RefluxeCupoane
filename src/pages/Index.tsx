@@ -157,7 +157,7 @@ return (
                 Transformă clienții ocazionali <span className="text-brand-orange">în clienți fideli</span>
               </h1>
               <p className="text-xl sm:text-2xl text-gray-200 leading-relaxed">
-                Platforma #1 din România care îți dublează clienții fideli și îți crește veniturile cu până la 30% pe pilot automat.
+                Automat, prin mementouri inteligente, mesaje personalizate și recompense care îi fac să revină. Fără aplicații complicate, fără reclame costisitoare, doar rezultate reale și constante.
               </p>
             </div>
             
