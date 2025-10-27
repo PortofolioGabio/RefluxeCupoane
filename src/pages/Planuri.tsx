@@ -147,7 +147,12 @@ const Planuri = () => {
 
                   {/* Subtitle */}
                   <p className="text-xs sm:text-sm text-gray-600 mb-4 sm:mb-6 leading-relaxed font-medium h-auto sm:h-10 flex items-center justify-center px-2">
-                    {index === 0 && "🚀 Dacă vrei control total și șanse reale de reușită"}
+                    {index === 0 && (
+                      <>
+                        🚀 Dacă vrei control total și<br />
+                        șanse reale de reușită
+                      </>
+                    )}
                     {index === 1 && "📈 Dacă vrei mai mult control și creștere constantă"}
                     {index === 2 && "🌱 Dacă vrei minimul necesar ca să pornești"}
                   </p>
@@ -206,7 +211,7 @@ const Planuri = () => {
                       {index === 2 && "📧 Suport STANDARD"}
                     </div>
                     <div className="text-xs text-purple-600 mt-1">
-                      {index === 0 && "personal, telefonic sau WhatsApp"}
+                      {index === 0 && "prioritar, telefonic sau WhatsApp"}
                       {index === 1 && "asistență directă pe WhatsApp"}
                       {index === 2 && "max. 48h prin mail"}
                     </div>
