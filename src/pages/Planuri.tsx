@@ -5,6 +5,8 @@ import { Badge } from '@/components/ui/badge';
 import { Check, X, Star, Crown, Zap, Rocket } from 'lucide-react';
 
 const Planuri = () => {
+  const [billingPeriod, setBillingPeriod] = useState('monthly'); // 'monthly' or 'yearly'
+  
   const plans = [
     {
       name: "PRO",
@@ -82,18 +84,44 @@ const Planuri = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 px-4">
-            TRANSFORMĂ CLIENȚII ÎN FANI CHIAR ASTĂZI
+            TRANSFORMĂ CLIENȚII OCAZIONALI ÎN CLIENȚI FIDELI
           </h1>
-          <p className="text-purple-200 text-base sm:text-lg max-w-2xl mx-auto px-4">
-            Alege planul perfect pentru afacerea ta și începe să construiești relații de durată cu clienții tăi
+          <p className="text-purple-200 text-base sm:text-lg max-w-2xl mx-auto px-4 mb-8">
+            Construiește o comunitate în jurul brandului tău
           </p>
+          
+          {/* Billing Period Toggle */}
+          <div className="flex justify-center items-center gap-4 mb-8">
+            <button
+              onClick={() => setBillingPeriod('monthly')}
+              className={`px-6 py-3 rounded-xl font-bold transition-all duration-300 ${
+                billingPeriod === 'monthly'
+                  ? 'bg-white text-purple-700 shadow-lg scale-105'
+                  : 'bg-purple-800 text-purple-200 hover:bg-purple-700'
+              }`}
+            >
+              Plată lunară
+            </button>
+            <button
+              onClick={() => setBillingPeriod('yearly')}
+              className={`px-6 py-3 rounded-xl font-bold transition-all duration-300 relative ${
+                billingPeriod === 'yearly'
+                  ? 'bg-white text-purple-700 shadow-lg scale-105'
+                  : 'bg-purple-800 text-purple-200 hover:bg-purple-700'
+              }`}
+            >
+              Plată anuală
+              <span className="absolute -top-2 -right-2 bg-green-400 text-gray-900 text-xs px-2 py-0.5 rounded-full font-bold">
+                -17%
+              </span>
+            </button>
+          </div>
         </div>
 
         {/* Pricing Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
           {plans.map((plan, index) => {
             const Icon = plan.icon;
-            // Toate planurile au aceeași înălțime totală pentru features (12 itemi)
             const totalFeatures = 12;
             const allFeatures = [...plan.features, ...plan.disabledFeatures];
             
@@ -147,27 +175,25 @@ const Planuri = () => {
 
                   {/* Subtitle */}
                   <p className="text-xs sm:text-sm text-gray-600 mb-4 sm:mb-6 leading-relaxed font-medium h-auto sm:h-10 flex items-center justify-center px-2">
-                    {index === 0 && (
-                      <>
-                        🚀 Dacă vrei control total și<br />
-                        șanse reale de reușită
-                      </>
-                    )}
-                    {index === 1 && "📈 Dacă vrei mai mult control și creștere constantă"}
-                    {index === 2 && "🌱 Dacă vrei minimul necesar ca să pornești"}
+                    {index === 0 && "🚀 Control total și succes real"}
+                    {index === 1 && "📈 Stabilitate și evoluție constantă"}
+                    {index === 2 && "🌱 Minimul necesar ca să pornești"}
                   </p>
 
                   {/* Pricing */}
                   <div className="mb-4 sm:mb-6">
                     <div className="flex items-end justify-center gap-1 sm:gap-2">
                       <span className="text-5xl sm:text-6xl md:text-7xl font-black bg-gradient-to-br from-purple-600 to-purple-800 bg-clip-text text-transparent">
-                        {plan.monthlyPrice}
+                        {billingPeriod === 'monthly' ? plan.monthlyPrice : Math.round(parseInt(plan.yearlyPrice.replace(',', '')) / 12)}
                       </span>
                       <span className="text-base sm:text-lg md:text-xl text-gray-600 mb-1 sm:mb-2 font-semibold">RON / lună</span>
                     </div>
-                    <div className="text-xs sm:text-sm text-purple-600 font-medium mt-2 px-2">
-                      Anual = <span className="font-bold">{plan.yearlyPrice} RON</span> + 2 luni CADOU
-                    </div>
+                    {billingPeriod === 'yearly' && (
+                      <div className="text-xs sm:text-sm text-purple-600 font-medium mt-2 px-2">
+                        Facturat anual: <span className="font-bold">{plan.yearlyPrice} RON</span>
+                        <div className="text-green-600 font-bold mt-1">✨ Economisești 2 luni!</div>
+                      </div>
+                    )}
                   </div>
                 </CardHeader>
 
@@ -225,14 +251,42 @@ const Planuri = () => {
 
         {/* Trust badges */}
         <div className="text-center mt-12 sm:mt-16">
-          <div className="flex justify-center gap-4 sm:gap-8 flex-wrap px-4">
-            <div className="flex items-center gap-2 text-purple-200">
-              <Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-400 flex-shrink-0" />
-              <span className="text-xs sm:text-sm font-semibold">Fără obligații contractuale</span>
+          <div className="flex justify-center gap-6 sm:gap-12 flex-wrap px-4 items-center">
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
+                <svg className="w-8 h-8 text-purple-700" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                </svg>
+              </div>
+              <span className="text-xs sm:text-sm font-bold text-white">Securitate<br/>GDPR</span>
             </div>
-            <div className="flex items-center gap-2 text-purple-200">
-              <Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-400 flex-shrink-0" />
-              <span className="text-xs sm:text-sm font-semibold">Anulare oricând</span>
+            
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
+                <svg className="w-8 h-8 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/>
+                  <path fillRule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clipRule="evenodd"/>
+                </svg>
+              </div>
+              <span className="text-xs sm:text-sm font-bold text-white">Plăți sigure<br/>Banca Transilvania</span>
+            </div>
+            
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
+                <svg className="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                </svg>
+              </div>
+              <span className="text-xs sm:text-sm font-bold text-white">100% Sigur<br/>& Protejat</span>
+            </div>
+            
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
+                <svg className="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd"/>
+                </svg>
+              </div>
+              <span className="text-xs sm:text-sm font-bold text-white">Suport<br/>dedicat</span>
             </div>
           </div>
         </div>
