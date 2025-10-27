@@ -12,7 +12,9 @@ const Planuri = () => {
       name: "PRO",
       clients: "clienți nelimitați",
       monthlyPrice: "399",
-      yearlyPrice: "3,990",
+      yearlyPrice: "3,200",
+      yearlyMonthly: "266",
+      yearlyBonus: "4 luni cadou",
       recommended: true,
       icon: Crown,
       features: [
@@ -35,7 +37,9 @@ const Planuri = () => {
       name: "PLUS",
       clients: "250 clienți",
       monthlyPrice: "249",
-      yearlyPrice: "2,490",
+      yearlyPrice: "2,500",
+      yearlyMonthly: "208",
+      yearlyBonus: "2 luni cadou",
       icon: Zap,
       features: [
         { text: "Design personalizat cu logo-ul tău", emoji: "🎨" },
@@ -58,7 +62,9 @@ const Planuri = () => {
       name: "START",
       clients: "100 clienți",
       monthlyPrice: "149",
-      yearlyPrice: "1,490",
+      yearlyPrice: "1,650",
+      yearlyMonthly: "138",
+      yearlyBonus: "1 lună cadou",
       icon: Rocket,
       features: [
         { text: "Design personalizat cu logo-ul tău", emoji: "🎨" },
@@ -184,14 +190,14 @@ const Planuri = () => {
                   <div className="mb-4 sm:mb-6">
                     <div className="flex items-end justify-center gap-1 sm:gap-2">
                       <span className="text-5xl sm:text-6xl md:text-7xl font-black bg-gradient-to-br from-purple-600 to-purple-800 bg-clip-text text-transparent">
-                        {billingPeriod === 'monthly' ? plan.monthlyPrice : Math.round(parseInt(plan.yearlyPrice.replace(',', '')) / 12)}
+                        {billingPeriod === 'monthly' ? plan.monthlyPrice : plan.yearlyMonthly}
                       </span>
                       <span className="text-base sm:text-lg md:text-xl text-gray-600 mb-1 sm:mb-2 font-semibold">RON / lună</span>
                     </div>
                     {billingPeriod === 'yearly' && (
                       <div className="text-xs sm:text-sm text-purple-600 font-medium mt-2 px-2">
                         Facturat anual: <span className="font-bold">{plan.yearlyPrice} RON</span>
-                        <div className="text-green-600 font-bold mt-1">✨ Economisești 2 luni!</div>
+                        <div className="text-green-600 font-bold mt-1">✨ {plan.yearlyBonus}</div>
                       </div>
                     )}
                   </div>
