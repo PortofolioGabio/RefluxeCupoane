@@ -229,10 +229,6 @@ const Planuri = () => {
               <Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-400 flex-shrink-0" />
               <span className="text-xs sm:text-sm font-semibold">Anulare oricând</span>
             </div>
-            <div className="flex items-center gap-2 text-purple-200">
-              <Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-400 flex-shrink-0" />
-              <span className="text-xs sm:text-sm font-semibold">Migrare gratuită</span>
-            </div>
           </div>
         </div>
       </div>
