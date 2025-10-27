@@ -161,7 +161,7 @@ const Planuri = () => {
                       <span className="text-base sm:text-lg md:text-xl text-gray-600 mb-1 sm:mb-2 font-semibold">RON / lună</span>
                     </div>
                     <div className="text-xs sm:text-sm text-purple-600 font-medium mt-2 px-2">
-                      💰 Anual = <span className="font-bold">{plan.yearlyPrice} RON</span> + 2 luni CADOU 🎁
+                      Anual = <span className="font-bold">{plan.yearlyPrice} RON</span> + 2 luni CADOU
                     </div>
                   </div>
                 </CardHeader>
