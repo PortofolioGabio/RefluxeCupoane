@@ -176,10 +176,10 @@ const Planuri = () => {
                           className={`flex items-start gap-1.5 sm:gap-2 text-xs sm:text-sm ${
                             idx < plan.features.length 
                               ? 'text-gray-800' 
-                              : 'text-gray-300 line-through opacity-50'
+                              : 'text-gray-400 line-through opacity-70'
                           }`}
                         >
-                          <span className={`text-sm sm:text-base flex-shrink-0 ${idx >= plan.features.length ? 'grayscale' : ''}`}>
+                          <span className={`text-sm sm:text-base flex-shrink-0 ${idx >= plan.features.length ? 'grayscale opacity-60' : ''}`}>
                             {feature.emoji}
                           </span>
                           <span className="leading-relaxed">{feature.text}</span>
