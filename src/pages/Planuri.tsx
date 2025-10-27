@@ -191,7 +191,10 @@ const Planuri = () => {
                   </div>
 
                   {/* CTA Button */}
-                  <Button className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-bold py-3 sm:py-4 rounded-xl sm:rounded-2xl text-sm sm:text-base shadow-lg transform transition-all duration-200 hover:scale-105">
+                  <Button 
+                    className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-bold py-3 sm:py-4 rounded-xl sm:rounded-2xl text-sm sm:text-base shadow-lg transform transition-all duration-200 hover:scale-105"
+                    onClick={() => window.open('https://app.refluxe.io/registration', '_blank')}
+                  >
                     Alege {plan.name}
                   </Button>
 
@@ -203,7 +206,7 @@ const Planuri = () => {
                       {index === 2 && "📧 Suport STANDARD"}
                     </div>
                     <div className="text-xs text-purple-600 mt-1">
-                      {index === 0 && "prioritar, telefonic sau WhatsApp"}
+                      {index === 0 && "personal, telefonic sau WhatsApp"}
                       {index === 1 && "asistență directă pe WhatsApp"}
                       {index === 2 && "max. 48h prin mail"}
                     </div>
