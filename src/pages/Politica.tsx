@@ -58,7 +58,7 @@ const PoliticaConfidentialitate = () => {
                 </p>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   Operatorul de date este:<br />
-                  <strong>Refluxe SRL</strong><br />
+                  <strong>REFLUXE LOIAL S.R.L.</strong><br />
                   str. Atelierelor, Moinești, Bacău, România<br />
                   Email: <a href="mailto:contact@refluxe.ro" className="text-blue-600 hover:text-blue-800 underline">contact@refluxe.ro</a>
                 </p>
@@ -209,5 +209,6 @@ const PoliticaConfidentialitate = () => {
     </div>
   );
 };
+
 
 export default PoliticaConfidentialitate;
