@@ -256,23 +256,23 @@ const Planuri = () => {
 
         {/* Trust badges */}
         <div className="text-center mt-12 sm:mt-16">
-          <div className="flex justify-center gap-6 sm:gap-12 flex-wrap px-4 items-center">
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-32 h-16 bg-white rounded-lg flex items-center justify-center shadow-lg p-2">
+          <div className="flex justify-center gap-8 sm:gap-16 flex-wrap px-4 items-center">
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-40 h-20 sm:w-48 sm:h-24 flex items-center justify-center">
                 <img src="/gabio-uploads/1.png" alt="GDPR Compliance" className="max-w-full max-h-full object-contain" />
               </div>
               <span className="text-xs sm:text-sm font-bold text-white">Securitate<br/>GDPR</span>
             </div>
             
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-32 h-16 bg-white rounded-lg flex items-center justify-center shadow-lg p-2">
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-40 h-20 sm:w-48 sm:h-24 flex items-center justify-center">
                 <img src="/gabio-uploads/2.png" alt="Metode de plată" className="max-w-full max-h-full object-contain" />
               </div>
               <span className="text-xs sm:text-sm font-bold text-white">Plăți sigure<br/>Banca Transilvania</span>
             </div>
             
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-32 h-16 bg-white rounded-lg flex items-center justify-center shadow-lg p-2">
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-40 h-20 sm:w-48 sm:h-24 flex items-center justify-center">
                 <img src="/gabio-uploads/3.png" alt="SSL Securizat" className="max-w-full max-h-full object-contain" />
               </div>
               <span className="text-xs sm:text-sm font-bold text-white">100% Sigur<br/>& Protejat</span>
