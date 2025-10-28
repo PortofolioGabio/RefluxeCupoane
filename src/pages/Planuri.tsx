@@ -244,7 +244,7 @@ const Planuri = () => {
                     <div className="text-xs text-purple-600 mt-1">
                       {index === 0 && "prioritar, telefonic sau WhatsApp"}
                       {index === 1 && "asistență directă pe WhatsApp"}
-                      {index === 2 && "max. 48h prin mail"}
+                      {index === 2 && "max. 24h prin mail"}
                     </div>
                   </div>
                 </CardContent>
