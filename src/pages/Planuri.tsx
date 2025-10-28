@@ -22,8 +22,8 @@ const Planuri = () => {
         { text: "Notificări PUSH nelimitate", emoji: "🔔" },
         { text: "Vezi cine revine și cât cheltuie", emoji: "📊" },
         { text: "Toate paginile sociale într-un loc", emoji: "🔗" },
-        { text: "Transformă clienții în ambasadori", emoji: "⭐" },
-        { text: "Link direct pentru recenzii Google", emoji: "💬" },
+        { text: "Transformă clienții în ambasadori", emoji: "💬" },
+        { text: "Link direct pentru recenzii Google", emoji: "⭐" },
         { text: "Primește vizite spontane, fără efort", emoji: "📍" },
         { text: "Mesaje automate trimise periodic", emoji: "⏰" },
         { text: "Mesaj automat de 'La mulți ani'", emoji: "🎂" },
@@ -118,7 +118,7 @@ const Planuri = () => {
             >
               Plată anuală
               <span className="absolute -top-2 -right-2 bg-green-400 text-gray-900 text-xs px-2 py-0.5 rounded-full font-bold">
-                -17%
+                -33%
               </span>
             </button>
           </div>
