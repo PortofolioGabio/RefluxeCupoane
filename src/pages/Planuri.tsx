@@ -25,9 +25,10 @@ const Planuri = () => {
         { text: "Transformă clienții în ambasadori", emoji: "💬" },
         { text: "Link direct pentru recenzii Google", emoji: "⭐" },
         { text: "Primește vizite spontane, fără efort", emoji: "📍" },
-        { text: "Mesaje automate trimise periodic", emoji: "⏰" },
+        { text: "Remindere automate trimise periodic", emoji: "⏰" },
         { text: "Mesaj automat de 'La mulți ani'", emoji: "🎂" },
-        { text: "", emoji: "" },
+        { text: "Umple mesele cu happy hour", emoji: "🍹" },
+        { text: "Mesaje automate și personalizate", emoji: "💌" },
         { text: "Implementare gratuită (150 LEI)", emoji: "🎁" },
         { text: "Modificări extra nelimitate", emoji: "✨" }
       ],
