@@ -54,7 +54,6 @@ const Planuri = () => {
       disabledFeatures: [
         { text: "Mesaje automate trimise periodic", emoji: "⏰" },
         { text: "Mesaj de 'La mulți ani' automat", emoji: "🎂" },
-        { text: "", emoji: "" },
         { text: "Implementare gratuită (150 LEI)", emoji: "🎁" },
         { text: "Modificări extra nelimitate", emoji: "✨" }
       ]
@@ -79,7 +78,6 @@ const Planuri = () => {
         { text: "Primește vizite spontane, fără efort", emoji: "📍" },
         { text: "Mesaje automate trimise periodic", emoji: "⏰" },
         { text: "Mesaj de 'La mulți ani' automat", emoji: "🎂" },
-        { text: "", emoji: "" },
         { text: "Implementare gratuită (150 LEI)", emoji: "🎁" },
         { text: "Modificări extra nelimitate", emoji: "✨" }
       ]
