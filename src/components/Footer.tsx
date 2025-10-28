@@ -19,7 +19,6 @@ const Footer = () => {
               Platforma modernă de cupoane digitale de fidelitate pentru afaceri și consumatori.
             </p>
           </div>
-
           {/* Navigation */}
           <div>
             <h3 className="font-semibold text-lg mb-4">Navigare</h3>
@@ -31,18 +30,27 @@ const Footer = () => {
               <li><Link to="/politica-confidentialitate" className="text-gray-400 hover:text-white transition-colors">Politica de Confidențialitate</Link></li>
             </ul>
           </div>
-
           {/* Contact */}
           <div>
             <h3 className="font-semibold text-lg mb-4">Contact</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-brand-orange" />
-                <span className="text-gray-400 text-sm">contact@refluxe.com</span>
+                <a 
+                  href="mailto:contact@refluxe.com" 
+                  className="text-gray-400 text-sm hover:text-white transition-colors"
+                >
+                  contact@refluxe.com
+                </a>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-brand-orange" />
-                <span className="text-gray-400 text-sm">+40 758 878 364</span>
+                <a 
+                  href="tel:+40758878364" 
+                  className="text-gray-400 text-sm hover:text-white transition-colors"
+                >
+                  +40 758 878 364
+                </a>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-brand-orange" />
@@ -51,7 +59,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
             REFLUXE LOIAL S.R.L. Toate drepturile rezervate.
