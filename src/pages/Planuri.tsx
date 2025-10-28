@@ -124,16 +124,16 @@ const Planuri = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start group/cards">
           {plans.map((plan, index) => {
             const Icon = plan.icon;
             const totalFeatures = 12;
             const allFeatures = [...plan.features, ...plan.disabledFeatures];
             
             return (
-              <div key={index} className="relative group">
+              <div key={index} className="relative group/card transition-opacity duration-500 hover:!opacity-100 group-hover/cards:opacity-40">
                 {plan.recommended && (
-                  <div className="absolute -top-3 sm:-top-4 left-0 right-0 z-10 flex justify-center transition-all duration-300 group-hover:-top-5 sm:group-hover:-top-6">
+                  <div className="absolute -top-3 sm:-top-4 left-0 right-0 z-10 flex justify-center transition-all duration-700 ease-out group-hover/card:-top-5 sm:group-hover/card:-top-6">
                     <Badge className="bg-gradient-to-r from-amber-400 to-orange-400 text-gray-900 font-bold text-xs sm:text-sm px-4 sm:px-6 py-1.5 sm:py-2 rounded-full shadow-lg">
                       <Star className="inline-block w-3 h-3 sm:w-4 sm:h-4 mr-1" />
                       <span className="hidden xs:inline">CEL MAI POPULAR</span>
@@ -144,7 +144,7 @@ const Planuri = () => {
                 )}
                 
                 <Card 
-                  className={`shadow-2xl border-0 rounded-2xl sm:rounded-3xl overflow-hidden transform transition-all duration-300 hover:scale-105 ${
+                  className={`shadow-2xl border-0 rounded-2xl sm:rounded-3xl overflow-hidden transform transition-all duration-700 ease-out hover:scale-105 ${
                     plan.recommended 
                       ? 'bg-gradient-to-br from-amber-50 via-purple-50 to-pink-50 ring-2 sm:ring-4 ring-amber-400 mt-3 sm:mt-4 relative' 
                       : 'bg-white mt-3 sm:mt-4'
@@ -228,7 +228,7 @@ const Planuri = () => {
 
                   {/* CTA Button */}
                   <Button 
-                    className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-bold py-3 sm:py-4 rounded-xl sm:rounded-2xl text-sm sm:text-base shadow-lg transform transition-all duration-200 hover:scale-105"
+                    className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-bold py-3 sm:py-4 rounded-xl sm:rounded-2xl text-sm sm:text-base shadow-lg transform transition-all duration-500 ease-out hover:scale-105"
                     onClick={() => window.open('https://app.refluxe.io/registration', '_blank')}
                   >
                     Alege {plan.name}
