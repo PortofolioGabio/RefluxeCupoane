@@ -52,8 +52,10 @@ const Planuri = () => {
         { text: "Primește vizite spontane, fără efort", emoji: "📍" }
       ],
       disabledFeatures: [
-        { text: "Mesaje automate trimise periodic", emoji: "⏰" },
-        { text: "Mesaj de 'La mulți ani' automat", emoji: "🎂" },
+        { text: "Remindere automate trimise periodic", emoji: "⏰" },
+        { text: "Mesaj automat de 'La mulți ani'", emoji: "🎂" },
+        { text: "Umple mesele cu happy hour", emoji: "🍹" },
+        { text: "Mesaje automate și personalizate", emoji: "💌" },
         { text: "Implementare gratuită (150 LEI)", emoji: "🎁" },
         { text: "Modificări extra nelimitate", emoji: "✨" }
       ]
@@ -76,8 +78,10 @@ const Planuri = () => {
         { text: "Transformă clienții în ambasadori", emoji: "⭐" },
         { text: "Link direct pentru recenzii Google", emoji: "💬" },
         { text: "Primește vizite spontane, fără efort", emoji: "📍" },
-        { text: "Mesaje automate trimise periodic", emoji: "⏰" },
-        { text: "Mesaj de 'La mulți ani' automat", emoji: "🎂" },
+        { text: "Remindere automate trimise periodic", emoji: "⏰" },
+        { text: "Mesaj automat de 'La mulți ani'", emoji: "🎂" },
+        { text: "Umple mesele cu happy hour", emoji: "🍹" },
+        { text: "Mesaje automate și personalizate", emoji: "💌" },
         { text: "Implementare gratuită (150 LEI)", emoji: "🎁" },
         { text: "Modificări extra nelimitate", emoji: "✨" }
       ]
@@ -89,7 +93,7 @@ const Planuri = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 px-4">
-            TRANSFORMĂ CLIENȚII OCAZIONALI ÎN CLIENȚI FIDELI
+            TRANSFORMĂ CLIENȚII OCAZIONALI<br/>ÎN CLIENȚI FIDELI
           </h1>
           <p className="text-purple-200 text-base sm:text-lg max-w-2xl mx-auto px-4 mb-8">
             Construiește o comunitate în jurul brandului tău
@@ -124,14 +128,14 @@ const Planuri = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start group/cards">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
           {plans.map((plan, index) => {
             const Icon = plan.icon;
             const totalFeatures = 12;
             const allFeatures = [...plan.features, ...plan.disabledFeatures];
             
             return (
-              <div key={index} className="relative group/card transition-opacity duration-500 hover:!opacity-100 group-hover/cards:opacity-40">
+              <div key={index} className="relative group/card transition-all duration-500">
                 {plan.recommended && (
                   <div className="absolute -top-3 sm:-top-4 left-0 right-0 z-10 flex justify-center transition-all duration-700 ease-out group-hover/card:-top-5 sm:group-hover/card:-top-6">
                     <Badge className="bg-gradient-to-r from-amber-400 to-orange-400 text-gray-900 font-bold text-xs sm:text-sm px-4 sm:px-6 py-1.5 sm:py-2 rounded-full shadow-lg">
