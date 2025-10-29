@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            REFLUXE LOIAL S.R.L. Toate drepturile rezervate.
+            © 2025 REFLUXE LOIAL S.R.L. Toate drepturile rezervate.
           </p>
         </div>
       </div>
