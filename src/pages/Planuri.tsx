@@ -17,21 +17,21 @@ const Planuri = () => {
       yearlyBonus: "1 lună cadou",
       icon: Rocket,
       features: [
-        { text: "Design personalizat cu logo-ul tău", emoji: "🎨" },
-        { text: "Notificări PUSH nelimitate", emoji: "🔔" },
-        { text: "Vezi cine revine și cât cheltuie", emoji: "📊" },
-        { text: "Toate paginile sociale într-un loc", emoji: "🔗" }
+        { text: "Design personalizat cu logo-ul tău" },
+        { text: "Notificări PUSH nelimitate" },
+        { text: "Vezi cine revine și cât cheltuie" },
+        { text: "Toate paginile sociale într-un loc" }
       ],
       disabledFeatures: [
-        { text: "Transformă clienții în ambasadori", emoji: "⭐" },
-        { text: "Link direct pentru recenzii Google", emoji: "💬" },
-        { text: "Primește vizite spontane, fără efort", emoji: "📍" },
-        { text: "Remindere automate trimise periodic", emoji: "⏰" },
-        { text: "Mesaj automat de 'La mulți ani'", emoji: "🎂" },
-        { text: "Umple mesele cu happy hour", emoji: "🍹" },
-        { text: "Mesaje automate și personalizate", emoji: "💌" },
-        { text: "Implementare gratuită (150 LEI)", emoji: "🎁" },
-        { text: "Modificări extra nelimitate", emoji: "✨" }
+        { text: "Transformă clienții în ambasadori" },
+        { text: "Link direct pentru recenzii Google" },
+        { text: "Primește vizite spontane, fără efort" },
+        { text: "Remindere automate trimise periodic" },
+        { text: "Mesaj automat de 'La mulți ani'" },
+        { text: "Umple mesele cu happy hour" },
+        { text: "Mesaje automate și personalizate" },
+        { text: "Implementare gratuită (150 LEI)" },
+        { text: "Modificări extra nelimitate" }
       ]
     },
     {
@@ -44,21 +44,21 @@ const Planuri = () => {
       recommended: true,
       icon: Zap,
       features: [
-        { text: "Design personalizat cu logo-ul tău", emoji: "🎨" },
-        { text: "Notificări PUSH nelimitate", emoji: "🔔" },
-        { text: "Vezi cine revine și cât cheltuie", emoji: "📊" },
-        { text: "Toate paginile sociale într-un loc", emoji: "🔗" },
-        { text: "Transformă clienții în ambasadori", emoji: "💬" },
-        { text: "Link direct pentru recenzii Google", emoji: "⭐" },
-        { text: "Primește vizite spontane, fără efort", emoji: "📍" },
-        { text: "Remindere automate trimise periodic", emoji: "⏰" },
-        { text: "Mesaj automat de 'La mulți ani'", emoji: "🎂" }
+        { text: "Design personalizat cu logo-ul tău" },
+        { text: "Notificări PUSH nelimitate" },
+        { text: "Vezi cine revine și cât cheltuie" },
+        { text: "Toate paginile sociale într-un loc" },
+        { text: "Transformă clienții în ambasadori" },
+        { text: "Link direct pentru recenzii Google" },
+        { text: "Primește vizite spontane, fără efort" },
+        { text: "Remindere automate trimise periodic" },
+        { text: "Mesaj automat de 'La mulți ani'" }
       ],
       disabledFeatures: [
-        { text: "Umple mesele cu happy hour", emoji: "🍹" },
-        { text: "Mesaje automate și personalizate", emoji: "💌" },
-        { text: "Implementare gratuită (150 LEI)", emoji: "🎁" },
-        { text: "Modificări extra nelimitate", emoji: "✨" }
+        { text: "Umple mesele cu happy hour" },
+        { text: "Mesaje automate și personalizate" },
+        { text: "Implementare gratuită (150 LEI)" },
+        { text: "Modificări extra nelimitate" }
       ]
     },
     {
@@ -70,19 +70,19 @@ const Planuri = () => {
       yearlyBonus: "4 luni cadou",
       icon: Crown,
       features: [
-        { text: "Design personalizat cu logo-ul tău", emoji: "🎨" },
-        { text: "Notificări PUSH nelimitate", emoji: "🔔" },
-        { text: "Vezi cine revine și cât cheltuie", emoji: "📊" },
-        { text: "Toate paginile sociale într-un loc", emoji: "🔗" },
-        { text: "Transformă clienții în ambasadori", emoji: "💬" },
-        { text: "Link direct pentru recenzii Google", emoji: "⭐" },
-        { text: "Primește vizite spontane, fără efort", emoji: "📍" },
-        { text: "Remindere automate trimise periodic", emoji: "⏰" },
-        { text: "Mesaj automat de 'La mulți ani'", emoji: "🎂" },
-        { text: "Umple mesele cu happy hour", emoji: "🍹" },
-        { text: "Mesaje automate și personalizate", emoji: "💌" },
-        { text: "Implementare gratuită (150 LEI)", emoji: "🎁" },
-        { text: "Modificări extra nelimitate", emoji: "✨" }
+        { text: "Design personalizat cu logo-ul tău" },
+        { text: "Notificări PUSH nelimitate" },
+        { text: "Vezi cine revine și cât cheltuie" },
+        { text: "Toate paginile sociale într-un loc" },
+        { text: "Transformă clienții în ambasadori" },
+        { text: "Link direct pentru recenzii Google" },
+        { text: "Primește vizite spontane, fără efort" },
+        { text: "Remindere automate trimise periodic" },
+        { text: "Mesaj automat de 'La mulți ani'" },
+        { text: "Umple mesele cu happy hour" },
+        { text: "Mesaje automate și personalizate" },
+        { text: "Implementare gratuită (150 LEI)" },
+        { text: "Modificări extra nelimitate" }
       ],
       disabledFeatures: []
     }
@@ -91,10 +91,36 @@ const Planuri = () => {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        @font-face {
+          font-family: 'Helvetica Now';
+          src: url('/fonts/helveticanowtext-bold-demo.ttf') format('truetype');
+          font-weight: 400;
+          font-style: normal;
+        }
+        
+        @font-face {
+          font-family: 'Helvetica Now';
+          src: url('/fonts/helveticanowtext-bold-demo.ttf') format('truetype');
+          font-weight: 500;
+          font-style: normal;
+        }
+        
+        @font-face {
+          font-family: 'Helvetica Now';
+          src: url('/fonts/helveticanowtext-bold-demo.ttf') format('truetype');
+          font-weight: 700;
+          font-style: normal;
+        }
+        
+        @font-face {
+          font-family: 'Helvetica Now';
+          src: url('/fonts/helveticanowtext-bold-demo.ttf') format('truetype');
+          font-weight: 900;
+          font-style: normal;
+        }
         
         * {
-          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+          font-family: 'Helvetica Now', 'Helvetica Neue', Helvetica, Arial, sans-serif;
         }
       `}</style>
       
@@ -183,19 +209,19 @@ const Planuri = () => {
                       </div>
                       <div className="text-right">
                         <Badge className="bg-purple-100 text-purple-700 text-xs font-semibold px-2 sm:px-3 py-0.5 sm:py-1 mb-1 rounded-full border border-purple-200">
-                          🏪 1 magazin
+                          1 magazin
                         </Badge>
                         <Badge className="bg-gradient-to-r from-purple-500 to-purple-700 text-white text-xs font-semibold px-2 sm:px-3 py-0.5 sm:py-1 block rounded-full shadow-md whitespace-nowrap">
-                          👥 {plan.clients}
+                          {plan.clients}
                         </Badge>
                       </div>
                     </div>
 
                     {/* Subtitle */}
                     <p className="text-xs sm:text-sm text-gray-600 mb-4 sm:mb-6 leading-relaxed font-medium h-auto sm:h-10 flex items-center justify-center px-2">
-                      {index === 0 && "🌱 Minimul necesar ca să pornești"}
-                      {index === 1 && "📈 Stabilitate și evoluție constantă"}
-                      {index === 2 && "🚀 Control total și succes real"}
+                      {index === 0 && "Minimul necesar ca să pornești"}
+                      {index === 1 && "Stabilitate și evoluție constantă"}
+                      {index === 2 && "Control total și succes real"}
                     </p>
 
                     {/* Pricing */}
@@ -209,7 +235,7 @@ const Planuri = () => {
                       {billingPeriod === 'yearly' && (
                         <div className="text-xs sm:text-sm text-purple-600 font-medium mt-2 px-2">
                           Facturat anual: <span className="font-bold">{plan.yearlyPrice} RON</span>
-                          <div className="text-green-600 font-bold mt-1">✨ {plan.yearlyBonus}</div>
+                          <div className="text-green-600 font-bold mt-1">{plan.yearlyBonus}</div>
                         </div>
                       )}
                     </div>
@@ -228,9 +254,6 @@ const Planuri = () => {
                                 : 'text-gray-400 line-through opacity-70'
                             }`}
                           >
-                            <span className={`text-sm sm:text-base flex-shrink-0 ${idx >= plan.features.length ? 'grayscale opacity-60' : ''}`}>
-                              {feature.emoji}
-                            </span>
                             <span className="leading-relaxed">{feature.text}</span>
                           </div>
                         ) : (
@@ -250,9 +273,9 @@ const Planuri = () => {
                     {/* Support Info */}
                     <div className="text-center mt-3 sm:mt-4 bg-purple-50 rounded-lg sm:rounded-xl p-2.5 sm:p-3 border border-purple-100">
                       <div className="font-bold text-xs sm:text-sm text-purple-700">
-                        {index === 0 && "📧 Suport STANDARD"}
-                        {index === 1 && "⚡ Suport RAPID"}
-                        {index === 2 && "💎 Suport PREMIUM"}
+                        {index === 0 && "Suport STANDARD"}
+                        {index === 1 && "Suport RAPID"}
+                        {index === 2 && "Suport PREMIUM"}
                       </div>
                       <div className="text-xs text-purple-600 mt-1">
                         {index === 0 && "max. 24h prin mail"}
