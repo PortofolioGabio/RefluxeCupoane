@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Check, X, Star, Crown, Zap, Rocket } from 'lucide-react';
+import { Star, Crown, Zap, Rocket } from 'lucide-react';
 
 const Planuri = () => {
   const [billingPeriod, setBillingPeriod] = useState('monthly'); // 'monthly' or 'yearly'
@@ -95,6 +95,7 @@ const Planuri = () => {
           font-family: 'Helvetica Now';
           src: url('/fonts/helveticanowtext-bold-demo.ttf') format('truetype');
         }
+
         * {
           font-family: 'Helvetica Now', 'Helvetica Neue', Helvetica, Arial, sans-serif;
         }
@@ -111,7 +112,7 @@ const Planuri = () => {
               Construiește o comunitate în jurul brandului tău
             </p>
             
-            {/* toggle */}
+            {/* TOGGLE */}
             <div className="flex justify-center items-center gap-4 mb-8">
               <button
                 onClick={() => setBillingPeriod('monthly')}
@@ -121,7 +122,7 @@ const Planuri = () => {
                     : 'bg-blue-800 text-blue-200 hover:bg-blue-700'
                 }`}
               >
-                Plată lunară
+                Lunar
               </button>
               <button
                 onClick={() => setBillingPeriod('yearly')}
@@ -131,7 +132,7 @@ const Planuri = () => {
                     : 'bg-blue-800 text-blue-200 hover:bg-blue-700'
                 }`}
               >
-                Plată anuală
+                Anual
                 <span className="absolute -top-2 -right-2 bg-green-400 text-gray-900 text-xs px-2 py-0.5 rounded-full font-bold">
                   -33%
                 </span>
@@ -139,14 +140,11 @@ const Planuri = () => {
             </div>
           </div>
 
-          {/* Cards */}
+          {/* CARDS */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
             {plans.map((plan, index) => {
               const Icon = plan.icon;
-              const totalFeatures = 12;
               const allFeatures = [...plan.features, ...plan.disabledFeatures];
-
-              // stil BUTON: outline pt START+PRO, plin pt PLUS
               const isRecommended = !!plan.recommended;
               const buttonClasses = isRecommended
                 ? 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white'
@@ -198,14 +196,12 @@ const Planuri = () => {
                         </div>
                       </div>
 
-                      {/* Subtitle */}
                       <p className="text-sm text-gray-600 mb-6 font-medium">
                         {index === 0 && "Minimul necesar ca să pornești"}
                         {index === 1 && "Stabilitate și evoluție constantă"}
                         {index === 2 && "Control total și succes real"}
                       </p>
 
-                      {/* Pricing (mare pentru impact) */}
                       <div className="mb-6">
                         <div className="flex items-end justify-center gap-2">
                           <span className="text-7xl sm:text-8xl md:text-9xl font-black bg-gradient-to-br from-blue-600 to-blue-800 bg-clip-text text-transparent">
@@ -223,7 +219,6 @@ const Planuri = () => {
                     </CardHeader>
 
                     <CardContent className="px-6 pb-6 flex flex-col">
-                      {/* Features */}
                       <div className="space-y-2 text-left mb-6 flex-grow">
                         {allFeatures.map((feature, idx) => (
                           <div 
@@ -239,7 +234,6 @@ const Planuri = () => {
                         ))}
                       </div>
 
-                      {/* CTA – outline pentru START/PRO, plin pentru PLUS */}
                       <Button 
                         className={`w-full font-bold py-4 rounded-2xl text-base shadow-lg transform transition-all duration-500 hover:scale-105 ${buttonClasses}`}
                         onClick={() => window.open('https://app.refluxe.io/registration', '_blank')}
@@ -247,7 +241,6 @@ const Planuri = () => {
                         Alege {plan.name}
                       </Button>
 
-                      {/* Support Info */}
                       <div className="text-center mt-4 bg-blue-50 rounded-xl p-3 border border-blue-100">
                         <div className="font-bold text-sm text-blue-700">
                           {index === 0 && "Suport STANDARD"}
@@ -267,7 +260,7 @@ const Planuri = () => {
             })}
           </div>
 
-          {/* Trust badges */}
+          {/* TRUST BADGES */}
           <div className="text-center mt-16">
             <div className="flex justify-center gap-16 flex-wrap items-center">
               <div className="flex flex-col items-center gap-3">
