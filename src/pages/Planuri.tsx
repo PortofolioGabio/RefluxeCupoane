@@ -101,7 +101,8 @@ const Planuri = () => {
         }
       `}</style>
       
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-20 pb-32">
+      {/* schimbat în fundal negru */}
+      <section className="bg-black text-white py-20 pb-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 px-4">
@@ -197,7 +198,8 @@ const Planuri = () => {
 
                       <div className="mb-6">
                         <div className="flex items-end justify-center gap-2">
-                          <span className="text-6xl font-black bg-gradient-to-br from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                          {/* mărit mărimea prețului */}
+                          <span className="text-7xl sm:text-8xl md:text-9xl font-black bg-gradient-to-br from-blue-600 to-blue-800 bg-clip-text text-transparent">
                             {billingPeriod === 'monthly' ? plan.monthlyPrice : plan.yearlyMonthly}
                           </span>
                           <span className="text-lg text-gray-600 mb-2 font-semibold">RON / lună</span>
@@ -277,7 +279,3 @@ const Planuri = () => {
 };
 
 export default Planuri;
-
-
-
-
