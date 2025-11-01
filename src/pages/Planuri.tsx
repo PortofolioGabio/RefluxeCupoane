@@ -122,7 +122,7 @@ const Planuri = () => {
                     : 'bg-blue-800 text-blue-200 hover:bg-blue-700'
                 }`}
               >
-                Lunar
+                Plan lunar
               </button>
               <button
                 onClick={() => setBillingPeriod('yearly')}
@@ -132,7 +132,7 @@ const Planuri = () => {
                     : 'bg-blue-800 text-blue-200 hover:bg-blue-700'
                 }`}
               >
-                Anual
+                Plan anual
                 <span className="absolute -top-2 -right-2 bg-green-400 text-gray-900 text-xs px-2 py-0.5 rounded-full font-bold">
                   -33%
                 </span>
@@ -204,7 +204,7 @@ const Planuri = () => {
 
                       <div className="mb-6">
                         <div className="flex items-end justify-center gap-2">
-                          <span className="text-7xl sm:text-8xl md:text-9xl font-black bg-gradient-to-br from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                          <span className="text-5xl sm:text-6xl md:text-7xl font-black bg-gradient-to-br from-blue-600 to-blue-800 bg-clip-text text-transparent">
                             {billingPeriod === 'monthly' ? plan.monthlyPrice : plan.yearlyMonthly}
                           </span>
                           <span className="text-lg text-gray-600 mb-2 font-semibold">RON / lună</span>
