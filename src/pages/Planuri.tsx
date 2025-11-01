@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Check, X, Star, Crown, Zap, Rocket } from 'lucide-react';
+import { Star, Crown, Zap, Rocket } from 'lucide-react';
 
 const Planuri = () => {
-  const [billingPeriod, setBillingPeriod] = useState('monthly'); // 'monthly' or 'yearly'
+  const [billingPeriod, setBillingPeriod] = useState('monthly');
   
   const plans = [
     {
@@ -96,21 +96,34 @@ const Planuri = () => {
           src: url('/fonts/helveticanowtext-bold-demo.ttf') format('truetype');
         }
 
+        @font-face {
+          font-family: 'Milker';
+          src: url('/fonts/Milker.ttf') format('truetype');
+          font-weight: 900;
+          font-style: normal;
+        }
+
         * {
           font-family: 'Helvetica Now', 'Helvetica Neue', Helvetica, Arial, sans-serif;
         }
+
+        .price-text {
+          font-family: 'Milker', sans-serif;
+          letter-spacing: -1px;
+        }
       `}</style>
-      
+
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-20 pb-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 px-4">
-              TRANSFORMĂ CLIENȚII OCAZIONALI<br/>ÎN CLIENȚI FIDELI
+              TRANSFORMĂ CLIENȚII OCAZIONALI<br />ÎN CLIENȚI FIDELI
             </h1>
             <p className="text-blue-200 text-base sm:text-lg max-w-2xl mx-auto px-4 mb-8">
               Construiește o comunitate în jurul brandului tău
             </p>
-            
+
+            {/* Billing toggle */}
             <div className="flex justify-center items-center gap-4 mb-8">
               <button
                 onClick={() => setBillingPeriod('monthly')}
@@ -138,36 +151,30 @@ const Planuri = () => {
             </div>
           </div>
 
+          {/* Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
             {plans.map((plan, index) => {
               const Icon = plan.icon;
               const allFeatures = [...plan.features, ...plan.disabledFeatures];
-              
+
               return (
                 <div key={index} className="relative group/card transition-all duration-500">
                   {plan.recommended && (
-                    <div className="absolute -top-3 sm:-top-4 left-0 right-0 z-10 flex justify-center">
-                      <Badge className="bg-gradient-to-r from-amber-400 to-orange-400 text-gray-900 font-bold text-xs sm:text-sm px-4 sm:px-6 py-1.5 sm:py-2 rounded-full shadow-lg">
+                    <div className="absolute -top-3 left-0 right-0 z-10 flex justify-center">
+                      <Badge className="bg-gradient-to-r from-amber-400 to-orange-400 text-gray-900 font-bold text-xs sm:text-sm px-6 py-2 rounded-full shadow-lg">
                         <Star className="inline-block w-4 h-4 mr-1" />
                         CEL MAI POPULAR
                         <Star className="inline-block w-4 h-4 ml-1" />
                       </Badge>
                     </div>
                   )}
-                  
-                  <Card 
+
+                  <Card
                     className={`shadow-2xl border-0 rounded-2xl overflow-hidden transform transition-all duration-700 ease-out hover:scale-105 ${
-                      plan.recommended 
-                        ? 'bg-gradient-to-br from-amber-50 via-blue-50 to-pink-50 ring-2 ring-amber-400 mt-4 relative' 
+                      plan.recommended
+                        ? 'bg-gradient-to-br from-amber-50 via-blue-50 to-pink-50 ring-2 ring-amber-400 mt-4 relative'
                         : 'bg-white mt-4'
                     }`}
-                    style={plan.recommended ? {
-                      backgroundImage: `
-                        radial-gradient(circle at 20% 20%, rgba(251, 191, 36, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 40% 80%, rgba(236, 72, 153, 0.08) 0%, transparent 50%)
-                      `
-                    } : {}}
                   >
                     <CardHeader className="text-center pb-4 pt-6 px-6">
                       <div className="flex justify-between items-start mb-4">
@@ -189,15 +196,17 @@ const Planuri = () => {
                         </div>
                       </div>
 
+                      {/* Subtitle */}
                       <p className="text-sm text-gray-600 mb-6 font-medium">
                         {index === 0 && "Minimul necesar ca să pornești"}
                         {index === 1 && "Stabilitate și evoluție constantă"}
                         {index === 2 && "Control total și succes real"}
                       </p>
 
+                      {/* Pricing */}
                       <div className="mb-6">
                         <div className="flex items-end justify-center gap-2">
-                          <span className="text-6xl font-black bg-gradient-to-br from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                          <span className="price-text text-7xl sm:text-8xl md:text-8xl font-black bg-gradient-to-br from-blue-500 to-blue-800 bg-clip-text text-transparent">
                             {billingPeriod === 'monthly' ? plan.monthlyPrice : plan.yearlyMonthly}
                           </span>
                           <span className="text-lg text-gray-600 mb-2 font-semibold">RON / lună</span>
@@ -214,11 +223,11 @@ const Planuri = () => {
                     <CardContent className="px-6 pb-6 flex flex-col">
                       <div className="space-y-2 text-left mb-6 flex-grow">
                         {allFeatures.map((feature, idx) => (
-                          <div 
-                            key={idx} 
+                          <div
+                            key={idx}
                             className={`flex items-start gap-2 text-sm ${
-                              idx < plan.features.length 
-                                ? 'text-gray-800' 
+                              idx < plan.features.length
+                                ? 'text-gray-800'
                                 : 'text-gray-400 line-through opacity-70'
                             }`}
                           >
@@ -227,7 +236,7 @@ const Planuri = () => {
                         ))}
                       </div>
 
-                      <Button 
+                      <Button
                         className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 rounded-2xl text-base shadow-lg transform transition-all duration-500 hover:scale-105"
                         onClick={() => window.open('https://app.refluxe.io/registration', '_blank')}
                       >
@@ -252,24 +261,6 @@ const Planuri = () => {
               );
             })}
           </div>
-
-          {/* Trust badges */}
-          <div className="text-center mt-16">
-            <div className="flex justify-center gap-16 flex-wrap items-center">
-              <div className="flex flex-col items-center gap-3">
-                <img src="/gabio-uploads/1.png" alt="GDPR Compliance" className="w-48 h-24 object-contain" />
-                <span className="text-sm font-bold text-white">Securitate<br/>GDPR</span>
-              </div>
-              <div className="flex flex-col items-center gap-3">
-                <img src="/gabio-uploads/2.png" alt="Metode de plată" className="w-48 h-24 object-contain" />
-                <span className="text-sm font-bold text-white">Plăți sigure<br/>Banca Transilvania</span>
-              </div>
-              <div className="flex flex-col items-center gap-3">
-                <img src="/gabio-uploads/3.png" alt="SSL Securizat" className="w-48 h-24 object-contain" />
-                <span className="text-sm font-bold text-white">100% Sigur<br/>& Protejat</span>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
     </>
@@ -277,4 +268,5 @@ const Planuri = () => {
 };
 
 export default Planuri;
+
 
