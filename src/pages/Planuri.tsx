@@ -99,15 +99,28 @@ const Planuri = () => {
         * {
           font-family: 'Helvetica Now', 'Helvetica Neue', Helvetica, Arial, sans-serif;
         }
+
+        /* Efect subtil mov animat */
+        @keyframes gradientMove {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+
+        .purple-bg {
+          background: linear-gradient(-45deg, #2a0040, #8733ff, #1a0028, #3d0066);
+          background-size: 300% 300%;
+          animation: gradientMove 12s ease infinite;
+        }
       `}</style>
       
-      <section className="bg-black text-white py-20 pb-32">
+      <section className="purple-bg text-white py-20 pb-32 transition-all duration-1000">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 px-4">
               TRANSFORMĂ CLIENȚII OCAZIONALI<br/>ÎN CLIENȚI FIDELI
             </h1>
-            <p className="text-[#b987ff] text-base sm:text-lg max-w-2xl mx-auto px-4 mb-8">
+            <p className="text-[#d6b5ff] text-base sm:text-lg max-w-2xl mx-auto px-4 mb-8">
               Construiește o comunitate în jurul brandului tău
             </p>
             
@@ -118,7 +131,7 @@ const Planuri = () => {
                 className={`px-6 py-3 rounded-xl font-bold transition-all duration-300 ${
                   billingPeriod === 'monthly'
                     ? 'bg-white text-[#8733ff] shadow-lg scale-105'
-                    : 'bg-[#1e1e1e] text-[#cbaaff] hover:bg-[#2a2a2a]'
+                    : 'bg-[#3a0060] text-[#e3ccff] hover:bg-[#4a007a]'
                 }`}
               >
                 Plan lunar
@@ -128,7 +141,7 @@ const Planuri = () => {
                 className={`px-6 py-3 rounded-xl font-bold transition-all duration-300 relative ${
                   billingPeriod === 'yearly'
                     ? 'bg-white text-[#8733ff] shadow-lg scale-105'
-                    : 'bg-[#1e1e1e] text-[#cbaaff] hover:bg-[#2a2a2a]'
+                    : 'bg-[#3a0060] text-[#e3ccff] hover:bg-[#4a007a]'
                 }`}
               >
                 Plan anual
@@ -147,7 +160,7 @@ const Planuri = () => {
               const isRecommended = !!plan.recommended;
               const buttonClasses = isRecommended
                 ? 'bg-gradient-to-r from-[#8733ff] to-[#a566ff] hover:from-[#7c2ee6] hover:to-[#9f5cff] text-white'
-                : 'bg-transparent border border-[#8733ff] text-[#8733ff] hover:bg-[#8733ff] hover:text-white';
+                : 'bg-transparent border border-[#d6b5ff] text-[#d6b5ff] hover:bg-[#8733ff] hover:text-white';
 
               return (
                 <div key={index} className="relative group/card transition-all duration-500">
