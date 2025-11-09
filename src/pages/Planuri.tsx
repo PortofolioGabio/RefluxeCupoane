@@ -1,8 +1,46 @@
-<table border="1" cellspacing="0" cellpadding="6" style="border-collapse:collapse; width:100%; font-family:Arial, sans-serif; text-align:left;">
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planuri Refluxe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      padding: 40px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px 14px;
+      vertical-align: top;
+    }
+    th {
+      background-color: #f2f2f2;
+      text-align: center;
+      font-size: 18px;
+    }
+    td {
+      font-size: 15px;
+      line-height: 1.4em;
+    }
+  </style>
+</head>
+<body>
+
+<table>
   <thead>
-    <tr style="background-color:#f2f2f2;">
-      <th style="width:50%; text-align:center;"><strong>249 / lună</strong></th>
-      <th style="width:50%; text-align:center;"><strong>497 / lună</strong></th>
+    <tr>
+      <th>249 / lună</th>
+      <th>497 / lună</th>
     </tr>
   </thead>
   <tbody>
@@ -41,3 +79,6 @@
     <tr><td></td><td>Integrare prin API</td></tr>
   </tbody>
 </table>
+
+</body>
+</html>
