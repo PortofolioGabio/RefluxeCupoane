@@ -2,87 +2,102 @@ import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Star, Crown, Zap, Rocket } from 'lucide-react';
+import { Star, Zap, Rocket } from 'lucide-react';
 
 const Planuri = () => {
-  const [billingPeriod, setBillingPeriod] = useState('monthly'); // 'monthly' or 'yearly'
+  const [billingPeriod, setBillingPeriod] = useState('monthly');
   
   const plans = [
     {
-      name: "START",
+      name: "Plan 1",
       clients: "100 clienți",
-      monthlyPrice: "149",
-      yearlyPrice: "1,650",
-      yearlyMonthly: "138",
+      monthlyPrice: "249",
+      yearlyPrice: "2,750",
+      yearlyMonthly: "229",
       yearlyBonus: "1 lună cadou",
       icon: Rocket,
       features: [
-        { text: "Design personalizat cu logo-ul tău" },
-        { text: "Notificări PUSH nelimitate" },
+        { text: "∞ Bază de clienți", highlight: true },
+        { text: "∞ Notificări PUSH", highlight: true },
+        { text: "∞ Promoții speciale", highlight: true },
+        { text: "Design personalizat" },
+        { text: "Formular personalizat" },
+        { text: "", spacer: true },
         { text: "Vezi cine revine și cât cheltuie" },
-        { text: "Toate paginile sociale într-un loc" }
+        { text: "Află profilul de client" },
+        { text: "Vezi media comenzilor" },
+        { text: "Află orele de vârf" },
+        { text: "", spacer: true },
+        { text: "Recenzii Google" },
+        { text: "Colectare feedback" },
+        { text: "Reminder automat" },
+        { text: "'La mulți ani' automat" },
+        { text: "Program de recomandare" },
+        { text: "Program de Happy-Hour" },
+        { text: "", spacer: true },
+        { text: "Manager de cont" },
+        { text: "Modificări nelimitate" },
+        { text: "Exclusivitate de ofertă" },
+        { text: "", spacer: true },
+        { text: "", spacer: true },
+        { text: "Implementare gratuită" },
+        { text: "", spacer: true },
+        { text: "8 tipuri de carduri" },
+        { text: "3 oferte simultane" },
+        { text: "3 puncte de lucru (70 / extra)" },
+        { text: "3 puncte de GEO-localizare" }
       ],
       disabledFeatures: [
-        { text: "Transformă clienții în ambasadori" },
-        { text: "Link direct pentru recenzii Google" },
-        { text: "Primește vizite spontane, fără efort" },
-        { text: "Remindere automate trimise periodic" },
-        { text: "Mesaj automat de 'La mulți ani'" },
-        { text: "Umple mesele cu happy hour" },
-        { text: "Mesaje automate și personalizate" },
-        { text: "Implementare gratuită (150 LEI)" },
-        { text: "Modificări extra nelimitate" }
+        { text: "Campanii automate de notificări" },
+        { text: "Automatizări personalizate" },
+        { text: "Admini cu funcții multiple" },
+        { text: "Integrare prin API" }
       ]
     },
     {
-      name: "PLUS",
+      name: "Plan 2",
       clients: "250 clienți",
-      monthlyPrice: "249",
-      yearlyPrice: "2,500",
-      yearlyMonthly: "208",
+      monthlyPrice: "497",
+      yearlyPrice: "5,470",
+      yearlyMonthly: "456",
       yearlyBonus: "2 luni cadou",
       recommended: true,
       icon: Zap,
       features: [
-        { text: "Design personalizat cu logo-ul tău" },
-        { text: "Notificări PUSH nelimitate" },
+        { text: "∞ Bază de clienți", highlight: true },
+        { text: "∞ Notificări PUSH", highlight: true },
+        { text: "∞ Promoții speciale", highlight: true },
+        { text: "Design personalizat" },
+        { text: "Formular personalizat" },
+        { text: "", spacer: true },
         { text: "Vezi cine revine și cât cheltuie" },
-        { text: "Toate paginile sociale într-un loc" },
-        { text: "Transformă clienții în ambasadori" },
-        { text: "Link direct pentru recenzii Google" },
-        { text: "Primește vizite spontane, fără efort" },
-        { text: "Remindere automate trimise periodic" },
-        { text: "Mesaj automat de 'La mulți ani'" }
-      ],
-      disabledFeatures: [
-        { text: "Umple mesele cu happy hour" },
-        { text: "Mesaje automate și personalizate" },
-        { text: "Implementare gratuită (150 LEI)" },
-        { text: "Modificări extra nelimitate" }
-      ]
-    },
-    {
-      name: "PRO",
-      clients: "clienți nelimitați",
-      monthlyPrice: "399",
-      yearlyPrice: "3,200",
-      yearlyMonthly: "266",
-      yearlyBonus: "4 luni cadou",
-      icon: Crown,
-      features: [
-        { text: "Design personalizat cu logo-ul tău" },
-        { text: "Notificări PUSH nelimitate" },
-        { text: "Vezi cine revine și cât cheltuie" },
-        { text: "Toate paginile sociale într-un loc" },
-        { text: "Transformă clienții în ambasadori" },
-        { text: "Link direct pentru recenzii Google" },
-        { text: "Primește vizite spontane, fără efort" },
-        { text: "Remindere automate trimise periodic" },
-        { text: "Mesaj automat de 'La mulți ani'" },
-        { text: "Umple mesele cu happy hour" },
-        { text: "Mesaje automate și personalizate" },
-        { text: "Implementare gratuită (150 LEI)" },
-        { text: "Modificări extra nelimitate" }
+        { text: "Află profilul de client" },
+        { text: "Vezi media comenzilor" },
+        { text: "Vezi orele de vârf" },
+        { text: "", spacer: true },
+        { text: "Recenzii Google" },
+        { text: "Colectare feedback" },
+        { text: "Reminder automat" },
+        { text: "'La mulți ani' automat" },
+        { text: "Program de recomandare" },
+        { text: "Program de Happy-Hour" },
+        { text: "", spacer: true },
+        { text: "Manager de cont" },
+        { text: "Modificări nelimitate" },
+        { text: "Exclusivitate de ofertă" },
+        { text: "", spacer: true },
+        { text: "", spacer: true },
+        { text: "Implementare gratuită" },
+        { text: "", spacer: true },
+        { text: "8 tipuri de carduri" },
+        { text: "10 oferte simultane" },
+        { text: "10 puncte de lucru (50 / extra)" },
+        { text: "10 puncte de GEO-localizare" },
+        { text: "", spacer: true },
+        { text: "Campanii automate de notificări" },
+        { text: "Automatizări personalizate" },
+        { text: "Admini cu funcții multiple" },
+        { text: "Integrare prin API" }
       ],
       disabledFeatures: []
     }
@@ -100,7 +115,6 @@ const Planuri = () => {
           font-family: 'Helvetica Now', 'Helvetica Neue', Helvetica, Arial, sans-serif;
         }
 
-        /* Efect subtil mov animat */
         @keyframes gradientMove {
           0% { background-position: 0% 50%; }
           50% { background-position: 100% 50%; }
@@ -124,7 +138,6 @@ const Planuri = () => {
               Construiește o comunitate în jurul brandului tău
             </p>
             
-            {/* TOGGLE */}
             <div className="flex justify-center items-center gap-4 mb-8">
               <button
                 onClick={() => setBillingPeriod('monthly')}
@@ -152,11 +165,9 @@ const Planuri = () => {
             </div>
           </div>
 
-          {/* CARDS */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto items-start">
             {plans.map((plan, index) => {
               const Icon = plan.icon;
-              const allFeatures = [...plan.features, ...plan.disabledFeatures];
               const isRecommended = !!plan.recommended;
               const buttonClasses = isRecommended
                 ? 'bg-gradient-to-r from-[#8733ff] to-[#a566ff] hover:from-[#7c2ee6] hover:to-[#9f5cff] text-white'
@@ -182,37 +193,31 @@ const Planuri = () => {
                     }`}
                   >
                     <CardHeader className="text-center pb-4 pt-6 px-6">
-                      <div className="flex justify-between items-start mb-4">
-                        <div className="flex items-center gap-2">
-                          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#8733ff] to-[#a566ff] flex items-center justify-center shadow-lg">
-                            <Icon className="w-6 h-6 text-white" />
+                      <div className="flex justify-between items-start mb-6">
+                        <div className="flex items-center gap-3">
+                          <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#8733ff] to-[#a566ff] flex items-center justify-center shadow-lg">
+                            <Icon className="w-7 h-7 text-white" />
                           </div>
-                          <CardTitle className="text-4xl font-black text-gray-900">
-                            {plan.name}
-                          </CardTitle>
+                          <div className="text-left">
+                            <CardTitle className="text-3xl font-black text-gray-900 mb-1">
+                              {plan.name}
+                            </CardTitle>
+                            <Badge className="bg-gradient-to-r from-[#8733ff] to-[#a566ff] text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
+                              {plan.clients}
+                            </Badge>
+                          </div>
                         </div>
-                        <div className="text-right">
-                          <Badge className="bg-[#f3eaff] text-[#8733ff] text-xs font-semibold px-3 py-1 mb-1 rounded-full border border-[#e0c8ff]">
-                            1 magazin
-                          </Badge>
-                          <Badge className="bg-gradient-to-r from-[#8733ff] to-[#a566ff] text-white text-xs font-semibold px-3 py-1 block rounded-full shadow-md">
-                            {plan.clients}
-                          </Badge>
-                        </div>
+                        <Badge className="bg-[#f3eaff] text-[#8733ff] text-xs font-semibold px-3 py-1.5 rounded-full border border-[#e0c8ff]">
+                          1 magazin
+                        </Badge>
                       </div>
 
-                      <p className="text-sm text-gray-600 mb-6 font-medium">
-                        {index === 0 && "Minimul necesar ca să pornești"}
-                        {index === 1 && "Stabilitate și evoluție constantă"}
-                        {index === 2 && "Control total și succes real"}
-                      </p>
-
-                      <div className="mb-6">
-                        <div className="flex items-end justify-center gap-2">
-                          <span className="text-5xl sm:text-6xl md:text-7xl font-black bg-gradient-to-br from-[#8733ff] to-[#a566ff] bg-clip-text text-transparent">
+                      <div className="mb-6 min-h-[140px]">
+                        <div className="flex items-baseline justify-center gap-2 mb-2">
+                          <span className="text-6xl font-black bg-gradient-to-br from-[#8733ff] to-[#a566ff] bg-clip-text text-transparent">
                             {billingPeriod === 'monthly' ? plan.monthlyPrice : plan.yearlyMonthly}
                           </span>
-                          <span className="text-lg text-gray-600 mb-2 font-semibold">RON / lună</span>
+                          <span className="text-lg text-gray-600 font-semibold">/ lună</span>
                         </div>
                         {billingPeriod === 'yearly' && (
                           <div className="text-sm text-[#8733ff] font-medium mt-2">
@@ -224,38 +229,48 @@ const Planuri = () => {
                     </CardHeader>
 
                     <CardContent className="px-6 pb-6 flex flex-col">
-                      <div className="space-y-2 text-left mb-6 flex-grow">
-                        {allFeatures.map((feature, idx) => (
-                          <div 
-                            key={idx} 
-                            className={`flex items-start gap-2 text-sm ${
-                              idx < plan.features.length 
-                                ? 'text-gray-800' 
-                                : 'text-gray-400 line-through opacity-70'
-                            }`}
-                          >
-                            <span>{feature.text}</span>
-                          </div>
-                        ))}
+                      <div className="space-y-1 text-left mb-6 flex-grow">
+                        {[...plan.features, ...plan.disabledFeatures].map((feature, idx) => {
+                          if (feature.spacer) {
+                            return <div key={idx} className="h-4"></div>;
+                          }
+                          
+                          const isEnabled = idx < plan.features.length;
+                          const isHighlight = feature.highlight;
+                          
+                          return (
+                            <div 
+                              key={idx} 
+                              className={`flex items-center gap-2 text-sm py-1 ${
+                                !isEnabled
+                                  ? 'text-gray-300 opacity-50'
+                                  : isHighlight
+                                  ? 'text-[#8733ff] font-bold'
+                                  : 'text-gray-700'
+                              }`}
+                            >
+                              <span className="text-base">{isEnabled ? '✓' : '✗'}</span>
+                              <span>{feature.text}</span>
+                            </div>
+                          );
+                        })}
                       </div>
 
                       <Button 
-                        className={`w-full font-bold py-4 rounded-2xl text-base shadow-lg transform transition-all duration-500 hover:scale-105 ${buttonClasses}`}
+                        className={`w-full font-bold py-6 rounded-2xl text-base shadow-lg transform transition-all duration-500 hover:scale-105 ${buttonClasses}`}
                         onClick={() => window.open('https://app.refluxe.io/registration', '_blank')}
                       >
                         Alege {plan.name}
                       </Button>
 
-                      <div className="text-center mt-4 bg-[#f8f3ff] rounded-xl p-3 border border-[#e0c8ff]">
+                      <div className="text-center mt-4 bg-[#f8f3ff] rounded-xl p-4 border border-[#e0c8ff]">
                         <div className="font-bold text-sm text-[#8733ff]">
                           {index === 0 && "Suport STANDARD"}
-                          {index === 1 && "Suport RAPID"}
-                          {index === 2 && "Suport PREMIUM"}
+                          {index === 1 && "Suport PREMIUM"}
                         </div>
                         <div className="text-xs text-[#a566ff] mt-1">
-                          {index === 0 && "max. 24h prin mail"}
-                          {index === 1 && "asistență directă pe WhatsApp"}
-                          {index === 2 && "prioritar, telefonic sau WhatsApp"}
+                          {index === 0 && "asistență directă pe WhatsApp"}
+                          {index === 1 && "prioritar, telefonic sau WhatsApp"}
                         </div>
                       </div>
                     </CardContent>
@@ -265,7 +280,6 @@ const Planuri = () => {
             })}
           </div>
 
-          {/* TRUST BADGES */}
           <div className="text-center mt-16">
             <div className="flex justify-center gap-16 flex-wrap items-center">
               <div className="flex flex-col items-center gap-3">
