@@ -3,7 +3,6 @@ import { Badge } from "@/components/ui/badge";
 import { Check, X, Rocket, Zap, Star } from "lucide-react";
 
 const Planuri = () => {
-  // ⭐ Lista Premium (DOAR restul feature-elor, fără locații, oferte și conturi)
   const premiumFeatures = [
     "∞ Bază de clienți",
     "∞ Notificări PUSH",
@@ -21,7 +20,6 @@ const Planuri = () => {
     "Implementare cadou",
   ];
 
-  // ⭐ Structura finală a planurilor
   const plans = [
     {
       name: "Basic",
@@ -83,7 +81,6 @@ const Planuri = () => {
           Alege planul potrivit afacerii tale
         </h1>
 
-        {/* Grid planuri */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
 
           {plans.map((plan, index) => {
@@ -92,21 +89,19 @@ const Planuri = () => {
             return (
               <Card
                 key={index}
-                className={`flex flex-col rounded-3xl overflow-hidden shadow-2xl ${
-                  plan.recommended ? "ring-4 ring-purple-400 bg-white" : "bg-white"
+                className={`flex flex-col rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-b from-white to-gray-50 ${
+                  plan.recommended ? "ring-4 ring-purple-400" : ""
                 }`}
               >
-                {/* Badge recomandat */}
                 {plan.recommended && (
                   <div className="absolute -top-5 left-0 right-0 flex justify-center z-20">
-                    <Badge className="bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-400 text-gray-900 font-black text-sm px-6 py-2.5 rounded-full shadow-xl border-2 border-yellow-200">
+                    <Badge className="bg-yellow-400 text-gray-900 font-black text-sm px-6 py-2.5 rounded-full shadow-xl border border-yellow-200">
                       🔥 Cel mai popular
                     </Badge>
                   </div>
                 )}
 
-                {/* Header */}
-                <CardHeader className="text-center pt-10 pb-6 bg-gradient-to-br from-purple-600 to-purple-800 text-white relative">
+                <CardHeader className="text-center pt-10 pb-6 bg-gradient-to-br from-purple-600 to-purple-800 text-white">
                   <div className="flex justify-center mb-6">
                     <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center shadow-xl">
                       <Icon className="w-8 h-8 text-white" />
@@ -124,50 +119,44 @@ const Planuri = () => {
                   </div>
                 </CardHeader>
 
-                {/* Content */}
-                <CardContent className="bg-white text-gray-700 px-8 py-8 flex flex-col flex-grow">
+                <CardContent className="text-gray-700 px-8 py-8 flex flex-col flex-grow">
 
-                  {/* 🔹 Locație + oferte simultane + conturi utilizator */}
+                  {/* Secțiunea fixă (locație, oferte, conturi) */}
                   <div className="mb-6 space-y-3">
-                    {[
-                      plan.location,
-                      plan.offers,
-                      plan.accounts,
-                    ].map((item, i) => (
-                      <div key={i} className="flex items-start gap-3 text-[15px]">
-                        <Check className="w-5 h-5 text-emerald-500 mt-0.5" />
-                        <span className="font-medium">{item}</span>
+                    {[plan.location, plan.offers, plan.accounts].map((item, i) => (
+                      <div key={i} className="flex items-start gap-3 text-[16px] font-bold">
+                        <Check className="w-5 h-5 text-emerald-500 mt-1" />
+                        <span>{item}</span>
                       </div>
                     ))}
                   </div>
 
-                  {/* 🔹 Lista comparată cu Premium */}
-                  <div className="space-y-3 mb-10 flex-grow">
+                  {/* Lista comparată */}
+                  <div className="space-y-2 mb-10 flex-grow">
                     {premiumFeatures.map((feature, i) => {
                       const available = plan.features.includes(feature);
 
                       return (
                         <div
                           key={i}
-                          className={`flex items-start gap-3 text-[15px] py-2 ${
+                          className={`flex items-start gap-3 text-[16px] font-bold py-1.5 ${
                             available
-                              ? "text-gray-800 font-medium"
-                              : "opacity-50 line-through text-gray-400"
+                              ? "text-gray-800"
+                              : "opacity-30 line-through text-gray-500"
                           }`}
                         >
                           {available ? (
-                            <Check className="w-5 h-5 text-emerald-500 mt-0.5" />
+                            <Check className="w-5 h-5 text-emerald-500 mt-1" />
                           ) : (
-                            <X className="w-5 h-5 text-gray-400 mt-0.5" />
+                            <X className="w-5 h-5 text-gray-400 mt-1" />
                           )}
-
                           <span className="leading-snug">{feature}</span>
                         </div>
                       );
                     })}
                   </div>
 
-                  {/* 🔹 Buton egal */}
+                  {/* Buton */}
                   <button className="w-full mt-auto bg-purple-600 hover:bg-purple-700 text-white font-black py-5 rounded-2xl text-lg shadow-xl transition-all">
                     Alege {plan.name}
                   </button>
@@ -176,6 +165,7 @@ const Planuri = () => {
               </Card>
             );
           })}
+
         </div>
       </div>
     </section>
