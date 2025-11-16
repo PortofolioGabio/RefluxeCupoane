@@ -1,8 +1,29 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, Star, Rocket, Zap } from "lucide-react";
+import { Check, X, Rocket, Zap, Star } from "lucide-react";
 
 const Planuri = () => {
+  // Lista PREMIUM completă – referința pentru toate planurile
+  const premiumFeatures = [
+    "1 locație",
+    "10 oferte simultane",
+    "50 conturi manager",
+    "∞ Bază de clienți",
+    "∞ Notificări PUSH",
+    "∞ Promoții speciale",
+    "Vezi cine cumpără și când. Media bonului și orele de activitate",
+    "Colectez Recenzii",
+    "Happy-Hour",
+    "Formular personal",
+    "Program Recom.",
+    "4 Mesaje Autom.",
+    "Manager de cont",
+    "Mesaje custom",
+    "Integrare API",
+    "Cont manager personal",
+    "Implementare cadou",
+  ];
+
   const plans = [
     {
       name: "Basic",
@@ -49,42 +70,27 @@ const Planuri = () => {
       price: "399",
       icon: Star,
       recommended: false,
-      features: [
-        "1 locație",
-        "10 oferte simultane",
-        "50 conturi manager",
-        "∞ Bază de clienți",
-        "∞ Notificări PUSH",
-        "∞ Promoții speciale",
-        "Vezi cine cumpără și când. Media bonului și orele de activitate",
-        "Colectez Recenzii",
-        "Happy-Hour",
-        "Formular personal",
-        "Program Recom.",
-        "4 Mesaje Autom.",
-        "Manager de cont",
-        "Mesaje custom",
-        "Integrare API",
-        "Cont manager personal",
-        "Implementare cadou",
-      ],
+      features: premiumFeatures,
     },
   ];
 
   return (
     <section className="purple-bg text-white py-24 pb-36 min-h-screen relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 relative z-10">
+        
         <h1 className="text-center text-5xl font-black mb-16 leading-tight">
           Alege planul potrivit afacerii tale
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+
           {plans.map((plan, index) => {
             const Icon = plan.icon;
+
             return (
               <Card
                 key={index}
-                className={`rounded-3xl overflow-hidden shadow-2xl ${
+                className={`flex flex-col rounded-3xl overflow-hidden shadow-2xl ${
                   plan.recommended
                     ? "ring-4 ring-purple-400 bg-white"
                     : "bg-white"
@@ -116,22 +122,39 @@ const Planuri = () => {
                   </div>
                 </CardHeader>
 
-                <CardContent className="bg-white text-gray-700 px-8 py-8">
-                  <div className="space-y-3 mb-8">
-                    {plan.features.map((f, i) => (
-                      <div
-                        key={i}
-                        className="flex items-start gap-3 text-[15px] py-2"
-                      >
-                        <Check className="w-5 h-5 text-emerald-500 mt-0.5" />
-                        <span className="leading-snug font-medium">{f}</span>
-                      </div>
-                    ))}
+                <CardContent className="bg-white text-gray-700 px-8 py-8 flex flex-col flex-grow">
+                  
+                  {/* Features list */}
+                  <div className="space-y-3 mb-10 flex-grow">
+                    {premiumFeatures.map((feature, i) => {
+                      const available = plan.features.includes(feature);
+
+                      return (
+                        <div
+                          key={i}
+                          className={`flex items-start gap-3 text-[15px] py-2 ${
+                            available
+                              ? "text-gray-800 font-medium"
+                              : "opacity-50 line-through text-gray-400"
+                          }`}
+                        >
+                          {available ? (
+                            <Check className="w-5 h-5 text-emerald-500 mt-0.5" />
+                          ) : (
+                            <X className="w-5 h-5 text-gray-400 mt-0.5" />
+                          )}
+
+                          <span className="leading-snug">{feature}</span>
+                        </div>
+                      );
+                    })}
                   </div>
 
-                  <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-black py-5 rounded-2xl text-lg shadow-xl transition-all">
+                  {/* Button aligned perfectly */}
+                  <button className={`w-full mt-auto bg-purple-600 hover:bg-purple-700 text-white font-black py-5 rounded-2xl text-lg shadow-xl transition-all`}>
                     Alege {plan.name}
                   </button>
+
                 </CardContent>
               </Card>
             );
