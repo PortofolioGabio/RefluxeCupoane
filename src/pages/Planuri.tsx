@@ -89,9 +89,9 @@ const Planuri = () => {
             return (
               <Card
                 key={index}
-                className={`flex flex-col rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-b from-white to-gray-50 ${
-                  plan.recommended ? "ring-4 ring-purple-400" : ""
-                }`}
+                className={`flex flex-col rounded-3xl overflow-hidden shadow-2xl
+                bg-gradient-to-b from-[#2a0144] to-[#150022]
+                ${plan.recommended ? "ring-4 ring-purple-400" : ""}`}
               >
                 {plan.recommended && (
                   <div className="absolute -top-5 left-0 right-0 flex justify-center z-20">
@@ -101,9 +101,9 @@ const Planuri = () => {
                   </div>
                 )}
 
-                <CardHeader className="text-center pt-10 pb-6 bg-gradient-to-br from-purple-600 to-purple-800 text-white">
+                <CardHeader className="text-center pt-10 pb-6 bg-gradient-to-br from-purple-700 to-purple-900 text-white">
                   <div className="flex justify-center mb-6">
-                    <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center shadow-xl">
+                    <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center shadow-xl">
                       <Icon className="w-8 h-8 text-white" />
                     </div>
                   </div>
@@ -119,13 +119,13 @@ const Planuri = () => {
                   </div>
                 </CardHeader>
 
-                <CardContent className="text-gray-700 px-8 py-8 flex flex-col flex-grow">
+                <CardContent className="text-purple-100 px-8 py-8 flex flex-col flex-grow">
 
-                  {/* Secțiunea fixă (locație, oferte, conturi) */}
+                  {/* Secțiunea fixă */}
                   <div className="mb-6 space-y-3">
                     {[plan.location, plan.offers, plan.accounts].map((item, i) => (
                       <div key={i} className="flex items-start gap-3 text-[16px] font-bold">
-                        <Check className="w-5 h-5 text-emerald-500 mt-1" />
+                        <Check className="w-5 h-5 text-emerald-400 mt-1" />
                         <span>{item}</span>
                       </div>
                     ))}
@@ -141,14 +141,14 @@ const Planuri = () => {
                           key={i}
                           className={`flex items-start gap-3 text-[16px] font-bold py-1.5 ${
                             available
-                              ? "text-gray-800"
-                              : "opacity-30 line-through text-gray-500"
+                              ? "text-purple-50"
+                              : "opacity-30 line-through text-purple-300"
                           }`}
                         >
                           {available ? (
-                            <Check className="w-5 h-5 text-emerald-500 mt-1" />
+                            <Check className="w-5 h-5 text-emerald-400 mt-1" />
                           ) : (
-                            <X className="w-5 h-5 text-gray-400 mt-1" />
+                            <X className="w-5 h-5 text-purple-400 mt-1" />
                           )}
                           <span className="leading-snug">{feature}</span>
                         </div>
