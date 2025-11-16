@@ -3,9 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { Check, X, Rocket, Zap, Star } from "lucide-react";
 
 const Planuri = () => {
-  // ⭐ Lista completă Premium (fără locație și oferte simultane)
+  // ⭐ Lista Premium (DOAR restul feature-elor, fără locații, oferte și conturi)
   const premiumFeatures = [
-    "50 conturi manager",
     "∞ Bază de clienți",
     "∞ Notificări PUSH",
     "∞ Promoții speciale",
@@ -22,7 +21,7 @@ const Planuri = () => {
     "Implementare cadou",
   ];
 
-  // ⭐ Structură completă cu location + offers distincte
+  // ⭐ Structura finală a planurilor
   const plans = [
     {
       name: "Basic",
@@ -31,6 +30,7 @@ const Planuri = () => {
       recommended: false,
       location: "1 locație",
       offers: "1 ofertă simultană",
+      accounts: "1 cont de utilizator",
       features: [
         "∞ Bază de clienți",
         "∞ Notificări PUSH",
@@ -49,6 +49,7 @@ const Planuri = () => {
       recommended: true,
       location: "1 locație",
       offers: "3 oferte simultane",
+      accounts: "10 conturi manager",
       features: [
         "∞ Bază de clienți",
         "∞ Notificări PUSH",
@@ -69,6 +70,7 @@ const Planuri = () => {
       recommended: false,
       location: "1 locație",
       offers: "10 oferte simultane",
+      accounts: "50 conturi manager",
       features: premiumFeatures,
     },
   ];
@@ -125,20 +127,21 @@ const Planuri = () => {
                 {/* Content */}
                 <CardContent className="bg-white text-gray-700 px-8 py-8 flex flex-col flex-grow">
 
-                  {/* 🔹 Locație + oferte simultane (NE-comparabile) */}
+                  {/* 🔹 Locație + oferte simultane + conturi utilizator */}
                   <div className="mb-6 space-y-3">
-                    <div className="flex items-start gap-3 text-[15px]">
-                      <Check className="w-5 h-5 text-emerald-500 mt-0.5" />
-                      <span className="font-medium">{plan.location}</span>
-                    </div>
-
-                    <div className="flex items-start gap-3 text-[15px]">
-                      <Check className="w-5 h-5 text-emerald-500 mt-0.5" />
-                      <span className="font-medium">{plan.offers}</span>
-                    </div>
+                    {[
+                      plan.location,
+                      plan.offers,
+                      plan.accounts,
+                    ].map((item, i) => (
+                      <div key={i} className="flex items-start gap-3 text-[15px]">
+                        <Check className="w-5 h-5 text-emerald-500 mt-0.5" />
+                        <span className="font-medium">{item}</span>
+                      </div>
+                    ))}
                   </div>
 
-                  {/* 🔹 Lista completă comparată cu Premium */}
+                  {/* 🔹 Lista comparată cu Premium */}
                   <div className="space-y-3 mb-10 flex-grow">
                     {premiumFeatures.map((feature, i) => {
                       const available = plan.features.includes(feature);
@@ -164,7 +167,7 @@ const Planuri = () => {
                     })}
                   </div>
 
-                  {/* 🔹 Buton egal pentru toate planurile */}
+                  {/* 🔹 Buton egal */}
                   <button className="w-full mt-auto bg-purple-600 hover:bg-purple-700 text-white font-black py-5 rounded-2xl text-lg shadow-xl transition-all">
                     Alege {plan.name}
                   </button>
