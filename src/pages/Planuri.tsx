@@ -156,12 +156,14 @@ const Planuri = () => {
                         </Badge>
                       </div>
                       
-                      <div className="mb-8">
+                      <div className="mb-6">
                         <span className="text-5xl font-black text-white">{plan.price}</span>
                         <span className="text-lg text-gray-300 ml-2">RON / lună</span>
                       </div>
+                    </CardHeader>
 
-                      <div className="space-y-3 text-left mb-6">
+                    <CardContent className="px-6 pb-8 flex flex-col flex-grow">
+                      <div className="space-y-3 text-left mb-6 flex-grow">
                         {plan.features.map((feature, idx) => (
                           <div 
                             key={idx} 
@@ -180,9 +182,7 @@ const Planuri = () => {
                           </div>
                         ))}
                       </div>
-                    </CardHeader>
 
-                    <CardContent className="px-6 pb-8">
                       <Button 
                         className={`w-full font-bold py-6 rounded-2xl text-lg shadow-lg transform transition-all duration-500 hover:scale-105 ${
                           isRecommended
