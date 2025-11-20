@@ -118,13 +118,13 @@ const Planuri = () => {
           </div>
 
           {/* CARDS */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
             {plans.map((plan, index) => {
               const Icon = plan.icon;
               const isRecommended = !!plan.recommended;
 
               return (
-                <div key={index} className="relative group/card transition-all duration-500">
+                <div key={index} className="relative group/card transition-all duration-500 flex flex-col h-full">
                   {plan.recommended && (
                     <div className="absolute -top-3 sm:-top-4 left-0 right-0 z-10 flex justify-center">
                       <Badge className="bg-gradient-to-r from-[#c69eff] to-[#a566ff] text-gray-900 font-bold text-xs sm:text-sm px-4 sm:px-6 py-1.5 sm:py-2 rounded-full shadow-lg">
@@ -136,7 +136,7 @@ const Planuri = () => {
                   )}
                   
                   <Card 
-                    className={`shadow-2xl border-0 rounded-3xl overflow-hidden transform transition-all duration-700 ease-out hover:scale-105 ${
+                    className={`shadow-2xl border-0 rounded-3xl overflow-hidden transform transition-all duration-700 ease-out hover:scale-105 flex flex-col h-full ${
                       plan.recommended 
                         ? 'bg-gradient-to-br from-[#6b2fb5] via-[#8733ff] to-[#6b2fb5] ring-2 ring-[#a566ff] mt-4' 
                         : 'bg-gradient-to-br from-[#3d1b5c] to-[#4a2370] mt-4'
