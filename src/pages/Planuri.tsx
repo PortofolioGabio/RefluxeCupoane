@@ -1,174 +1,212 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Check, X, Rocket, Zap, Star } from "lucide-react";
+import { useState } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Star, Crown, Zap, Rocket } from 'lucide-react';
 
 const Planuri = () => {
-  const premiumFeatures = [
-    "∞ Bază de clienți",
-    "∞ Notificări PUSH",
-    "∞ Promoții speciale",
-    "Vezi cine cumpără și când. Media bonului și orele de activitate",
-    "Colectez Recenzii",
-    "Happy-Hour",
-    "Formular personal",
-    "Program Recom.",
-    "4 Mesaje Autom.",
-    "Manager de cont",
-    "Mesaje custom",
-    "Integrare API",
-    "Cont manager personal",
-    "Implementare cadou",
-  ];
-
   const plans = [
     {
       name: "Basic",
-      price: "149",
+      subtitle: "Alege Basic",
       icon: Rocket,
-      recommended: false,
-      location: "1 locație",
-      offers: "1 ofertă simultană",
-      accounts: "1 cont de utilizator",
       features: [
-        "∞ Bază de clienți",
-        "∞ Notificări PUSH",
-        "∞ Promoții speciale",
-        "Vezi cine cumpără și când. Media bonului și orele de activitate",
-        "Colectez Recenzii",
-        "Happy-Hour",
-        "Formular personal",
-        "Program Recom.",
-      ],
+        { text: "1 locație", enabled: true },
+        { text: "1 ofertă simultană", enabled: true },
+        { text: "1 cont de utilizator", enabled: true },
+        { text: "∞ Bază de clienți", enabled: true },
+        { text: "∞ Notificări PUSH", enabled: true },
+        { text: "∞ Promoții speciale", enabled: true },
+        { text: "Vezi cine cumpără și când. Media bonului și orele de activitate", enabled: true },
+        { text: "Colectez Recenzii", enabled: true },
+        { text: "Happy-Hour", enabled: true },
+        { text: "Formular personal", enabled: true },
+        { text: "Program Recom.", enabled: true },
+        { text: "4 Mesaje Autom.", enabled: false },
+        { text: "Manager de cont", enabled: false },
+        { text: "Mesaje custom", enabled: false },
+        { text: "Integrare API", enabled: false },
+        { text: "Cont manager personal", enabled: false },
+        { text: "Implementare cadou", enabled: false }
+      ]
     },
     {
       name: "Standard",
-      price: "249",
-      icon: Zap,
+      subtitle: "Alege Standard",
       recommended: true,
-      location: "1 locație",
-      offers: "3 oferte simultane",
-      accounts: "10 conturi manager",
+      icon: Zap,
       features: [
-        "∞ Bază de clienți",
-        "∞ Notificări PUSH",
-        "∞ Promoții speciale",
-        "Vezi cine cumpără și când. Media bonului și orele de activitate",
-        "Colectez Recenzii",
-        "Happy-Hour",
-        "Formular personal",
-        "Program Recom.",
-        "4 Mesaje Autom.",
-        "Manager de cont",
-      ],
+        { text: "1 locație", enabled: true },
+        { text: "3 oferte simultane", enabled: true },
+        { text: "10 conturi manager", enabled: true },
+        { text: "∞ Bază de clienți", enabled: true },
+        { text: "∞ Notificări PUSH", enabled: true },
+        { text: "∞ Promoții speciale", enabled: true },
+        { text: "Vezi cine cumpără și când. Media bonului și orele de activitate", enabled: true },
+        { text: "Colectez Recenzii", enabled: true },
+        { text: "Happy-Hour", enabled: true },
+        { text: "Formular personal", enabled: true },
+        { text: "Program Recom.", enabled: true },
+        { text: "4 Mesaje Autom.", enabled: true },
+        { text: "Manager de cont", enabled: true },
+        { text: "Mesaje custom", enabled: false },
+        { text: "Integrare API", enabled: false },
+        { text: "Cont manager personal", enabled: false },
+        { text: "Implementare cadou", enabled: false }
+      ]
     },
     {
       name: "Premium",
-      price: "399",
-      icon: Star,
-      recommended: false,
-      location: "1 locație",
-      offers: "10 oferte simultane",
-      accounts: "50 conturi manager",
-      features: premiumFeatures,
-    },
+      subtitle: "Alege Premium",
+      icon: Crown,
+      features: [
+        { text: "1 locație", enabled: true },
+        { text: "10 oferte simultane", enabled: true },
+        { text: "50 conturi manager", enabled: true },
+        { text: "∞ Bază de clienți", enabled: true },
+        { text: "∞ Notificări PUSH", enabled: true },
+        { text: "∞ Promoții speciale", enabled: true },
+        { text: "Vezi cine cumpără și când. Media bonului și orele de activitate", enabled: true },
+        { text: "Colectez Recenzii", enabled: true },
+        { text: "Happy-Hour", enabled: true },
+        { text: "Formular personal", enabled: true },
+        { text: "Program Recom.", enabled: true },
+        { text: "4 Mesaje Autom.", enabled: true },
+        { text: "Manager de cont", enabled: true },
+        { text: "Mesaje custom", enabled: true },
+        { text: "Integrare API", enabled: true },
+        { text: "Cont manager personal", enabled: true },
+        { text: "Implementare cadou", enabled: true }
+      ]
+    }
   ];
 
   return (
-    <section className="purple-bg text-white py-24 pb-36 min-h-screen relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 relative z-10">
-        
-        <h1 className="text-center text-5xl font-black mb-16 leading-tight">
-          Alege planul potrivit afacerii tale
-        </h1>
+    <>
+      <style>{`
+        @font-face {
+          font-family: 'Helvetica Now';
+          src: url('/fonts/helveticanowtext-bold-demo.ttf') format('truetype');
+        }
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        * {
+          font-family: 'Helvetica Now', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
 
-          {plans.map((plan, index) => {
-            const Icon = plan.icon;
+        /* Efect subtil mov animat */
+        @keyframes gradientMove {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
 
-            return (
-              <Card
-                key={index}
-                className={`flex flex-col rounded-3xl overflow-hidden shadow-2xl
-                bg-gradient-to-b from-[#2a0144] to-[#150022]
-                ${plan.recommended ? "ring-4 ring-purple-400" : ""}`}
-              >
-                {plan.recommended && (
-                  <div className="absolute -top-5 left-0 right-0 flex justify-center z-20">
-                    <Badge className="bg-yellow-400 text-gray-900 font-black text-sm px-6 py-2.5 rounded-full shadow-xl border border-yellow-200">
-                      🔥 Cel mai popular
-                    </Badge>
-                  </div>
-                )}
+        .purple-bg {
+          background: linear-gradient(-45deg, #1a0028, #2a0a3d, #0f0018, #1f0a33);
+          background-size: 300% 300%;
+          animation: gradientMove 12s ease infinite;
+        }
+      `}</style>
+      
+      <section className="purple-bg text-white py-20 pb-32 transition-all duration-1000">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 px-4">
+              TRANSFORMĂ CLIENȚII OCAZIONALI<br/>ÎN CLIENȚI FIDELI
+            </h1>
+            <p className="text-[#d6b5ff] text-base sm:text-lg max-w-2xl mx-auto px-4 mb-8">
+              Construiește o comunitate în jurul brandului tău
+            </p>
+          </div>
 
-                <CardHeader className="text-center pt-10 pb-6 bg-gradient-to-br from-purple-700 to-purple-900 text-white">
-                  <div className="flex justify-center mb-6">
-                    <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center shadow-xl">
-                      <Icon className="w-8 h-8 text-white" />
+          {/* CARDS */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
+            {plans.map((plan, index) => {
+              const Icon = plan.icon;
+              const isRecommended = !!plan.recommended;
+
+              return (
+                <div key={index} className="relative group/card transition-all duration-500">
+                  {plan.recommended && (
+                    <div className="absolute -top-3 sm:-top-4 left-0 right-0 z-10 flex justify-center">
+                      <Badge className="bg-gradient-to-r from-[#c69eff] to-[#a566ff] text-gray-900 font-bold text-xs sm:text-sm px-4 sm:px-6 py-1.5 sm:py-2 rounded-full shadow-lg">
+                        <Star className="inline-block w-4 h-4 mr-1" />
+                        CEL MAI POPULAR
+                        <Star className="inline-block w-4 h-4 ml-1" />
+                      </Badge>
                     </div>
-                  </div>
+                  )}
+                  
+                  <Card 
+                    className={`shadow-2xl border-0 rounded-3xl overflow-hidden transform transition-all duration-700 ease-out hover:scale-105 ${
+                      plan.recommended 
+                        ? 'bg-gradient-to-br from-[#6b2fb5] via-[#8733ff] to-[#6b2fb5] ring-2 ring-[#a566ff] mt-4' 
+                        : 'bg-gradient-to-br from-[#1a0028] to-[#2a0a3d] mt-4'
+                    }`}
+                  >
+                    <CardHeader className="text-center pb-6 pt-8 px-6">
+                      <CardTitle className="text-4xl font-black text-white mb-8">
+                        {plan.name}
+                      </CardTitle>
 
-                  <CardTitle className="text-4xl font-black tracking-tight">
-                    {plan.name}
-                  </CardTitle>
-
-                  <div className="mt-6">
-                    <span className="text-6xl font-black">{plan.price}</span>
-                    <span className="text-xl ml-2 font-semibold">Lei</span>
-                    <div className="text-sm mt-1 opacity-80">pe lună</div>
-                  </div>
-                </CardHeader>
-
-                <CardContent className="text-purple-100 px-8 py-8 flex flex-col flex-grow">
-
-                  {/* Secțiunea fixă */}
-                  <div className="mb-6 space-y-3">
-                    {[plan.location, plan.offers, plan.accounts].map((item, i) => (
-                      <div key={i} className="flex items-start gap-3 text-[16px] font-bold">
-                        <Check className="w-5 h-5 text-emerald-400 mt-1" />
-                        <span>{item}</span>
+                      <div className="space-y-3 text-left mb-8">
+                        {plan.features.map((feature, idx) => (
+                          <div 
+                            key={idx} 
+                            className={`flex items-start gap-3 text-sm font-medium ${
+                              feature.enabled 
+                                ? 'text-white' 
+                                : isRecommended 
+                                  ? 'text-gray-300 line-through opacity-50' 
+                                  : 'text-gray-500 line-through opacity-60'
+                            }`}
+                          >
+                            <span className={`mt-0.5 ${feature.enabled ? 'text-green-400' : isRecommended ? 'text-gray-400' : 'text-gray-600'}`}>
+                              {feature.enabled ? '✓' : '✕'}
+                            </span>
+                            <span>{feature.text}</span>
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
+                    </CardHeader>
 
-                  {/* Lista comparată */}
-                  <div className="space-y-2 mb-10 flex-grow">
-                    {premiumFeatures.map((feature, i) => {
-                      const available = plan.features.includes(feature);
+                    <CardContent className="px-6 pb-8">
+                      <Button 
+                        className={`w-full font-bold py-6 rounded-2xl text-lg shadow-lg transform transition-all duration-500 hover:scale-105 ${
+                          isRecommended
+                            ? 'bg-gradient-to-r from-[#a566ff] to-[#c69eff] hover:from-[#9f5cff] hover:to-[#bb8fff] text-gray-900'
+                            : 'bg-gradient-to-r from-[#6b2fb5] to-[#8733ff] hover:from-[#7c2ee6] hover:to-[#9f5cff] text-white'
+                        }`}
+                        onClick={() => window.open('https://app.refluxe.io/registration', '_blank')}
+                      >
+                        {plan.subtitle}
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </div>
+              );
+            })}
+          </div>
 
-                      return (
-                        <div
-                          key={i}
-                          className={`flex items-start gap-3 text-[16px] font-bold py-1.5 ${
-                            available
-                              ? "text-purple-50"
-                              : "opacity-30 line-through text-purple-300"
-                          }`}
-                        >
-                          {available ? (
-                            <Check className="w-5 h-5 text-emerald-400 mt-1" />
-                          ) : (
-                            <X className="w-5 h-5 text-purple-400 mt-1" />
-                          )}
-                          <span className="leading-snug">{feature}</span>
-                        </div>
-                      );
-                    })}
-                  </div>
-
-                  {/* Buton */}
-                  <button className="w-full mt-auto bg-purple-600 hover:bg-purple-700 text-white font-black py-5 rounded-2xl text-lg shadow-xl transition-all">
-                    Alege {plan.name}
-                  </button>
-
-                </CardContent>
-              </Card>
-            );
-          })}
-
+          {/* TRUST BADGES */}
+          <div className="text-center mt-16">
+            <div className="flex justify-center gap-16 flex-wrap items-center">
+              <div className="flex flex-col items-center gap-3">
+                <img src="/gabio-uploads/1.png" alt="GDPR Compliance" className="w-48 h-24 object-contain" />
+                <span className="text-sm font-bold text-white">Securitate<br/>GDPR</span>
+              </div>
+              <div className="flex flex-col items-center gap-3">
+                <img src="/gabio-uploads/2.png" alt="Metode de plată" className="w-48 h-24 object-contain" />
+                <span className="text-sm font-bold text-white">Plăți sigure<br/>Banca Transilvania</span>
+              </div>
+              <div className="flex flex-col items-center gap-3">
+                <img src="/gabio-uploads/3.png" alt="SSL Securizat" className="w-48 h-24 object-contain" />
+                <span className="text-sm font-bold text-white">100% Sigur<br/>& Protejat</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
