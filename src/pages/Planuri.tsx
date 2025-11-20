@@ -10,6 +10,9 @@ const Planuri = () => {
       name: "Basic",
       subtitle: "Alege Basic",
       icon: Rocket,
+      price: "149",
+      locations: "1 magazin",
+      clients: "100 clienți",
       features: [
         { text: "1 locație", enabled: true },
         { text: "1 ofertă simultană", enabled: true },
@@ -17,17 +20,7 @@ const Planuri = () => {
         { text: "∞ Bază de clienți", enabled: true },
         { text: "∞ Notificări PUSH", enabled: true },
         { text: "∞ Promoții speciale", enabled: true },
-        { text: "Vezi cine cumpără și când. Media bonului și orele de activitate", enabled: true },
-        { text: "Colectez Recenzii", enabled: true },
-        { text: "Happy-Hour", enabled: true },
-        { text: "Formular personal", enabled: true },
-        { text: "Program Recom.", enabled: true },
-        { text: "4 Mesaje Autom.", enabled: false },
-        { text: "Manager de cont", enabled: false },
-        { text: "Mesaje custom", enabled: false },
-        { text: "Integrare API", enabled: false },
-        { text: "Cont manager personal", enabled: false },
-        { text: "Implementare cadou", enabled: false }
+        { text: "Vezi cine cumpără și când. Media bonului și orele de activitate", enabled: true }
       ]
     },
     {
@@ -35,6 +28,9 @@ const Planuri = () => {
       subtitle: "Alege Standard",
       recommended: true,
       icon: Zap,
+      price: "249",
+      locations: "1 magazin",
+      clients: "250 clienți",
       features: [
         { text: "1 locație", enabled: true },
         { text: "3 oferte simultane", enabled: true },
@@ -59,6 +55,9 @@ const Planuri = () => {
       name: "Premium",
       subtitle: "Alege Premium",
       icon: Crown,
+      price: "399",
+      locations: "1 magazin",
+      clients: "clienți nelimitați",
       features: [
         { text: "1 locație", enabled: true },
         { text: "10 oferte simultane", enabled: true },
@@ -140,13 +139,27 @@ const Planuri = () => {
                     className={`shadow-2xl border-0 rounded-3xl overflow-hidden transform transition-all duration-700 ease-out hover:scale-105 ${
                       plan.recommended 
                         ? 'bg-gradient-to-br from-[#6b2fb5] via-[#8733ff] to-[#6b2fb5] ring-2 ring-[#a566ff] mt-4' 
-                        : 'bg-gradient-to-br from-[#1a0028] to-[#2a0a3d] mt-4'
+                        : 'bg-gradient-to-br from-[#3d1b5c] to-[#4a2370] mt-4'
                     }`}
                   >
                     <CardHeader className="text-center pb-6 pt-8 px-6">
-                      <CardTitle className="text-4xl font-black text-white mb-8">
+                      <CardTitle className="text-4xl font-black text-white mb-2">
                         {plan.name}
                       </CardTitle>
+                      
+                      <div className="flex justify-center gap-3 mb-2">
+                        <Badge className="bg-purple-500/30 text-white border border-purple-400/50 text-xs px-3 py-1">
+                          {plan.locations}
+                        </Badge>
+                        <Badge className="bg-purple-500/30 text-white border border-purple-400/50 text-xs px-3 py-1">
+                          {plan.clients}
+                        </Badge>
+                      </div>
+                      
+                      <div className="mb-8">
+                        <span className="text-5xl font-black text-white">{plan.price}</span>
+                        <span className="text-lg text-gray-300 ml-2">RON / lună</span>
+                      </div>
 
                       <div className="space-y-3 text-left mb-8">
                         {plan.features.map((feature, idx) => (
