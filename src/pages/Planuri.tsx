@@ -161,7 +161,7 @@ const Planuri = () => {
                         <span className="text-lg text-gray-300 ml-2">RON / lună</span>
                       </div>
 
-                      <div className="space-y-3 text-left mb-8 flex-grow">
+                      <div className="space-y-3 text-left mb-6">
                         {plan.features.map((feature, idx) => (
                           <div 
                             key={idx} 
