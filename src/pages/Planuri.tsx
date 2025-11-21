@@ -20,7 +20,8 @@ const Planuri = () => {
         { text: "∞ Bază de clienți", enabled: true },
         { text: "∞ Notificări PUSH", enabled: true },
         { text: "∞ Promoții speciale", enabled: true },
-        { text: "Vezi cine cumpără și când. Media bonului și orele de activitate", enabled: true }
+        { text: "Media bonului și orele de activitate", enabled: true },
+        { text: "Vezi cine cumpără și când. 
       ]
     },
     {
