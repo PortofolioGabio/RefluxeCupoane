@@ -21,7 +21,17 @@ const Planuri = () => {
         { text: "∞ Notificări PUSH", enabled: true },
         { text: "∞ Promoții speciale", enabled: true },
         { text: "Media bonului și orele de activitate", enabled: true },
-        { text: "Vezi cine cumpără și când. 
+        { text: "Vezi cine cumpără și când", enabled: true },
+        { text: "Colectez Recenzii", enabled: false },
+        { text: "Happy-Hour", enabled: false },
+        { text: "Formular personal", enabled: false },
+        { text: "Program Recom.", enabled: false },
+        { text: "4 Mesaje Autom.", enabled: false },
+        { text: "Manager de cont", enabled: false },
+        { text: "Mesaje custom", enabled: false },
+        { text: "Integrare API", enabled: false },
+        { text: "Cont manager personal", enabled: false },
+        { text: "Implementare cadou", enabled: false }
       ]
     },
     {
@@ -39,7 +49,8 @@ const Planuri = () => {
         { text: "∞ Bază de clienți", enabled: true },
         { text: "∞ Notificări PUSH", enabled: true },
         { text: "∞ Promoții speciale", enabled: true },
-        { text: "Vezi cine cumpără și când. Media bonului și orele de activitate", enabled: true },
+        { text: "Media bonului și orele de activitate", enabled: true },
+        { text: "Vezi cine cumpără și când", enabled: true },
         { text: "Colectez Recenzii", enabled: true },
         { text: "Happy-Hour", enabled: true },
         { text: "Formular personal", enabled: true },
