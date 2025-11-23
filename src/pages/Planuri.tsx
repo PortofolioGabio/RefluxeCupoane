@@ -139,7 +139,7 @@ const Planuri = () => {
                     <div className="absolute -top-3 sm:-top-4 left-0 right-0 z-10 flex justify-center">
                       <Badge className="bg-gradient-to-r from-[#c69eff] to-[#a566ff] text-gray-900 font-bold text-xs sm:text-sm px-4 sm:px-6 py-1.5 sm:py-2 rounded-full shadow-lg">
                         <Star className="inline-block w-4 h-4 mr-1" />
-                        CEL MAI POPULAR
+                        ales de 87% din afaceri
                         <Star className="inline-block w-4 h-4 ml-1" />
                       </Badge>
                     </div>
