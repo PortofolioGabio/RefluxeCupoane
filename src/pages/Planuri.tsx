@@ -7,8 +7,8 @@ import { Star, Crown, Zap, Rocket } from 'lucide-react';
 const Planuri = () => {
   const plans = [
     {
-      name: "Basic",
-      subtitle: "Alege Basic",
+      name: "Flow",
+      subtitle: "Alege Flow",
       icon: Zap,
       price: "197",
       locations: "1 locație",
@@ -34,8 +34,8 @@ const Planuri = () => {
       ]
     },
     {
-      name: "Standard",
-      subtitle: "Alege Standard",
+      name: "Boost",
+      subtitle: "Alege Boost",
       recommended: true,
       icon: Rocket,
       price: "297",
@@ -62,8 +62,8 @@ const Planuri = () => {
       ]
     },
     {
-      name: "Premium",
-      subtitle: "Alege Premium",
+      name: "Infinity",
+      subtitle: "Alege Infinity",
       icon: Crown,
       price: "497",
       locations: "1 locație",
