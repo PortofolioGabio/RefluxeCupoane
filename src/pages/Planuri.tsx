@@ -15,7 +15,7 @@ const Planuri = () => {
       clients: "Anual = implementare cadou",
       features: [
         { text: "1 ofertă simultană", enabled: true },
-        { text: "1 cont de utilizator", enabled: true },
+        { text: "1 cont manager", enabled: true },
         { text: "∞ Bază de clienți", enabled: true },
         { text: "∞ Notificări PUSH", enabled: true },
         { text: "∞ Promoții speciale", enabled: true },
