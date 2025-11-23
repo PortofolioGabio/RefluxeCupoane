@@ -160,7 +160,7 @@ const Planuri = () => {
                         {plan.name}
                       </CardTitle>
                       
-                      <div className="flex justify-center gap-3 mb-2">
+                      <div className="flex flex-col items-center gap-2 mb-2">
                         <Badge className="bg-purple-500/30 text-white border border-purple-400/50 text-xs px-3 py-1">
                           {plan.locations}
                         </Badge>
