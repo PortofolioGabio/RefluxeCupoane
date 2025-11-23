@@ -12,6 +12,7 @@ const Planuri = () => {
       icon: Zap,
       price: "197",
       locations: "1 locație",
+      clients: "Anual = implementare cadou",
       features: [
         { text: "1 ofertă simultană", enabled: true },
         { text: "1 cont de utilizator", enabled: true },
@@ -39,8 +40,8 @@ const Planuri = () => {
       recommended: true,
       icon: Rocket,
       price: "297",
-      locations: "3 locații",
-      clients: "20% extra locație",
+      locations: "1 locație",
+      clients: "Anual = 2 luni cadou",
       features: [
         { text: "3 oferte simultane", enabled: true },
         { text: "10 conturi manager", enabled: true },
@@ -67,8 +68,8 @@ const Planuri = () => {
       subtitle: "Alege Infinity",
       icon: Crown,
       price: "497",
-      locations: "10 locații",
-      clients: "20% extra locație",
+      locations: "1 locație",
+      clients: "Anual = 4 luni cadou",
       features: [
         { text: "10 oferte simultane", enabled: true },
         { text: "50 conturi manager", enabled: true },
