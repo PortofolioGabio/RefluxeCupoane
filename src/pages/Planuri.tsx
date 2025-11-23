@@ -19,6 +19,7 @@ const Planuri = () => {
         { text: "∞ Bază de clienți", enabled: true },
         { text: "∞ Notificări PUSH", enabled: true },
         { text: "∞ Promoții speciale", enabled: true },
+        { text: "Mesaj automat la 100m", enabled: true },
         { text: "Media bonului și orele de activitate", enabled: true },
         { text: "Vezi cine cumpără și când", enabled: true },
         { text: "Colectează Recenzii", enabled: false },
@@ -39,7 +40,7 @@ const Planuri = () => {
       recommended: true,
       icon: Rocket,
       price: "297",
-      locations: "1 locație",
+      locations: "2-3 locații",
       clients: "500 clienți",
       features: [
         { text: "3 oferte simultane", enabled: true },
@@ -47,6 +48,7 @@ const Planuri = () => {
         { text: "∞ Bază de clienți", enabled: true },
         { text: "∞ Notificări PUSH", enabled: true },
         { text: "∞ Promoții speciale", enabled: true },
+        { text: "Mesaj automat la 100m", enabled: true },
         { text: "Media bonului și orele de activitate", enabled: true },
         { text: "Vezi cine cumpără și când", enabled: true },
         { text: "Colectează Recenzii", enabled: true },
@@ -66,7 +68,7 @@ const Planuri = () => {
       subtitle: "Alege Infinity",
       icon: Crown,
       price: "497",
-      locations: "1 locație",
+      locations: "4-10 locații",
       clients: "Clienți Nelimitați",
       features: [
         { text: "10 oferte simultane", enabled: true },
@@ -74,6 +76,7 @@ const Planuri = () => {
         { text: "∞ Bază de clienți", enabled: true },
         { text: "∞ Notificări PUSH", enabled: true },
         { text: "∞ Promoții speciale", enabled: true },
+        { text: "Mesaj automat la 100m", enabled: true },
         { text: "Media bonului și orele de activitate", enabled: true },
         { text: "Vezi cine cumpără și când", enabled: true },
         { text: "Colectează Recenzii", enabled: true },
@@ -139,7 +142,7 @@ const Planuri = () => {
                     <div className="absolute -top-3 sm:-top-4 left-0 right-0 z-10 flex justify-center">
                       <Badge className="bg-gradient-to-r from-[#c69eff] to-[#a566ff] text-gray-900 font-bold text-xs sm:text-sm px-4 sm:px-6 py-1.5 sm:py-2 rounded-full shadow-lg">
                         <Star className="inline-block w-4 h-4 mr-1" />
-                        ales de 87% din afaceri
+                        Ales de 87% din afaceri
                         <Star className="inline-block w-4 h-4 ml-1" />
                       </Badge>
                     </div>
