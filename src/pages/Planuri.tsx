@@ -12,7 +12,7 @@ const Planuri = () => {
       icon: Zap,
       price: "197",
       locations: "1 locație",
-      clients: "100 clienți",
+      clients: "250 clienți",
       features: [
         { text: "1 ofertă simultană", enabled: true },
         { text: "1 cont de utilizator", enabled: true },
@@ -40,7 +40,7 @@ const Planuri = () => {
       icon: Rocket,
       price: "297",
       locations: "1 locație",
-      clients: "250 clienți",
+      clients: "500 clienți",
       features: [
         { text: "3 oferte simultane", enabled: true },
         { text: "10 conturi manager", enabled: true },
