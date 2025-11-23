@@ -54,7 +54,7 @@ const Planuri = () => {
         { text: "Formular personalizat", enabled: true },
         { text: "Program de Recomandări", enabled: true },
         { text: "4 Mesaje Automate", enabled: true },
-        { text: "Manager de cont", enabled: true },
+        { text: "Manager de cont", enabled: false },
         { text: "Mesaje Personalizate", enabled: false },
         { text: "Integrare API", enabled: false },
         { text: "Manager de cont", enabled: false },
